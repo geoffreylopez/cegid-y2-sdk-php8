@@ -12,7 +12,7 @@ Consume CEGID/Y2's SOAP API.
 ## Installation
 
 ```
-composer require pgrimaud/cegid-y2-sdk
+composer require web-atypique/cegid-y2-sdk-php8
 ```
 ## Basic usage
 

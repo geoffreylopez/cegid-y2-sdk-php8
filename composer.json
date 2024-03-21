@@ -1,13 +1,13 @@
 {
-  "name": "pgrimaud/cegid-y2-sdk",
+  "name": "web-atypique/cegid-y2-sdk-php8",
   "type": "library",
-  "description": "CEGID / Y2 - SDK",
-  "homepage": "https://github.com/pgrimaud/cegid-y2-sdk",
+  "description": "CEGID / Y2 - SDK - PHP8",
+  "homepage": "https://github.com/geoffreylopez/cegid-y2-sdk-php8",
   "license": "MIT",
   "authors": [
     {
-      "name": "Pierre Grimaud",
-      "email": "pierre@bigyouth.fr"
+      "name": "Geoffrey Lopez",
+      "email": "geoffrey@web-atypique.fr"
     }
   ],
   "require": {
