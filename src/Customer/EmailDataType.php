@@ -22,7 +22,7 @@ class EmailDataType
         return $this->AlternativeEmail;
     }
 
-    public function setAlternativeEmail(string $AlternativeEmail): static
+    public function setAlternativeEmail(?string $AlternativeEmail): static
     {
         $this->AlternativeEmail = $AlternativeEmail;
         return $this;
@@ -33,7 +33,7 @@ class EmailDataType
         return $this->Email;
     }
 
-    public function setEmail(string $Email): static
+    public function setEmail(?string $Email): static
     {
         $this->Email = $Email;
         return $this;
@@ -44,7 +44,7 @@ class EmailDataType
         return $this->EmailingAccepted;
     }
 
-    public function setEmailingAccepted(bool $EmailingAccepted): static
+    public function setEmailingAccepted(?bool $EmailingAccepted): static
     {
         $this->EmailingAccepted = $EmailingAccepted;
         return $this;
@@ -55,7 +55,7 @@ class EmailDataType
         return $this->SendReceiptByMail;
     }
 
-    public function setSendReceiptByMail(bool $SendReceiptByMail): static
+    public function setSendReceiptByMail(?bool $SendReceiptByMail): static
     {
         $this->SendReceiptByMail = $SendReceiptByMail;
         return $this;

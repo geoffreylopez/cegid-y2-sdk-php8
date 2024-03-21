@@ -20,11 +20,11 @@ class Get_Header
 
     protected ?OmniChannel $OmniChannel = null;
 
-    protected ?DocumentOrigin $Origin = null;
+    protected ?string $Origin = null;
 
     protected ?string $SalesPersonId = null;
 
-    protected ?DocumentStatus $Status = null;
+    protected ?string $Status = null;
 
     protected ?string $StoreId = null;
 
@@ -151,12 +151,12 @@ class Get_Header
       return $this;
     }
 
-    public function getOrigin(): ?DocumentOrigin
+    public function getOrigin(): ?string
     {
       return $this->Origin;
     }
 
-    public function setOrigin(DocumentOrigin $Origin): static
+    public function setOrigin(string $Origin): static
     {
       $this->Origin = $Origin;
       return $this;
@@ -173,12 +173,12 @@ class Get_Header
       return $this;
     }
 
-    public function getStatus(): ?DocumentStatus
+    public function getStatus(): ?string
     {
       return $this->Status;
     }
 
-    public function setStatus(DocumentStatus $Status): static
+    public function setStatus(string $Status): static
     {
       $this->Status = $Status;
       return $this;

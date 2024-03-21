@@ -71,7 +71,7 @@ class CustomerData extends CustomerDataBase
         return $this->ActivityCode;
     }
 
-    public function setActivityCode(string $ActivityCode): static
+    public function setActivityCode(?string $ActivityCode): static
     {
         $this->ActivityCode = $ActivityCode;
         return $this;
@@ -82,7 +82,7 @@ class CustomerData extends CustomerDataBase
         return $this->Barcode;
     }
 
-    public function setBarcode(string $Barcode): static
+    public function setBarcode(?string $Barcode): static
     {
         $this->Barcode = $Barcode;
         return $this;
@@ -93,7 +93,7 @@ class CustomerData extends CustomerDataBase
         return $this->BirthDateData;
     }
 
-    public function setBirthDateData(BirthDateDataType $BirthDateData): static
+    public function setBirthDateData(?BirthDateDataType $BirthDateData): static
     {
         $this->BirthDateData = $BirthDateData;
         return $this;
@@ -104,7 +104,7 @@ class CustomerData extends CustomerDataBase
         return $this->CompanyIdNumber;
     }
 
-    public function setCompanyIdNumber(string $CompanyIdNumber): static
+    public function setCompanyIdNumber(?string $CompanyIdNumber): static
     {
         $this->CompanyIdNumber = $CompanyIdNumber;
         return $this;
@@ -115,7 +115,7 @@ class CustomerData extends CustomerDataBase
         return $this->CompanyTitleId;
     }
 
-    public function setCompanyTitleId(string $CompanyTitleId): static
+    public function setCompanyTitleId(?string $CompanyTitleId): static
     {
         $this->CompanyTitleId = $CompanyTitleId;
         return $this;
@@ -126,7 +126,7 @@ class CustomerData extends CustomerDataBase
         return $this->CurrencyId;
     }
 
-    public function setCurrencyId(string $CurrencyId): static
+    public function setCurrencyId(?string $CurrencyId): static
     {
         $this->CurrencyId = $CurrencyId;
         return $this;
@@ -137,7 +137,7 @@ class CustomerData extends CustomerDataBase
         return $this->DirectMail;
     }
 
-    public function setDirectMail(bool $DirectMail): static
+    public function setDirectMail(?bool $DirectMail): static
     {
         $this->DirectMail = $DirectMail;
         return $this;
@@ -148,7 +148,7 @@ class CustomerData extends CustomerDataBase
         return $this->FiscalId;
     }
 
-    public function setFiscalId(string $FiscalId): static
+    public function setFiscalId(?string $FiscalId): static
     {
         $this->FiscalId = $FiscalId;
         return $this;
@@ -159,7 +159,7 @@ class CustomerData extends CustomerDataBase
         return $this->ItalianFiscalId;
     }
 
-    public function setItalianFiscalId(string $ItalianFiscalId): static
+    public function setItalianFiscalId(?string $ItalianFiscalId): static
     {
         $this->ItalianFiscalId = $ItalianFiscalId;
         return $this;
@@ -170,7 +170,7 @@ class CustomerData extends CustomerDataBase
         return $this->LanguageId;
     }
 
-    public function setLanguageId(string $LanguageId): static
+    public function setLanguageId(?string $LanguageId): static
     {
         $this->LanguageId = $LanguageId;
         return $this;
@@ -181,7 +181,7 @@ class CustomerData extends CustomerDataBase
         return $this->LongDescription;
     }
 
-    public function setLongDescription(string $LongDescription): static
+    public function setLongDescription(?string $LongDescription): static
     {
         $this->LongDescription = $LongDescription;
         return $this;
@@ -192,7 +192,7 @@ class CustomerData extends CustomerDataBase
         return $this->NationalityId;
     }
 
-    public function setNationalityId(string $NationalityId): static
+    public function setNationalityId(?string $NationalityId): static
     {
         $this->NationalityId = $NationalityId;
         return $this;
@@ -203,7 +203,7 @@ class CustomerData extends CustomerDataBase
         return $this->OptinAlternativeEmail;
     }
 
-    public function setOptinAlternativeEmail(string $OptinAlternativeEmail): static
+    public function setOptinAlternativeEmail(?string $OptinAlternativeEmail): static
     {
         $this->OptinAlternativeEmail = $OptinAlternativeEmail;
         return $this;
@@ -269,7 +269,7 @@ class CustomerData extends CustomerDataBase
         return $this->PassportNumber;
     }
 
-    public function setPassportNumber(string $PassportNumber): static
+    public function setPassportNumber(?string $PassportNumber): static
     {
         $this->PassportNumber = $PassportNumber;
         return $this;
@@ -280,7 +280,7 @@ class CustomerData extends CustomerDataBase
         return $this->Sex;
     }
 
-    public function setSex(string $Sex): static
+    public function setSex(?string $Sex): static
     {
         $this->Sex = $Sex;
         return $this;
@@ -291,7 +291,7 @@ class CustomerData extends CustomerDataBase
         return $this->ShortName;
     }
 
-    public function setShortName(string $ShortName): static
+    public function setShortName(?string $ShortName): static
     {
         $this->ShortName = $ShortName;
         return $this;
@@ -302,7 +302,7 @@ class CustomerData extends CustomerDataBase
         return $this->UserFields;
     }
 
-    public function setUserFields(ArrayOfUserField $UserFields): static
+    public function setUserFields(?ArrayOfUserField $UserFields): static
     {
         $this->UserFields = $UserFields;
         return $this;
@@ -313,7 +313,7 @@ class CustomerData extends CustomerDataBase
         return $this->VATSystem;
     }
 
-    public function setVATSystem(string $VATSystem): static
+    public function setVATSystem(?string $VATSystem): static
     {
         $this->VATSystem = $VATSystem;
         return $this;
@@ -324,7 +324,7 @@ class CustomerData extends CustomerDataBase
         return $this->ValidAlternativeEmail;
     }
 
-    public function setValidAlternativeEmail(bool $ValidAlternativeEmail): static
+    public function setValidAlternativeEmail(?bool $ValidAlternativeEmail): static
     {
         $this->ValidAlternativeEmail = $ValidAlternativeEmail;
         return $this;
@@ -335,7 +335,7 @@ class CustomerData extends CustomerDataBase
         return $this->ValidEmail;
     }
 
-    public function setValidEmail(bool $ValidEmail): static
+    public function setValidEmail(?bool $ValidEmail): static
     {
         $this->ValidEmail = $ValidEmail;
         return $this;
@@ -346,7 +346,7 @@ class CustomerData extends CustomerDataBase
         return $this->ValidHomePhone;
     }
 
-    public function setValidHomePhone(bool $ValidHomePhone): static
+    public function setValidHomePhone(?bool $ValidHomePhone): static
     {
         $this->ValidHomePhone = $ValidHomePhone;
         return $this;
@@ -357,7 +357,7 @@ class CustomerData extends CustomerDataBase
         return $this->ValidMobile;
     }
 
-    public function setValidMobile(bool $ValidMobile): static
+    public function setValidMobile(?bool $ValidMobile): static
     {
         $this->ValidMobile = $ValidMobile;
         return $this;
@@ -368,7 +368,7 @@ class CustomerData extends CustomerDataBase
         return $this->ValidOfficePhone;
     }
 
-    public function setValidOfficePhone(bool $ValidOfficePhone): static
+    public function setValidOfficePhone(?bool $ValidOfficePhone): static
     {
         $this->ValidOfficePhone = $ValidOfficePhone;
         return $this;

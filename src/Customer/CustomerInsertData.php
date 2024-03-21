@@ -18,7 +18,7 @@ class CustomerInsertData extends CustomerInputData
         return $this->CustomerGuid;
     }
 
-    public function setCustomerGuid(InternalGuid $CustomerGuid): static
+    public function setCustomerGuid(?InternalGuid $CustomerGuid): static
     {
         $this->CustomerGuid = $CustomerGuid;
         return $this;
@@ -29,7 +29,7 @@ class CustomerInsertData extends CustomerInputData
         return $this->CustomerId;
     }
 
-    public function setCustomerId(string $CustomerId): static
+    public function setCustomerId(?string $CustomerId): static
     {
         $this->CustomerId = $CustomerId;
         return $this;

@@ -32,7 +32,7 @@ class CustomerQueryData extends CustomerData
         return $this->Closed;
     }
 
-    public function setClosed(bool $Closed): static
+    public function setClosed(?bool $Closed): static
     {
         $this->Closed = $Closed;
         return $this;
@@ -43,7 +43,7 @@ class CustomerQueryData extends CustomerData
         return $this->CreationStoreId;
     }
 
-    public function setCreationStoreId(string $CreationStoreId): static
+    public function setCreationStoreId(?string $CreationStoreId): static
     {
         $this->CreationStoreId = $CreationStoreId;
         return $this;
@@ -54,7 +54,7 @@ class CustomerQueryData extends CustomerData
         return $this->CustomerId;
     }
 
-    public function setCustomerId(string $CustomerId): static
+    public function setCustomerId(?string $CustomerId): static
     {
         $this->CustomerId = $CustomerId;
         return $this;
@@ -65,7 +65,7 @@ class CustomerQueryData extends CustomerData
         return $this->InvoiceCustomerId;
     }
 
-    public function setInvoiceCustomerId(string $InvoiceCustomerId): static
+    public function setInvoiceCustomerId(?string $InvoiceCustomerId): static
     {
         $this->InvoiceCustomerId = $InvoiceCustomerId;
         return $this;
@@ -76,7 +76,7 @@ class CustomerQueryData extends CustomerData
         return $this->IsProspect;
     }
 
-    public function setIsProspect(bool $IsProspect): static
+    public function setIsProspect(?bool $IsProspect): static
     {
         $this->IsProspect = $IsProspect;
         return $this;
@@ -87,7 +87,7 @@ class CustomerQueryData extends CustomerData
         return $this->IsVirtual;
     }
 
-    public function setIsVirtual(bool $IsVirtual): static
+    public function setIsVirtual(?bool $IsVirtual): static
     {
         $this->IsVirtual = $IsVirtual;
         return $this;
@@ -121,7 +121,7 @@ class CustomerQueryData extends CustomerData
         return $this->Notepad;
     }
 
-    public function setNotepad(string $Notepad): static
+    public function setNotepad(?string $Notepad): static
     {
         $this->Notepad = $Notepad;
         return $this;

@@ -49,7 +49,7 @@ class CustomerSearchDataType extends CustomerDataBase
         return $this->ActivityCode;
     }
 
-    public function setActivityCode(string $ActivityCode): static
+    public function setActivityCode(?string $ActivityCode): static
     {
         $this->ActivityCode = $ActivityCode;
         return $this;
@@ -60,7 +60,7 @@ class CustomerSearchDataType extends CustomerDataBase
         return $this->Barcode;
     }
 
-    public function setBarcode(string $Barcode): static
+    public function setBarcode(?string $Barcode): static
     {
         $this->Barcode = $Barcode;
         return $this;
@@ -71,7 +71,7 @@ class CustomerSearchDataType extends CustomerDataBase
         return $this->BirthDateData;
     }
 
-    public function setBirthDateData($BirthDateData): static
+    public function setBirthDateData(?BirthDateDataType $BirthDateData): static
     {
         $this->BirthDateData = $BirthDateData;
         return $this;
@@ -82,7 +82,7 @@ class CustomerSearchDataType extends CustomerDataBase
         return $this->Closed;
     }
 
-    public function setClosed(bool $Closed): static
+    public function setClosed(?bool $Closed): static
     {
         $this->Closed = $Closed;
         return $this;
@@ -93,7 +93,7 @@ class CustomerSearchDataType extends CustomerDataBase
         return $this->CompanyIdNumber;
     }
 
-    public function setCompanyIdNumber(string $CompanyIdNumber): static
+    public function setCompanyIdNumber(?string $CompanyIdNumber): static
     {
         $this->CompanyIdNumber = $CompanyIdNumber;
         return $this;
@@ -104,7 +104,7 @@ class CustomerSearchDataType extends CustomerDataBase
         return $this->CreationStoreId;
     }
 
-    public function setCreationStoreId(string $CreationStoreId): static
+    public function setCreationStoreId(?string $CreationStoreId): static
     {
         $this->CreationStoreId = $CreationStoreId;
         return $this;
@@ -115,7 +115,7 @@ class CustomerSearchDataType extends CustomerDataBase
         return $this->CustomerId;
     }
 
-    public function setCustomerId(string $CustomerId): static
+    public function setCustomerId(?string $CustomerId): static
     {
         $this->CustomerId = $CustomerId;
         return $this;
@@ -126,7 +126,7 @@ class CustomerSearchDataType extends CustomerDataBase
         return $this->CustomerReference;
     }
 
-    public function setCustomerReference(string $CustomerReference): static
+    public function setCustomerReference(?string $CustomerReference): static
     {
         $this->CustomerReference = $CustomerReference;
         return $this;
@@ -137,7 +137,7 @@ class CustomerSearchDataType extends CustomerDataBase
         return $this->DirectMail;
     }
 
-    public function setDirectMail(bool $DirectMail): static
+    public function setDirectMail(?bool $DirectMail): static
     {
         $this->DirectMail = $DirectMail;
         return $this;
@@ -148,7 +148,7 @@ class CustomerSearchDataType extends CustomerDataBase
         return $this->FiscalId;
     }
 
-    public function setFiscalId(string $FiscalId): static
+    public function setFiscalId(?string $FiscalId): static
     {
         $this->FiscalId = $FiscalId;
         return $this;
@@ -159,7 +159,7 @@ class CustomerSearchDataType extends CustomerDataBase
         return $this->InvoiceCustomerId;
     }
 
-    public function setInvoiceCustomerId(string $InvoiceCustomerId): static
+    public function setInvoiceCustomerId(?string $InvoiceCustomerId): static
     {
         $this->InvoiceCustomerId = $InvoiceCustomerId;
         return $this;
@@ -170,7 +170,7 @@ class CustomerSearchDataType extends CustomerDataBase
         return $this->IsCustomer;
     }
 
-    public function setIsCustomer(bool $IsCustomer): static
+    public function setIsCustomer(?bool $IsCustomer): static
     {
         $this->IsCustomer = $IsCustomer;
         return $this;
@@ -181,7 +181,7 @@ class CustomerSearchDataType extends CustomerDataBase
         return $this->IsProspect;
     }
 
-    public function setIsProspect(bool $IsProspect): static
+    public function setIsProspect(?bool $IsProspect): static
     {
         $this->IsProspect = $IsProspect;
         return $this;
@@ -192,7 +192,7 @@ class CustomerSearchDataType extends CustomerDataBase
         return $this->ItalianFiscalId;
     }
 
-    public function setItalianFiscalId(string $ItalianFiscalId): static
+    public function setItalianFiscalId(?string $ItalianFiscalId): static
     {
         $this->ItalianFiscalId = $ItalianFiscalId;
         return $this;
@@ -203,7 +203,7 @@ class CustomerSearchDataType extends CustomerDataBase
         return $this->MaxNumberOfCustomers;
     }
 
-    public function setMaxNumberOfCustomers(int $MaxNumberOfCustomers): static
+    public function setMaxNumberOfCustomers(?int $MaxNumberOfCustomers): static
     {
         $this->MaxNumberOfCustomers = $MaxNumberOfCustomers;
         return $this;
@@ -214,7 +214,7 @@ class CustomerSearchDataType extends CustomerDataBase
         return $this->NationalityData;
     }
 
-    public function setNationalityData(NationalityDataType $NationalityData): static
+    public function setNationalityData(?NationalityDataType $NationalityData): static
     {
         $this->NationalityData = $NationalityData;
         return $this;
@@ -225,7 +225,7 @@ class CustomerSearchDataType extends CustomerDataBase
         return $this->PassportNumber;
     }
 
-    public function setPassportNumber(string $PassportNumber): static
+    public function setPassportNumber(?string $PassportNumber): static
     {
         $this->PassportNumber = $PassportNumber;
         return $this;

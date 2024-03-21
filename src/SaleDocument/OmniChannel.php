@@ -10,7 +10,7 @@ class OmniChannel
 
     protected ?string $CancelReasonId = null;
 
-    protected ?CancelStatus $CancelStatus = null;
+    protected ?string $CancelStatus = null;
 
     protected ?string $Comment = null;
 
@@ -24,7 +24,7 @@ class OmniChannel
 
     protected ?string $GiftMessage = null;
 
-    protected ?GiftMessageType $GiftMessageType = null;
+    protected ?string $GiftMessageType = null;
 
     protected ?\DateTime $LockingDate = null;
 
@@ -94,12 +94,12 @@ class OmniChannel
       return $this;
     }
 
-    public function getCancelStatus(): ?CancelStatus
+    public function getCancelStatus(): ?string
     {
       return $this->CancelStatus;
     }
 
-    public function setCancelStatus(?CancelStatus $CancelStatus): static
+    public function setCancelStatus(?string $CancelStatus): static
     {
       $this->CancelStatus = $CancelStatus;
       return $this;
@@ -171,12 +171,12 @@ class OmniChannel
       return $this;
     }
 
-    public function getGiftMessageType(): ?GiftMessageType
+    public function getGiftMessageType(): ?string
     {
       return $this->GiftMessageType;
     }
 
-    public function setGiftMessageType(?GiftMessageType $GiftMessageType): static
+    public function setGiftMessageType(?string $GiftMessageType): static
     {
       $this->GiftMessageType = $GiftMessageType;
       return $this;

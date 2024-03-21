@@ -6,7 +6,7 @@ class AvailableQtyReturn
 {
     protected ?float $AvailableQty = null;
 
-    protected QueryExecutionStatus|string|null $QueryStatus = null;
+    protected ?string $QueryStatus = null;
 
     public function __construct()
     {
@@ -24,12 +24,12 @@ class AvailableQtyReturn
         return $this;
     }
 
-    public function getQueryStatus(): QueryExecutionStatus|string|null
+    public function getQueryStatus(): ?string
     {
         return $this->QueryStatus;
     }
 
-    public function setQueryStatus(QueryExecutionStatus|string|null $QueryStatus): static
+    public function setQueryStatus(?string $QueryStatus): static
     {
         $this->QueryStatus = $QueryStatus;
         return $this;

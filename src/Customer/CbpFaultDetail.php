@@ -27,7 +27,7 @@ class CbpFaultDetail
         return $this->Cause;
     }
 
-    public function setCause(string $Cause): static
+    public function setCause(?string $Cause): static
     {
         $this->Cause = $Cause;
         return $this;
@@ -38,7 +38,7 @@ class CbpFaultDetail
         return $this->Description;
     }
 
-    public function setDescription(string $Description): static
+    public function setDescription(?string $Description): static
     {
         $this->Description = $Description;
         return $this;
@@ -49,7 +49,7 @@ class CbpFaultDetail
         return $this->Id;
     }
 
-    public function setId(string $Id): static
+    public function setId(?string $Id): static
     {
         $this->Id = $Id;
         return $this;
@@ -60,7 +60,7 @@ class CbpFaultDetail
         return $this->Message;
     }
 
-    public function setMessage(string $Message): static
+    public function setMessage(?string $Message): static
     {
         $this->Message = $Message;
         return $this;
@@ -71,7 +71,7 @@ class CbpFaultDetail
         return $this->SourceLocation;
     }
 
-    public function setSourceLocation(string $SourceLocation): static
+    public function setSourceLocation(?string $SourceLocation): static
     {
         $this->SourceLocation = $SourceLocation;
         return $this;
@@ -82,7 +82,7 @@ class CbpFaultDetail
         return $this->ToDo;
     }
 
-    public function setToDo(string $ToDo): static
+    public function setToDo(?string $ToDo): static
     {
         $this->ToDo = $ToDo;
         return $this;

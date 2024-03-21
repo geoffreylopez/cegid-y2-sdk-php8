@@ -18,7 +18,7 @@ class CbpExceptionDetail extends ExceptionDetail
         return $this->Id;
     }
 
-    public function setId(string $Id): static
+    public function setId(?string $Id): static
     {
         $this->Id = $Id;
         return $this;
@@ -29,7 +29,7 @@ class CbpExceptionDetail extends ExceptionDetail
         return $this->ToDo;
     }
 
-    public function setToDo(string $ToDo): static
+    public function setToDo(?string $ToDo): static
     {
         $this->ToDo = $ToDo;
         return $this;

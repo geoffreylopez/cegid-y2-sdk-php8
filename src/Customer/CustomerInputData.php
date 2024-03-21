@@ -22,7 +22,7 @@ class CustomerInputData extends CustomerData
         return $this->Closed;
     }
 
-    public function setClosed($Closed): static
+    public function setClosed(?bool $Closed): static
     {
         $this->Closed = $Closed;
         return $this;
@@ -33,7 +33,7 @@ class CustomerInputData extends CustomerData
         return $this->InvoiceCustomerId;
     }
 
-    public function setInvoiceCustomerId(string $InvoiceCustomerId): static
+    public function setInvoiceCustomerId(?string $InvoiceCustomerId): static
     {
         $this->InvoiceCustomerId = $InvoiceCustomerId;
         return $this;
@@ -44,7 +44,7 @@ class CustomerInputData extends CustomerData
         return $this->IsProspect;
     }
 
-    public function setIsProspect(bool $IsProspect): static
+    public function setIsProspect(?bool $IsProspect): static
     {
         $this->IsProspect = $IsProspect;
         return $this;
@@ -55,7 +55,7 @@ class CustomerInputData extends CustomerData
         return $this->Notepad;
     }
 
-    public function setNotepad(string $Notepad): static
+    public function setNotepad(?string $Notepad): static
     {
         $this->Notepad = $Notepad;
         return $this;

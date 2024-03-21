@@ -69,7 +69,7 @@ class CustomerDataBase
         return $this->ActivitySectorCode;
     }
 
-    public function setActivitySectorCode(string $ActivitySectorCode): static
+    public function setActivitySectorCode(?string $ActivitySectorCode): static
     {
         $this->ActivitySectorCode = $ActivitySectorCode;
         return $this;
@@ -80,7 +80,7 @@ class CustomerDataBase
         return $this->AddressData;
     }
 
-    public function setAddressData(AddressDataType $AddressData): static
+    public function setAddressData(?AddressDataType $AddressData): static
     {
         $this->AddressData = $AddressData;
         return $this;
@@ -91,7 +91,7 @@ class CustomerDataBase
         return $this->AlternateFirstName;
     }
 
-    public function setAlternateFirstName(string $AlternateFirstName): static
+    public function setAlternateFirstName(?string $AlternateFirstName): static
     {
         $this->AlternateFirstName = $AlternateFirstName;
         return $this;
@@ -102,7 +102,7 @@ class CustomerDataBase
         return $this->AlternateLastName;
     }
 
-    public function setAlternateLastName(string $AlternateLastName): static
+    public function setAlternateLastName(?string $AlternateLastName): static
     {
         $this->AlternateLastName = $AlternateLastName;
         return $this;
@@ -113,7 +113,7 @@ class CustomerDataBase
         return $this->BusinessAreaCode;
     }
 
-    public function setBusinessAreaCode(string $BusinessAreaCode): static
+    public function setBusinessAreaCode(?string $BusinessAreaCode): static
     {
         $this->BusinessAreaCode = $BusinessAreaCode;
         return $this;
@@ -124,7 +124,7 @@ class CustomerDataBase
         return $this->CpfCnpjCode;
     }
 
-    public function setCpfCnpjCode(string $CpfCnpjCode): static
+    public function setCpfCnpjCode(?string $CpfCnpjCode): static
     {
         $this->CpfCnpjCode = $CpfCnpjCode;
         return $this;
@@ -135,7 +135,7 @@ class CustomerDataBase
         return $this->EmailData;
     }
 
-    public function setEmailData(EmailDataType $EmailData): static
+    public function setEmailData(?EmailDataType $EmailData): static
     {
         $this->EmailData = $EmailData;
         return $this;
@@ -146,7 +146,7 @@ class CustomerDataBase
         return $this->FirstName;
     }
 
-    public function setFirstName(string $FirstName): static
+    public function setFirstName(?string $FirstName): static
     {
         $this->FirstName = $FirstName;
         return $this;
@@ -157,7 +157,7 @@ class CustomerDataBase
         return $this->IsCompany;
     }
 
-    public function setIsCompany(bool $IsCompany): static
+    public function setIsCompany(?bool $IsCompany): static
     {
         $this->IsCompany = $IsCompany;
         return $this;
@@ -191,7 +191,7 @@ class CustomerDataBase
         return $this->LastName;
     }
 
-    public function setLastName(string $LastName): static
+    public function setLastName(?string $LastName): static
     {
         $this->LastName = $LastName;
         return $this;
@@ -202,7 +202,7 @@ class CustomerDataBase
         return $this->MunicipalRegistration;
     }
 
-    public function setMunicipalRegistration(string $MunicipalRegistration): static
+    public function setMunicipalRegistration(?string $MunicipalRegistration): static
     {
         $this->MunicipalRegistration = $MunicipalRegistration;
         return $this;
@@ -213,7 +213,7 @@ class CustomerDataBase
         return $this->OriginCode;
     }
 
-    public function setOriginCode(string $OriginCode): static
+    public function setOriginCode(?string $OriginCode): static
     {
         $this->OriginCode = $OriginCode;
         return $this;
@@ -224,7 +224,7 @@ class CustomerDataBase
         return $this->PhoneData;
     }
 
-    public function setPhoneData(PhoneDataType $PhoneData): static
+    public function setPhoneData(?PhoneDataType $PhoneData): static
     {
         $this->PhoneData = $PhoneData;
         return $this;
@@ -235,7 +235,7 @@ class CustomerDataBase
         return $this->PriceListCode;
     }
 
-    public function setPriceListCode(string $PriceListCode): static
+    public function setPriceListCode(?string $PriceListCode): static
     {
         $this->PriceListCode = $PriceListCode;
         return $this;
@@ -246,7 +246,7 @@ class CustomerDataBase
         return $this->RegionalRegistration;
     }
 
-    public function setRegionalRegistration(string $RegionalRegistration): static
+    public function setRegionalRegistration(?string $RegionalRegistration): static
     {
         $this->RegionalRegistration = $RegionalRegistration;
         return $this;
@@ -257,7 +257,7 @@ class CustomerDataBase
         return $this->RiskLevel;
     }
 
-    public function setRiskLevel(string $RiskLevel): static
+    public function setRiskLevel(?string $RiskLevel): static
     {
         $this->RiskLevel = $RiskLevel;
         return $this;
@@ -268,7 +268,7 @@ class CustomerDataBase
         return $this->SalesPerson2Id;
     }
 
-    public function setSalesPerson2Id(string $SalesPerson2Id): static
+    public function setSalesPerson2Id(?string $SalesPerson2Id): static
     {
         $this->SalesPerson2Id = $SalesPerson2Id;
         return $this;
@@ -279,7 +279,7 @@ class CustomerDataBase
         return $this->SalesPerson3Id;
     }
 
-    public function setSalesPerson3Id(string $SalesPerson3Id): static
+    public function setSalesPerson3Id(?string $SalesPerson3Id): static
     {
         $this->SalesPerson3Id = $SalesPerson3Id;
         return $this;
@@ -290,7 +290,7 @@ class CustomerDataBase
         return $this->SalesPersonId;
     }
 
-    public function setSalesPersonId(string $SalesPersonId): static
+    public function setSalesPersonId(?string $SalesPersonId): static
     {
         $this->SalesPersonId = $SalesPersonId;
         return $this;
@@ -301,7 +301,7 @@ class CustomerDataBase
         return $this->TitleId;
     }
 
-    public function setTitleId(string $TitleId): static
+    public function setTitleId(?string $TitleId): static
     {
         $this->TitleId = $TitleId;
         return $this;
@@ -312,7 +312,7 @@ class CustomerDataBase
         return $this->UserDefinedBooleans;
     }
 
-    public function setUserDefinedBooleans(ArrayOfUserDefinedBoolean $UserDefinedBooleans): static
+    public function setUserDefinedBooleans(?ArrayOfUserDefinedBoolean $UserDefinedBooleans): static
     {
         $this->UserDefinedBooleans = $UserDefinedBooleans;
         return $this;
@@ -323,7 +323,7 @@ class CustomerDataBase
         return $this->UserDefinedData;
     }
 
-    public function setUserDefinedData(UserDefinedDataType $UserDefinedData): static
+    public function setUserDefinedData(?UserDefinedDataType $UserDefinedData): static
     {
         $this->UserDefinedData = $UserDefinedData;
         return $this;
@@ -334,7 +334,7 @@ class CustomerDataBase
         return $this->UserDefinedDates;
     }
 
-    public function setUserDefinedDates(ArrayOfUserDefinedDate $UserDefinedDates): static
+    public function setUserDefinedDates(?ArrayOfUserDefinedDate $UserDefinedDates): static
     {
         $this->UserDefinedDates = $UserDefinedDates;
         return $this;
@@ -345,7 +345,7 @@ class CustomerDataBase
         return $this->UserDefinedTexts;
     }
 
-    public function setUserDefinedTexts(ArrayOfUserDefinedText $UserDefinedTexts): static
+    public function setUserDefinedTexts(?ArrayOfUserDefinedText $UserDefinedTexts): static
     {
         $this->UserDefinedTexts = $UserDefinedTexts;
         return $this;
@@ -356,7 +356,7 @@ class CustomerDataBase
         return $this->UserDefinedValues;
     }
 
-    public function setUserDefinedValues(ArrayOfUserDefinedValue $UserDefinedValues): static
+    public function setUserDefinedValues(?ArrayOfUserDefinedValue $UserDefinedValues): static
     {
         $this->UserDefinedValues = $UserDefinedValues;
         return $this;
@@ -367,7 +367,7 @@ class CustomerDataBase
         return $this->UsualStoreId;
     }
 
-    public function setUsualStoreId(string $UsualStoreId): static
+    public function setUsualStoreId(?string $UsualStoreId): static
     {
         $this->UsualStoreId = $UsualStoreId;
         return $this;

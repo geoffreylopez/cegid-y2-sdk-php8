@@ -27,7 +27,7 @@ class ExceptionDetail
         return $this->HelpLink;
     }
 
-    public function setHelpLink(string $HelpLink): static
+    public function setHelpLink(?string $HelpLink): static
     {
         $this->HelpLink = $HelpLink;
         return $this;
@@ -38,7 +38,7 @@ class ExceptionDetail
         return $this->InnerException;
     }
 
-    public function setInnerException(ExceptionDetail $InnerException): static
+    public function setInnerException(?ExceptionDetail $InnerException): static
     {
         $this->InnerException = $InnerException;
         return $this;
@@ -49,7 +49,7 @@ class ExceptionDetail
         return $this->Message;
     }
 
-    public function setMessage(string $Message): static
+    public function setMessage(?string $Message): static
     {
         $this->Message = $Message;
         return $this;
@@ -60,7 +60,7 @@ class ExceptionDetail
         return $this->StackTrace;
     }
 
-    public function setStackTrace(string $StackTrace): static
+    public function setStackTrace(?string $StackTrace): static
     {
         $this->StackTrace = $StackTrace;
         return $this;
@@ -71,7 +71,7 @@ class ExceptionDetail
         return $this->TrackingId;
     }
 
-    public function setTrackingId(guid $TrackingId): static
+    public function setTrackingId(?guid $TrackingId): static
     {
         $this->TrackingId = $TrackingId;
         return $this;
@@ -82,7 +82,7 @@ class ExceptionDetail
         return $this->Type;
     }
 
-    public function setType(string $Type): static
+    public function setType(?string $Type): static
     {
         $this->Type = $Type;
         return $this;
