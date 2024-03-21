@@ -4,44 +4,27 @@ namespace Y2\Customer;
 
 class UserDefinedDate
 {
-    /**
-     * @var UserDefinedId $Id
-     */
-    protected $Id = null;
+    protected ?UserDefinedId $Id = null;
 
-    /**
-     * @var \DateTime $Value
-     */
-    protected $Value = null;
+    protected ?\DateTime $Value = null;
 
     public function __construct()
     {
 
     }
 
-    /**
-     * @return UserDefinedId
-     */
-    public function getId()
+    public function getId(): ?UserDefinedId
     {
         return $this->Id;
     }
 
-    /**
-     * @param UserDefinedId $Id
-     *
-     * @return UserDefinedDate
-     */
-    public function setId($Id)
+    public function setId(UserDefinedId $Id): static
     {
         $this->Id = $Id;
         return $this;
     }
 
-    /**
-     * @return \DateTime
-     */
-    public function getValue()
+    public function getValue(): \DateTime|bool|null
     {
         if ($this->Value == null) {
             return null;
@@ -54,12 +37,7 @@ class UserDefinedDate
         }
     }
 
-    /**
-     * @param \DateTime $Value
-     *
-     * @return UserDefinedDate
-     */
-    public function setValue(\DateTime $Value = null)
+    public function setValue(\DateTime $Value = null): static
     {
         if ($Value == null) {
             $this->Value = null;

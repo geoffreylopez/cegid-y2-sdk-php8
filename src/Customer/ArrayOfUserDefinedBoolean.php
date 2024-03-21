@@ -5,30 +5,19 @@ namespace Y2\Customer;
 class ArrayOfUserDefinedBoolean implements \ArrayAccess, \Iterator, \Countable
 {
 
-    /**
-     * @var UserDefinedBoolean[] $UserDefinedBoolean
-     */
-    protected $UserDefinedBoolean = null;
+    protected ?array $UserDefinedBoolean = null;
 
     public function __construct()
     {
 
     }
 
-    /**
-     * @return UserDefinedBoolean[]
-     */
-    public function getUserDefinedBoolean()
+    public function getUserDefinedBoolean(): ?array
     {
         return $this->UserDefinedBoolean;
     }
 
-    /**
-     * @param UserDefinedBoolean[] $UserDefinedBoolean
-     *
-     * @return ArrayOfUserDefinedBoolean
-     */
-    public function setUserDefinedBoolean(array $UserDefinedBoolean = null)
+    public function setUserDefinedBoolean(array $UserDefinedBoolean = null): static
     {
         $this->UserDefinedBoolean = $UserDefinedBoolean;
         return $this;
@@ -36,37 +25,24 @@ class ArrayOfUserDefinedBoolean implements \ArrayAccess, \Iterator, \Countable
 
     /**
      * ArrayAccess implementation
-     *
-     * @param mixed $offset An offset to check for
-     *
-     * @return boolean true on success or false on failure
      */
-    public function offsetExists($offset)
+    public function offsetExists(mixed $offset): bool
     {
         return isset($this->UserDefinedBoolean[$offset]);
     }
 
     /**
      * ArrayAccess implementation
-     *
-     * @param mixed $offset The offset to retrieve
-     *
-     * @return UserDefinedBoolean
      */
-    public function offsetGet($offset)
+    public function offsetGet(mixed $offset): mixed
     {
         return $this->UserDefinedBoolean[$offset];
     }
 
     /**
      * ArrayAccess implementation
-     *
-     * @param mixed              $offset The offset to assign the value to
-     * @param UserDefinedBoolean $value The value to set
-     *
-     * @return void
      */
-    public function offsetSet($offset, $value)
+    public function offsetSet(mixed $offset, $value): void
     {
         if (!isset($offset)) {
             $this->UserDefinedBoolean[] = $value;
@@ -82,17 +58,15 @@ class ArrayOfUserDefinedBoolean implements \ArrayAccess, \Iterator, \Countable
      *
      * @return void
      */
-    public function offsetUnset($offset)
+    public function offsetUnset(mixed $offset): void
     {
         unset($this->UserDefinedBoolean[$offset]);
     }
 
     /**
      * Iterator implementation
-     *
-     * @return UserDefinedBoolean Return the current element
      */
-    public function current()
+    public function current(): mixed
     {
         return current($this->UserDefinedBoolean);
     }
@@ -100,30 +74,24 @@ class ArrayOfUserDefinedBoolean implements \ArrayAccess, \Iterator, \Countable
     /**
      * Iterator implementation
      * Move forward to next element
-     *
-     * @return void
      */
-    public function next()
+    public function next(): void
     {
         next($this->UserDefinedBoolean);
     }
 
     /**
      * Iterator implementation
-     *
-     * @return string|null Return the key of the current element or null
      */
-    public function key()
+    public function key(): string|int|null
     {
         return key($this->UserDefinedBoolean);
     }
 
     /**
      * Iterator implementation
-     *
-     * @return boolean Return the validity of the current position
      */
-    public function valid()
+    public function valid(): bool
     {
         return $this->key() !== null;
     }
@@ -131,20 +99,16 @@ class ArrayOfUserDefinedBoolean implements \ArrayAccess, \Iterator, \Countable
     /**
      * Iterator implementation
      * Rewind the Iterator to the first element
-     *
-     * @return void
      */
-    public function rewind()
+    public function rewind(): void
     {
         reset($this->UserDefinedBoolean);
     }
 
     /**
      * Countable implementation
-     *
-     * @return UserDefinedBoolean Return count of elements
      */
-    public function count()
+    public function count(): int
     {
         return count($this->UserDefinedBoolean);
     }

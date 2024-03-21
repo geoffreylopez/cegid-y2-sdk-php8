@@ -4,30 +4,19 @@ namespace Y2\Customer;
 
 class ArrayOfUserField implements \ArrayAccess, \Iterator, \Countable
 {
-    /**
-     * @var UserField[] $UserField
-     */
-    protected $UserField = null;
+    protected ?array $UserField = null;
 
     public function __construct()
     {
 
     }
 
-    /**
-     * @return UserField[]
-     */
-    public function getUserField()
+    public function getUserField(): ?array
     {
         return $this->UserField;
     }
 
-    /**
-     * @param UserField[] $UserField
-     *
-     * @return ArrayOfUserField
-     */
-    public function setUserField(array $UserField = null)
+    public function setUserField(array $UserField = null): static
     {
         $this->UserField = $UserField;
         return $this;
@@ -35,37 +24,24 @@ class ArrayOfUserField implements \ArrayAccess, \Iterator, \Countable
 
     /**
      * ArrayAccess implementation
-     *
-     * @param mixed $offset An offset to check for
-     *
-     * @return boolean true on success or false on failure
      */
-    public function offsetExists($offset)
+    public function offsetExists(mixed $offset): bool
     {
         return isset($this->UserField[$offset]);
     }
 
     /**
      * ArrayAccess implementation
-     *
-     * @param mixed $offset The offset to retrieve
-     *
-     * @return UserField
      */
-    public function offsetGet($offset)
+    public function offsetGet(mixed $offset): mixed
     {
         return $this->UserField[$offset];
     }
 
     /**
      * ArrayAccess implementation
-     *
-     * @param mixed     $offset The offset to assign the value to
-     * @param UserField $value The value to set
-     *
-     * @return void
      */
-    public function offsetSet($offset, $value)
+    public function offsetSet(mixed $offset, $value): void
     {
         if (!isset($offset)) {
             $this->UserField[] = $value;
@@ -76,22 +52,16 @@ class ArrayOfUserField implements \ArrayAccess, \Iterator, \Countable
 
     /**
      * ArrayAccess implementation
-     *
-     * @param mixed $offset The offset to unset
-     *
-     * @return void
      */
-    public function offsetUnset($offset)
+    public function offsetUnset(mixed $offset): void
     {
         unset($this->UserField[$offset]);
     }
 
     /**
      * Iterator implementation
-     *
-     * @return UserField Return the current element
      */
-    public function current()
+    public function current(): mixed
     {
         return current($this->UserField);
     }
@@ -99,30 +69,24 @@ class ArrayOfUserField implements \ArrayAccess, \Iterator, \Countable
     /**
      * Iterator implementation
      * Move forward to next element
-     *
-     * @return void
      */
-    public function next()
+    public function next(): void
     {
         next($this->UserField);
     }
 
     /**
      * Iterator implementation
-     *
-     * @return string|null Return the key of the current element or null
      */
-    public function key()
+    public function key(): string|int|null
     {
         return key($this->UserField);
     }
 
     /**
      * Iterator implementation
-     *
-     * @return boolean Return the validity of the current position
      */
-    public function valid()
+    public function valid(): bool
     {
         return $this->key() !== null;
     }
@@ -130,20 +94,16 @@ class ArrayOfUserField implements \ArrayAccess, \Iterator, \Countable
     /**
      * Iterator implementation
      * Rewind the Iterator to the first element
-     *
-     * @return void
      */
-    public function rewind()
+    public function rewind(): void
     {
         reset($this->UserField);
     }
 
     /**
      * Countable implementation
-     *
-     * @return UserField Return count of elements
      */
-    public function count()
+    public function count(): int
     {
         return count($this->UserField);
     }

@@ -4,102 +4,58 @@ namespace Y2\Customer;
 
 class CustomerInputData extends CustomerData
 {
-    /**
-     * @var boolean $Closed
-     */
-    protected $Closed = null;
+    protected ?bool $Closed = null;
 
-    /**
-     * @var string $InvoiceCustomerId
-     */
-    protected $InvoiceCustomerId = null;
+    protected ?string $InvoiceCustomerId = null;
 
-    /**
-     * @var boolean $IsProspect
-     */
-    protected $IsProspect = null;
+    protected ?bool $IsProspect = null;
 
-    /**
-     * @var string $Notepad
-     */
-    protected $Notepad = null;
+    protected ?string $Notepad = null;
 
     public function __construct()
     {
         parent::__construct();
     }
 
-    /**
-     * @return boolean
-     */
-    public function getClosed()
+    public function getClosed(): ?bool
     {
         return $this->Closed;
     }
 
-    /**
-     * @param boolean $Closed
-     *
-     * @return CustomerInputData
-     */
-    public function setClosed($Closed)
+    public function setClosed($Closed): static
     {
         $this->Closed = $Closed;
         return $this;
     }
 
-    /**
-     * @return string
-     */
-    public function getInvoiceCustomerId()
+    public function getInvoiceCustomerId(): ?string
     {
         return $this->InvoiceCustomerId;
     }
 
-    /**
-     * @param string $InvoiceCustomerId
-     *
-     * @return CustomerInputData
-     */
-    public function setInvoiceCustomerId($InvoiceCustomerId)
+    public function setInvoiceCustomerId(string $InvoiceCustomerId): static
     {
         $this->InvoiceCustomerId = $InvoiceCustomerId;
         return $this;
     }
 
-    /**
-     * @return boolean
-     */
-    public function getIsProspect()
+    public function getIsProspect(): ?bool
     {
         return $this->IsProspect;
     }
 
-    /**
-     * @param boolean $IsProspect
-     *
-     * @return CustomerInputData
-     */
-    public function setIsProspect($IsProspect)
+    public function setIsProspect(bool $IsProspect): static
     {
         $this->IsProspect = $IsProspect;
         return $this;
     }
 
-    /**
-     * @return string
-     */
-    public function getNotepad()
+    public function getNotepad(): ?string
     {
         return $this->Notepad;
     }
 
-    /**
-     * @param string $Notepad
-     *
-     * @return CustomerInputData
-     */
-    public function setNotepad($Notepad)
+    public function setNotepad(string $Notepad): static
     {
         $this->Notepad = $Notepad;
         return $this;

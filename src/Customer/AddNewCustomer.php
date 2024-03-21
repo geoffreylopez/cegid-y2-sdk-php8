@@ -4,59 +4,33 @@ namespace Y2\Customer;
 
 class AddNewCustomer
 {
-    /**
-     * @var CustomerInsertData $customerData
-     */
-    protected $customerData = null;
+    protected ?CustomerInsertData $customerData = null;
 
-    /**
-     * @var RetailContext $clientContext
-     */
-    protected $clientContext = null;
+    protected ?RetailContext $clientContext = null;
 
-    /**
-     * @param CustomerInsertData $customerData
-     * @param RetailContext      $clientContext
-     */
-    public function __construct($customerData, $clientContext)
+    public function __construct(CustomerInsertData $customerData, RetailContext $clientContext)
     {
         $this->customerData  = $customerData;
         $this->clientContext = $clientContext;
     }
 
-    /**
-     * @return CustomerInsertData
-     */
-    public function getCustomerData()
+    public function getCustomerData(): ?CustomerInsertData
     {
         return $this->customerData;
     }
 
-    /**
-     * @param CustomerInsertData $customerData
-     *
-     * @return AddNewCustomer
-     */
-    public function setCustomerData($customerData)
+    public function setCustomerData(CustomerInsertData $customerData): static
     {
         $this->customerData = $customerData;
         return $this;
     }
 
-    /**
-     * @return RetailContext
-     */
-    public function getClientContext()
+    public function getClientContext(): ?RetailContext
     {
         return $this->clientContext;
     }
 
-    /**
-     * @param RetailContext $clientContext
-     *
-     * @return AddNewCustomer
-     */
-    public function setClientContext($clientContext)
+    public function setClientContext(RetailContext $clientContext): static
     {
         $this->clientContext = $clientContext;
         return $this;

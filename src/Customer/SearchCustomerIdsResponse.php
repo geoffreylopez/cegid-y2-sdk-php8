@@ -4,34 +4,19 @@ namespace Y2\Customer;
 
 class SearchCustomerIdsResponse
 {
+    protected ?ArrayOfCustomerQueryData $SearchCustomerIdsResult = null;
 
-    /**
-     * @var ArrayOfCustomerQueryData $SearchCustomerIdsResult
-     */
-    protected $SearchCustomerIdsResult = null;
-
-    /**
-     * @param ArrayOfCustomerQueryData $SearchCustomerIdsResult
-     */
-    public function __construct($SearchCustomerIdsResult)
+    public function __construct(ArrayOfCustomerQueryData $SearchCustomerIdsResult)
     {
         $this->SearchCustomerIdsResult = $SearchCustomerIdsResult;
     }
 
-    /**
-     * @return ArrayOfCustomerQueryData
-     */
-    public function getSearchCustomerIdsResult()
+    public function getSearchCustomerIdsResult(): ?ArrayOfCustomerQueryData
     {
         return $this->SearchCustomerIdsResult;
     }
 
-    /**
-     * @param ArrayOfCustomerQueryData $SearchCustomerIdsResult
-     *
-     * @return SearchCustomerIdsResponse
-     */
-    public function setSearchCustomerIdsResult($SearchCustomerIdsResult)
+    public function setSearchCustomerIdsResult(ArrayOfCustomerQueryData $SearchCustomerIdsResult): static
     {
         $this->SearchCustomerIdsResult = $SearchCustomerIdsResult;
         return $this;

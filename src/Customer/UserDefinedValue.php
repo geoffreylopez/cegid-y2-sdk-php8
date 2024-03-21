@@ -5,54 +5,32 @@ namespace Y2\Customer;
 class UserDefinedValue
 {
 
-    /**
-     * @var UserDefinedId $Id
-     */
-    protected $Id = null;
+    protected ?UserDefinedId $Id = null;
 
-    /**
-     * @var float $Value
-     */
-    protected $Value = null;
+    protected ?float $Value = null;
 
     public function __construct()
     {
 
     }
 
-    /**
-     * @return UserDefinedId
-     */
-    public function getId()
+    public function getId(): ?UserDefinedId
     {
         return $this->Id;
     }
 
-    /**
-     * @param UserDefinedId $Id
-     *
-     * @return UserDefinedValue
-     */
-    public function setId($Id)
+    public function setId(UserDefinedId $Id): static
     {
         $this->Id = $Id;
         return $this;
     }
 
-    /**
-     * @return float
-     */
-    public function getValue()
+    public function getValue(): ?float
     {
         return $this->Value;
     }
 
-    /**
-     * @param float $Value
-     *
-     * @return UserDefinedValue
-     */
-    public function setValue($Value)
+    public function setValue(float $Value): static
     {
         $this->Value = $Value;
         return $this;

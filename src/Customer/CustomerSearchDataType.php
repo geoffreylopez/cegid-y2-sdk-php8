@@ -4,90 +4,39 @@ namespace Y2\Customer;
 
 class CustomerSearchDataType extends CustomerDataBase
 {
-    /**
-     * @var string $ActivityCode
-     */
-    protected $ActivityCode = null;
+    protected ?string $ActivityCode = null;
 
-    /**
-     * @var string $Barcode
-     */
-    protected $Barcode = null;
+    protected ?string $Barcode = null;
 
-    /**
-     * @var BirthDateDataType $BirthDateData
-     */
-    protected $BirthDateData = null;
+    protected ?BirthDateDataType $BirthDateData = null;
 
-    /**
-     * @var boolean $Closed
-     */
-    protected $Closed = null;
+    protected ?bool $Closed = null;
 
-    /**
-     * @var string $CompanyIdNumber
-     */
-    protected $CompanyIdNumber = null;
+    protected ?string $CompanyIdNumber = null;
 
-    /**
-     * @var string $CreationStoreId
-     */
-    protected $CreationStoreId = null;
+    protected ?string $CreationStoreId = null;
 
-    /**
-     * @var string $CustomerId
-     */
-    protected $CustomerId = null;
+    protected ?string $CustomerId = null;
 
-    /**
-     * @var string $CustomerReference
-     */
-    protected $CustomerReference = null;
+    protected ?string $CustomerReference = null;
 
-    /**
-     * @var boolean $DirectMail
-     */
-    protected $DirectMail = null;
+    protected ?bool $DirectMail = null;
 
-    /**
-     * @var string $FiscalId
-     */
-    protected $FiscalId = null;
+    protected ?string $FiscalId = null;
 
-    /**
-     * @var string $InvoiceCustomerId
-     */
-    protected $InvoiceCustomerId = null;
+    protected ?string $InvoiceCustomerId = null;
 
-    /**
-     * @var boolean $IsCustomer
-     */
-    protected $IsCustomer = null;
+    protected ?bool $IsCustomer = null;
 
-    /**
-     * @var boolean $IsProspect
-     */
-    protected $IsProspect = null;
+    protected ?bool $IsProspect = null;
 
-    /**
-     * @var string $ItalianFiscalId
-     */
-    protected $ItalianFiscalId = null;
+    protected ?string $ItalianFiscalId = null;
 
-    /**
-     * @var int $MaxNumberOfCustomers
-     */
-    protected $MaxNumberOfCustomers = null;
+    protected ?int $MaxNumberOfCustomers = null;
 
-    /**
-     * @var NationalityDataType $NationalityData
-     */
-    protected $NationalityData = null;
+    protected ?NationalityDataType $NationalityData = null;
 
-    /**
-     * @var string $PassportNumber
-     */
-    protected $PassportNumber = null;
+    protected ?string $PassportNumber = null;
 
 
     public function __construct()
@@ -95,324 +44,188 @@ class CustomerSearchDataType extends CustomerDataBase
         parent::__construct();
     }
 
-    /**
-     * @return string
-     */
-    public function getActivityCode()
+    public function getActivityCode(): ?string
     {
         return $this->ActivityCode;
     }
 
-    /**
-     * @param string $ActivityCode
-     *
-     * @return CustomerSearchDataType
-     */
-    public function setActivityCode($ActivityCode)
+    public function setActivityCode(string $ActivityCode): static
     {
         $this->ActivityCode = $ActivityCode;
         return $this;
     }
 
-    /**
-     * @return string
-     */
-    public function getBarcode()
+    public function getBarcode(): ?string
     {
         return $this->Barcode;
     }
 
-    /**
-     * @param string $Barcode
-     *
-     * @return CustomerSearchDataType
-     */
-    public function setBarcode($Barcode)
+    public function setBarcode(string $Barcode): static
     {
         $this->Barcode = $Barcode;
         return $this;
     }
 
-    /**
-     * @return BirthDateDataType
-     */
-    public function getBirthDateData()
+    public function getBirthDateData(): ?BirthDateDataType
     {
         return $this->BirthDateData;
     }
 
-    /**
-     * @param BirthDateDataType $BirthDateData
-     *
-     * @return CustomerSearchDataType
-     */
-    public function setBirthDateData($BirthDateData)
+    public function setBirthDateData($BirthDateData): static
     {
         $this->BirthDateData = $BirthDateData;
         return $this;
     }
 
-    /**
-     * @return boolean
-     */
-    public function getClosed()
+    public function getClosed(): ?bool
     {
         return $this->Closed;
     }
 
-    /**
-     * @param boolean $Closed
-     *
-     * @return CustomerSearchDataType
-     */
-    public function setClosed($Closed)
+    public function setClosed(bool $Closed): static
     {
         $this->Closed = $Closed;
         return $this;
     }
 
-    /**
-     * @return string
-     */
-    public function getCompanyIdNumber()
+    public function getCompanyIdNumber(): ?string
     {
         return $this->CompanyIdNumber;
     }
 
-    /**
-     * @param string $CompanyIdNumber
-     *
-     * @return CustomerSearchDataType
-     */
-    public function setCompanyIdNumber($CompanyIdNumber)
+    public function setCompanyIdNumber(string $CompanyIdNumber): static
     {
         $this->CompanyIdNumber = $CompanyIdNumber;
         return $this;
     }
 
-    /**
-     * @return string
-     */
-    public function getCreationStoreId()
+    public function getCreationStoreId(): ?string
     {
         return $this->CreationStoreId;
     }
 
-    /**
-     * @param string $CreationStoreId
-     *
-     * @return CustomerSearchDataType
-     */
-    public function setCreationStoreId($CreationStoreId)
+    public function setCreationStoreId(string $CreationStoreId): static
     {
         $this->CreationStoreId = $CreationStoreId;
         return $this;
     }
 
-    /**
-     * @return string
-     */
-    public function getCustomerId()
+    public function getCustomerId(): ?string
     {
         return $this->CustomerId;
     }
 
-    /**
-     * @param string $CustomerId
-     *
-     * @return CustomerSearchDataType
-     */
-    public function setCustomerId($CustomerId)
+    public function setCustomerId(string $CustomerId): static
     {
         $this->CustomerId = $CustomerId;
         return $this;
     }
 
-    /**
-     * @return string
-     */
-    public function getCustomerReference()
+    public function getCustomerReference(): ?string
     {
         return $this->CustomerReference;
     }
 
-    /**
-     * @param string $CustomerReference
-     *
-     * @return CustomerSearchDataType
-     */
-    public function setCustomerReference($CustomerReference)
+    public function setCustomerReference(string $CustomerReference): static
     {
         $this->CustomerReference = $CustomerReference;
         return $this;
     }
 
-    /**
-     * @return boolean
-     */
-    public function getDirectMail()
+    public function getDirectMail(): ?bool
     {
         return $this->DirectMail;
     }
 
-    /**
-     * @param boolean $DirectMail
-     *
-     * @return CustomerSearchDataType
-     */
-    public function setDirectMail($DirectMail)
+    public function setDirectMail(bool $DirectMail): static
     {
         $this->DirectMail = $DirectMail;
         return $this;
     }
 
-    /**
-     * @return string
-     */
-    public function getFiscalId()
+    public function getFiscalId(): ?string
     {
         return $this->FiscalId;
     }
 
-    /**
-     * @param string $FiscalId
-     *
-     * @return CustomerSearchDataType
-     */
-    public function setFiscalId($FiscalId)
+    public function setFiscalId(string $FiscalId): static
     {
         $this->FiscalId = $FiscalId;
         return $this;
     }
 
-    /**
-     * @return string
-     */
-    public function getInvoiceCustomerId()
+    public function getInvoiceCustomerId(): ?string
     {
         return $this->InvoiceCustomerId;
     }
 
-    /**
-     * @param string $InvoiceCustomerId
-     *
-     * @return CustomerSearchDataType
-     */
-    public function setInvoiceCustomerId($InvoiceCustomerId)
+    public function setInvoiceCustomerId(string $InvoiceCustomerId): static
     {
         $this->InvoiceCustomerId = $InvoiceCustomerId;
         return $this;
     }
 
-    /**
-     * @return boolean
-     */
-    public function getIsCustomer()
+    public function getIsCustomer(): ?bool
     {
         return $this->IsCustomer;
     }
 
-    /**
-     * @param boolean $IsCustomer
-     *
-     * @return CustomerSearchDataType
-     */
-    public function setIsCustomer($IsCustomer)
+    public function setIsCustomer(bool $IsCustomer): static
     {
         $this->IsCustomer = $IsCustomer;
         return $this;
     }
 
-    /**
-     * @return boolean
-     */
-    public function getIsProspect()
+    public function getIsProspect(): ?bool
     {
         return $this->IsProspect;
     }
 
-    /**
-     * @param boolean $IsProspect
-     *
-     * @return CustomerSearchDataType
-     */
-    public function setIsProspect($IsProspect)
+    public function setIsProspect(bool $IsProspect): static
     {
         $this->IsProspect = $IsProspect;
         return $this;
     }
 
-    /**
-     * @return string
-     */
-    public function getItalianFiscalId()
+    public function getItalianFiscalId(): ?string
     {
         return $this->ItalianFiscalId;
     }
 
-    /**
-     * @param string $ItalianFiscalId
-     *
-     * @return CustomerSearchDataType
-     */
-    public function setItalianFiscalId($ItalianFiscalId)
+    public function setItalianFiscalId(string $ItalianFiscalId): static
     {
         $this->ItalianFiscalId = $ItalianFiscalId;
         return $this;
     }
 
-    /**
-     * @return int
-     */
-    public function getMaxNumberOfCustomers()
+    public function getMaxNumberOfCustomers(): ?int
     {
         return $this->MaxNumberOfCustomers;
     }
 
-    /**
-     * @param int $MaxNumberOfCustomers
-     *
-     * @return CustomerSearchDataType
-     */
-    public function setMaxNumberOfCustomers($MaxNumberOfCustomers)
+    public function setMaxNumberOfCustomers(int $MaxNumberOfCustomers): static
     {
         $this->MaxNumberOfCustomers = $MaxNumberOfCustomers;
         return $this;
     }
 
-    /**
-     * @return NationalityDataType
-     */
-    public function getNationalityData()
+    public function getNationalityData(): ?NationalityDataType
     {
         return $this->NationalityData;
     }
 
-    /**
-     * @param NationalityDataType $NationalityData
-     *
-     * @return CustomerSearchDataType
-     */
-    public function setNationalityData($NationalityData)
+    public function setNationalityData(NationalityDataType $NationalityData): static
     {
         $this->NationalityData = $NationalityData;
         return $this;
     }
 
-    /**
-     * @return string
-     */
-    public function getPassportNumber()
+    public function getPassportNumber(): ?string
     {
         return $this->PassportNumber;
     }
 
-    /**
-     * @param string $PassportNumber
-     *
-     * @return CustomerSearchDataType
-     */
-    public function setPassportNumber($PassportNumber)
+    public function setPassportNumber(string $PassportNumber): static
     {
         $this->PassportNumber = $PassportNumber;
         return $this;

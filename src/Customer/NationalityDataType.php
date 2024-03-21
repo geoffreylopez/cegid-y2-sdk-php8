@@ -4,126 +4,71 @@ namespace Y2\Customer;
 
 class NationalityDataType
 {
-    /**
-     * @var string $ISO2
-     */
-    protected $ISO2 = null;
+    protected ?string $ISO2 = null;
 
-    /**
-     * @var string $ISO3
-     */
-    protected $ISO3 = null;
+    protected ?string $ISO3 = null;
 
-    /**
-     * @var string $ISO3Num
-     */
-    protected $ISO3Num = null;
+    protected ?string $ISO3Num = null;
 
-    /**
-     * @var string $Id
-     */
-    protected $Id = null;
+    protected ?string $Id = null;
 
-    /**
-     * @var string $Label
-     */
-    protected $Label = null;
+    protected ?string $Label = null;
 
     public function __construct()
     {
 
     }
 
-    /**
-     * @return string
-     */
-    public function getISO2()
+    public function getISO2(): ?string
     {
         return $this->ISO2;
     }
 
-    /**
-     * @param string $ISO2
-     *
-     * @return NationalityDataType
-     */
-    public function setISO2($ISO2)
+    public function setISO2(string $ISO2): static
     {
         $this->ISO2 = $ISO2;
         return $this;
     }
 
-    /**
-     * @return string
-     */
-    public function getISO3()
+    public function getISO3(): ?string
     {
         return $this->ISO3;
     }
 
-    /**
-     * @param string $ISO3
-     *
-     * @return NationalityDataType
-     */
-    public function setISO3($ISO3)
+    public function setISO3(string $ISO3): static
     {
         $this->ISO3 = $ISO3;
         return $this;
     }
 
-    /**
-     * @return string
-     */
-    public function getISO3Num()
+    public function getISO3Num(): ?string
     {
         return $this->ISO3Num;
     }
 
-    /**
-     * @param string $ISO3Num
-     *
-     * @return NationalityDataType
-     */
-    public function setISO3Num($ISO3Num)
+    public function setISO3Num(string $ISO3Num): static
     {
         $this->ISO3Num = $ISO3Num;
         return $this;
     }
 
-    /**
-     * @return string
-     */
-    public function getId()
+    public function getId(): ?string
     {
         return $this->Id;
     }
 
-    /**
-     * @param string $Id
-     *
-     * @return NationalityDataType
-     */
-    public function setId($Id)
+    public function setId(string $Id): static
     {
         $this->Id = $Id;
         return $this;
     }
 
-    /**
-     * @return string
-     */
-    public function getLabel()
+    public function getLabel(): ?string
     {
         return $this->Label;
     }
 
-    /**
-     * @param string $Label
-     *
-     * @return NationalityDataType
-     */
-    public function setLabel($Label)
+    public function setLabel(string $Label): static
     {
         $this->Label = $Label;
         return $this;

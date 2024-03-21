@@ -4,30 +4,19 @@ namespace Y2\Customer;
 
 class ArrayOfUserDefinedValue implements \ArrayAccess, \Iterator, \Countable
 {
-    /**
-     * @var UserDefinedValue[] $UserDefinedValue
-     */
-    protected $UserDefinedValue = null;
+    protected ?array $UserDefinedValue = null;
 
     public function __construct()
     {
 
     }
 
-    /**
-     * @return UserDefinedValue[]
-     */
-    public function getUserDefinedValue()
+    public function getUserDefinedValue(): ?array
     {
         return $this->UserDefinedValue;
     }
 
-    /**
-     * @param UserDefinedValue[] $UserDefinedValue
-     *
-     * @return ArrayOfUserDefinedValue
-     */
-    public function setUserDefinedValue(array $UserDefinedValue = null)
+    public function setUserDefinedValue(array $UserDefinedValue = null): static
     {
         $this->UserDefinedValue = $UserDefinedValue;
         return $this;
@@ -35,37 +24,24 @@ class ArrayOfUserDefinedValue implements \ArrayAccess, \Iterator, \Countable
 
     /**
      * ArrayAccess implementation
-     *
-     * @param mixed $offset An offset to check for
-     *
-     * @return boolean true on success or false on failure
      */
-    public function offsetExists($offset)
+    public function offsetExists(mixed $offset): bool
     {
         return isset($this->UserDefinedValue[$offset]);
     }
 
     /**
      * ArrayAccess implementation
-     *
-     * @param mixed $offset The offset to retrieve
-     *
-     * @return UserDefinedValue
      */
-    public function offsetGet($offset)
+    public function offsetGet(mixed $offset): mixed
     {
         return $this->UserDefinedValue[$offset];
     }
 
     /**
      * ArrayAccess implementation
-     *
-     * @param mixed            $offset The offset to assign the value to
-     * @param UserDefinedValue $value The value to set
-     *
-     * @return void
      */
-    public function offsetSet($offset, $value)
+    public function offsetSet(mixed $offset, $value): void
     {
         if (!isset($offset)) {
             $this->UserDefinedValue[] = $value;
@@ -76,22 +52,16 @@ class ArrayOfUserDefinedValue implements \ArrayAccess, \Iterator, \Countable
 
     /**
      * ArrayAccess implementation
-     *
-     * @param mixed $offset The offset to unset
-     *
-     * @return void
      */
-    public function offsetUnset($offset)
+    public function offsetUnset(mixed $offset): void
     {
         unset($this->UserDefinedValue[$offset]);
     }
 
     /**
      * Iterator implementation
-     *
-     * @return UserDefinedValue Return the current element
      */
-    public function current()
+    public function current(): mixed
     {
         return current($this->UserDefinedValue);
     }
@@ -99,30 +69,24 @@ class ArrayOfUserDefinedValue implements \ArrayAccess, \Iterator, \Countable
     /**
      * Iterator implementation
      * Move forward to next element
-     *
-     * @return void
      */
-    public function next()
+    public function next(): void
     {
         next($this->UserDefinedValue);
     }
 
     /**
      * Iterator implementation
-     *
-     * @return string|null Return the key of the current element or null
      */
-    public function key()
+    public function key(): string|int|null
     {
         return key($this->UserDefinedValue);
     }
 
     /**
      * Iterator implementation
-     *
-     * @return boolean Return the validity of the current position
      */
-    public function valid()
+    public function valid(): bool
     {
         return $this->key() !== null;
     }
@@ -130,20 +94,16 @@ class ArrayOfUserDefinedValue implements \ArrayAccess, \Iterator, \Countable
     /**
      * Iterator implementation
      * Rewind the Iterator to the first element
-     *
-     * @return void
      */
-    public function rewind()
+    public function rewind(): void
     {
         reset($this->UserDefinedValue);
     }
 
     /**
      * Countable implementation
-     *
-     * @return UserDefinedValue Return count of elements
      */
-    public function count()
+    public function count(): int
     {
         return count($this->UserDefinedValue);
     }

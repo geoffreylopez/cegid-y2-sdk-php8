@@ -7,10 +7,7 @@ namespace Y2\Customer;
  */
 class CustomerWcfService extends \SoapClient
 {
-    /**
-     * @var array $classmap The defined classes
-     */
-    private static $classmap = array(
+    private static array $classmap = array(
         'HelloWorld'                       => 'Y2\\Customer\\HelloWorld',
         'RetailContext'                    => 'Y2\\Customer\\RetailContext',
         'HelloWorldResponse'               => 'Y2\\Customer\\HelloWorldResponse',
@@ -76,62 +73,32 @@ class CustomerWcfService extends \SoapClient
         parent::__construct($wsdl, $options);
     }
 
-    /**
-     * @param HelloWorld $parameters
-     *
-     * @return HelloWorldResponse
-     */
-    public function HelloWorld(HelloWorld $parameters)
+    public function HelloWorld(HelloWorld $parameters): HelloWorldResponse
     {
         return $this->__soapCall('HelloWorld', array($parameters));
     }
 
-    /**
-     * @param GetCustomerIdByReference $parameters
-     *
-     * @return GetCustomerIdByReferenceResponse
-     */
-    public function GetCustomerIdByReference(GetCustomerIdByReference $parameters)
+    public function GetCustomerIdByReference(GetCustomerIdByReference $parameters): GetCustomerIdByReferenceResponse
     {
         return $this->__soapCall('GetCustomerIdByReference', array($parameters));
     }
 
-    /**
-     * @param GetCustomerDetail $parameters
-     *
-     * @return GetCustomerDetailResponse
-     */
-    public function GetCustomerDetail(GetCustomerDetail $parameters)
+    public function GetCustomerDetail(GetCustomerDetail $parameters): GetCustomerDetailResponse
     {
         return $this->__soapCall('GetCustomerDetail', array($parameters));
     }
 
-    /**
-     * @param SearchCustomerIds $parameters
-     *
-     * @return SearchCustomerIdsResponse
-     */
-    public function SearchCustomerIds(SearchCustomerIds $parameters)
+    public function SearchCustomerIds(SearchCustomerIds $parameters): SearchCustomerIdsResponse
     {
         return $this->__soapCall('SearchCustomerIds', array($parameters));
     }
 
-    /**
-     * @param AddNewCustomer $parameters
-     *
-     * @return AddNewCustomerResponse
-     */
-    public function AddNewCustomer(AddNewCustomer $parameters)
+    public function AddNewCustomer(AddNewCustomer $parameters): AddNewCustomerResponse
     {
         return $this->__soapCall('AddNewCustomer', array($parameters));
     }
 
-    /**
-     * @param UpdateCustomer $parameters
-     *
-     * @return UpdateCustomerResponse
-     */
-    public function UpdateCustomer(UpdateCustomer $parameters)
+    public function UpdateCustomer(UpdateCustomer $parameters): UpdateCustomerResponse
     {
         return $this->__soapCall('UpdateCustomer', array($parameters));
     }

@@ -4,69 +4,37 @@ namespace Y2\Customer;
 
 class UserField
 {
-    /**
-     * @var boolean $BooleanValue
-     */
-    protected $BooleanValue = null;
+    protected ?bool $BooleanValue = null;
 
-    /**
-     * @var \DateTime $DateValue
-     */
-    protected $DateValue = null;
+    protected ?\DateTime $DateValue = null;
 
-    /**
-     * @var int $Id
-     */
-    protected $Id = null;
+    protected ?int $Id = null;
 
-    /**
-     * @var string $ListElementValue
-     */
-    protected $ListElementValue = null;
+    protected ?string $ListElementValue = null;
 
-    /**
-     * @var float $NumberValue
-     */
-    protected $NumberValue = null;
+    protected ?float $NumberValue = null;
 
-    /**
-     * @var string $TextValue
-     */
-    protected $TextValue = null;
+    protected ?string $TextValue = null;
 
-    /**
-     * @var UserFieldKind $ValueType
-     */
-    protected $ValueType = null;
+    protected ?UserFieldKind $ValueType = null;
 
     public function __construct()
     {
 
     }
 
-    /**
-     * @return boolean
-     */
-    public function getBooleanValue()
+    public function getBooleanValue(): ?bool
     {
         return $this->BooleanValue;
     }
 
-    /**
-     * @param boolean $BooleanValue
-     *
-     * @return UserField
-     */
-    public function setBooleanValue($BooleanValue)
+    public function setBooleanValue(bool $BooleanValue): static
     {
         $this->BooleanValue = $BooleanValue;
         return $this;
     }
 
-    /**
-     * @return bool|\DateTime|null
-     */
-    public function getDateValue()
+    public function getDateValue(): \DateTime|bool|null
     {
         if ($this->DateValue == null) {
             return null;
@@ -79,12 +47,7 @@ class UserField
         }
     }
 
-    /**
-     * @param \DateTime $DateValue
-     *
-     * @return UserField
-     */
-    public function setDateValue(\DateTime $DateValue = null)
+    public function setDateValue(\DateTime|null $DateValue = null): static
     {
         if ($DateValue == null) {
             $this->DateValue = null;
@@ -94,96 +57,56 @@ class UserField
         return $this;
     }
 
-    /**
-     * @return int
-     */
-    public function getId()
+    public function getId(): ?int
     {
         return $this->Id;
     }
 
-    /**
-     * @param int $Id
-     *
-     * @return UserField
-     */
-    public function setId($Id)
+    public function setId(int $Id): static
     {
         $this->Id = $Id;
         return $this;
     }
 
-    /**
-     * @return string
-     */
-    public function getListElementValue()
+    public function getListElementValue(): ?string
     {
         return $this->ListElementValue;
     }
 
-    /**
-     * @param string $ListElementValue
-     *
-     * @return UserField
-     */
-    public function setListElementValue($ListElementValue)
+    public function setListElementValue(string $ListElementValue): static
     {
         $this->ListElementValue = $ListElementValue;
         return $this;
     }
 
-    /**
-     * @return float
-     */
-    public function getNumberValue()
+    public function getNumberValue(): ?float
     {
         return $this->NumberValue;
     }
 
-    /**
-     * @param float $NumberValue
-     *
-     * @return UserField
-     */
-    public function setNumberValue($NumberValue)
+    public function setNumberValue(float $NumberValue): static
     {
         $this->NumberValue = $NumberValue;
         return $this;
     }
 
-    /**
-     * @return string
-     */
-    public function getTextValue()
+    public function getTextValue(): ?string
     {
         return $this->TextValue;
     }
 
-    /**
-     * @param string $TextValue
-     *
-     * @return UserField
-     */
-    public function setTextValue($TextValue)
+    public function setTextValue(string $TextValue): static
     {
         $this->TextValue = $TextValue;
         return $this;
     }
 
-    /**
-     * @return UserFieldKind
-     */
-    public function getValueType()
+    public function getValueType(): ?UserFieldKind
     {
         return $this->ValueType;
     }
 
-    /**
-     * @param UserFieldKind $ValueType
-     *
-     * @return UserField
-     */
-    public function setValueType($ValueType)
+    public function setValueType(UserFieldKind $ValueType): static
     {
         $this->ValueType = $ValueType;
         return $this;

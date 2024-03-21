@@ -4,33 +4,19 @@ namespace Y2\Customer;
 
 class GetCustomerIdByReferenceResponse
 {
-    /**
-     * @var string $GetCustomerIdByReferenceResult
-     */
-    protected $GetCustomerIdByReferenceResult = null;
+    protected ?string $GetCustomerIdByReferenceResult = null;
 
-    /**
-     * @param string $GetCustomerIdByReferenceResult
-     */
-    public function __construct($GetCustomerIdByReferenceResult)
+    public function __construct(string $GetCustomerIdByReferenceResult)
     {
         $this->GetCustomerIdByReferenceResult = $GetCustomerIdByReferenceResult;
     }
 
-    /**
-     * @return string
-     */
-    public function getGetCustomerIdByReferenceResult()
+    public function getGetCustomerIdByReferenceResult(): ?string
     {
         return $this->GetCustomerIdByReferenceResult;
     }
 
-    /**
-     * @param string $GetCustomerIdByReferenceResult
-     *
-     * @return GetCustomerIdByReferenceResponse
-     */
-    public function setGetCustomerIdByReferenceResult($GetCustomerIdByReferenceResult)
+    public function setGetCustomerIdByReferenceResult(string $GetCustomerIdByReferenceResult): static
     {
         $this->GetCustomerIdByReferenceResult = $GetCustomerIdByReferenceResult;
         return $this;

@@ -4,33 +4,19 @@ namespace Y2\Customer;
 
 class AddNewCustomerResponse
 {
-    /**
-     * @var string $AddNewCustomerResult
-     */
-    protected $AddNewCustomerResult = null;
+    protected ?string $AddNewCustomerResult = null;
 
-    /**
-     * @param string $AddNewCustomerResult
-     */
-    public function __construct($AddNewCustomerResult)
+    public function __construct(string $AddNewCustomerResult)
     {
         $this->AddNewCustomerResult = $AddNewCustomerResult;
     }
 
-    /**
-     * @return string
-     */
-    public function getAddNewCustomerResult()
+    public function getAddNewCustomerResult(): ?string
     {
         return $this->AddNewCustomerResult;
     }
 
-    /**
-     * @param string $AddNewCustomerResult
-     *
-     * @return AddNewCustomerResponse
-     */
-    public function setAddNewCustomerResult($AddNewCustomerResult)
+    public function setAddNewCustomerResult(string $AddNewCustomerResult): static
     {
         $this->AddNewCustomerResult = $AddNewCustomerResult;
         return $this;

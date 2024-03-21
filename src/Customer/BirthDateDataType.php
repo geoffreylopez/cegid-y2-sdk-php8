@@ -4,20 +4,11 @@ namespace Y2\Customer;
 
 class BirthDateDataType
 {
-    /**
-     * @var int $BirthDateDay
-     */
-    protected $BirthDateDay = null;
+    protected ?int $BirthDateDay = null;
 
-    /**
-     * @var int $BirthDateMonth
-     */
-    protected $BirthDateMonth = null;
+    protected ?int $BirthDateMonth = null;
 
-    /**
-     * @var int $BirthDateYear
-     */
-    protected $BirthDateYear = null;
+    protected ?int $BirthDateYear = null;
 
 
     public function __construct()
@@ -25,58 +16,34 @@ class BirthDateDataType
 
     }
 
-    /**
-     * @return int
-     */
-    public function getBirthDateDay()
+    public function getBirthDateDay(): ?int
     {
         return $this->BirthDateDay;
     }
 
-    /**
-     * @param int $BirthDateDay
-     *
-     * @return BirthDateDataType
-     */
-    public function setBirthDateDay($BirthDateDay)
+    public function setBirthDateDay(int $BirthDateDay): static
     {
         $this->BirthDateDay = $BirthDateDay;
         return $this;
     }
 
-    /**
-     * @return int
-     */
-    public function getBirthDateMonth()
+    public function getBirthDateMonth(): ?int
     {
         return $this->BirthDateMonth;
     }
 
-    /**
-     * @param int $BirthDateMonth
-     *
-     * @return BirthDateDataType
-     */
-    public function setBirthDateMonth($BirthDateMonth)
+    public function setBirthDateMonth($BirthDateMonth): static
     {
         $this->BirthDateMonth = $BirthDateMonth;
         return $this;
     }
 
-    /**
-     * @return int
-     */
-    public function getBirthDateYear()
+    public function getBirthDateYear(): ?int
     {
         return $this->BirthDateYear;
     }
 
-    /**
-     * @param int $BirthDateYear
-     *
-     * @return BirthDateDataType
-     */
-    public function setBirthDateYear($BirthDateYear)
+    public function setBirthDateYear(int $BirthDateYear): static
     {
         $this->BirthDateYear = $BirthDateYear;
         return $this;

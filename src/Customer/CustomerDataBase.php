@@ -4,140 +4,59 @@ namespace Y2\Customer;
 
 class CustomerDataBase
 {
-    /**
-     * @var string $ActivitySectorCode
-     */
-    protected $ActivitySectorCode = null;
+    protected ?string $ActivitySectorCode = null;
 
-    /**
-     * @var AddressDataType $AddressData
-     */
-    protected $AddressData = null;
+    protected ?AddressDataType $AddressData = null;
 
-    /**
-     * @var string $AlternateFirstName
-     */
-    protected $AlternateFirstName = null;
+    protected ?string $AlternateFirstName = null;
 
-    /**
-     * @var string $AlternateLastName
-     */
-    protected $AlternateLastName = null;
+    protected ?string $AlternateLastName = null;
 
-    /**
-     * @var string $BusinessAreaCode
-     */
-    protected $BusinessAreaCode = null;
+    protected ?string $BusinessAreaCode = null;
 
-    /**
-     * @var string $CpfCnpjCode
-     */
-    protected $CpfCnpjCode = null;
+    protected ?string $CpfCnpjCode = null;
 
-    /**
-     * @var EmailDataType $EmailData
-     */
-    protected $EmailData = null;
+    protected ?EmailDataType $EmailData = null;
 
-    /**
-     * @var string $FirstName
-     */
-    protected $FirstName = null;
+    protected ?string $FirstName = null;
 
-    /**
-     * @var boolean $IsCompany
-     */
-    protected $IsCompany = null;
+    protected ?bool $IsCompany = null;
 
-    /**
-     * @var \DateTime $LastModificationDate
-     */
-    protected $LastModificationDate = null;
+    protected ?\DateTime $LastModificationDate = null;
 
-    /**
-     * @var string $LastName
-     */
-    protected $LastName = null;
+    protected ?string $LastName = null;
 
-    /**
-     * @var string $MunicipalRegistration
-     */
-    protected $MunicipalRegistration = null;
+    protected ?string $MunicipalRegistration = null;
 
-    /**
-     * @var string $OriginCode
-     */
-    protected $OriginCode = null;
+    protected ?string $OriginCode = null;
 
-    /**
-     * @var PhoneDataType $PhoneData
-     */
-    protected $PhoneData = null;
+    protected ?PhoneDataType $PhoneData = null;
 
-    /**
-     * @var string $PriceListCode
-     */
-    protected $PriceListCode = null;
+    protected ?string $PriceListCode = null;
 
-    /**
-     * @var string $RegionalRegistration
-     */
-    protected $RegionalRegistration = null;
+    protected ?string $RegionalRegistration = null;
 
-    /**
-     * @var string $RiskLevel
-     */
-    protected $RiskLevel = null;
+    protected ?string $RiskLevel = null;
 
-    /**
-     * @var string $SalesPerson2Id
-     */
-    protected $SalesPerson2Id = null;
+    protected ?string $SalesPerson2Id = null;
 
-    /**
-     * @var string $SalesPerson3Id
-     */
-    protected $SalesPerson3Id = null;
+    protected ?string $SalesPerson3Id = null;
 
-    /**
-     * @var string $SalesPersonId
-     */
-    protected $SalesPersonId = null;
+    protected ?string $SalesPersonId = null;
 
-    /**
-     * @var string $TitleId
-     */
-    protected $TitleId = null;
+    protected ?string $TitleId = null;
 
-    /**
-     * @var ArrayOfUserDefinedBoolean $UserDefinedBooleans
-     */
-    protected $UserDefinedBooleans = null;
+    protected ?ArrayOfUserDefinedBoolean $UserDefinedBooleans = null;
 
-    /**
-     * @var UserDefinedDataType $UserDefinedData
-     */
-    protected $UserDefinedData = null;
+    protected ?UserDefinedDataType $UserDefinedData = null;
 
-    /**
-     * @var ArrayOfUserDefinedDate $UserDefinedDates
-     */
-    protected $UserDefinedDates = null;
+    protected ?ArrayOfUserDefinedDate $UserDefinedDates = null;
 
-    /**
-     * @var ArrayOfUserDefinedText $UserDefinedTexts
-     */
-    protected $UserDefinedTexts = null;
+    protected ?ArrayOfUserDefinedText $UserDefinedTexts = null;
 
-    /**
-     * @var ArrayOfUserDefinedValue $UserDefinedValues
-     */
-    protected $UserDefinedValues = null;
+    protected ?ArrayOfUserDefinedValue $UserDefinedValues = null;
 
-    /**
-     * @var string $UsualStoreId
-     */
-    protected $UsualStoreId = null;
+    protected ?string $UsualStoreId = null;
 
 
     public function __construct()
@@ -145,181 +64,106 @@ class CustomerDataBase
 
     }
 
-    /**
-     * @return string
-     */
-    public function getActivitySectorCode()
+    public function getActivitySectorCode(): ?string
     {
         return $this->ActivitySectorCode;
     }
 
-    /**
-     * @param string $ActivitySectorCode
-     *
-     * @return CustomerDataBase
-     */
-    public function setActivitySectorCode($ActivitySectorCode)
+    public function setActivitySectorCode(string $ActivitySectorCode): static
     {
         $this->ActivitySectorCode = $ActivitySectorCode;
         return $this;
     }
 
-    /**
-     * @return AddressDataType
-     */
-    public function getAddressData()
+    public function getAddressData(): ?AddressDataType
     {
         return $this->AddressData;
     }
 
-    /**
-     * @param AddressDataType $AddressData
-     *
-     * @return CustomerDataBase
-     */
-    public function setAddressData($AddressData)
+    public function setAddressData(AddressDataType $AddressData): static
     {
         $this->AddressData = $AddressData;
         return $this;
     }
 
-    /**
-     * @return string
-     */
-    public function getAlternateFirstName()
+    public function getAlternateFirstName(): ?string
     {
         return $this->AlternateFirstName;
     }
 
-    /**
-     * @param string $AlternateFirstName
-     *
-     * @return CustomerDataBase
-     */
-    public function setAlternateFirstName($AlternateFirstName)
+    public function setAlternateFirstName(string $AlternateFirstName): static
     {
         $this->AlternateFirstName = $AlternateFirstName;
         return $this;
     }
 
-    /**
-     * @return string
-     */
-    public function getAlternateLastName()
+    public function getAlternateLastName(): ?string
     {
         return $this->AlternateLastName;
     }
 
-    /**
-     * @param string $AlternateLastName
-     *
-     * @return CustomerDataBase
-     */
-    public function setAlternateLastName($AlternateLastName)
+    public function setAlternateLastName(string $AlternateLastName): static
     {
         $this->AlternateLastName = $AlternateLastName;
         return $this;
     }
 
-    /**
-     * @return string
-     */
-    public function getBusinessAreaCode()
+    public function getBusinessAreaCode(): ?string
     {
         return $this->BusinessAreaCode;
     }
 
-    /**
-     * @param string $BusinessAreaCode
-     *
-     * @return CustomerDataBase
-     */
-    public function setBusinessAreaCode($BusinessAreaCode)
+    public function setBusinessAreaCode(string $BusinessAreaCode): static
     {
         $this->BusinessAreaCode = $BusinessAreaCode;
         return $this;
     }
 
-    /**
-     * @return string
-     */
-    public function getCpfCnpjCode()
+    public function getCpfCnpjCode(): ?string
     {
         return $this->CpfCnpjCode;
     }
 
-    /**
-     * @param string $CpfCnpjCode
-     *
-     * @return CustomerDataBase
-     */
-    public function setCpfCnpjCode($CpfCnpjCode)
+    public function setCpfCnpjCode(string $CpfCnpjCode): static
     {
         $this->CpfCnpjCode = $CpfCnpjCode;
         return $this;
     }
 
-    /**
-     * @return EmailDataType
-     */
-    public function getEmailData()
+    public function getEmailData(): ?EmailDataType
     {
         return $this->EmailData;
     }
 
-    /**
-     * @param EmailDataType $EmailData
-     *
-     * @return CustomerDataBase
-     */
-    public function setEmailData($EmailData)
+    public function setEmailData(EmailDataType $EmailData): static
     {
         $this->EmailData = $EmailData;
         return $this;
     }
 
-    /**
-     * @return string
-     */
-    public function getFirstName()
+    public function getFirstName(): ?string
     {
         return $this->FirstName;
     }
 
-    /**
-     * @param string $FirstName
-     *
-     * @return CustomerDataBase
-     */
-    public function setFirstName($FirstName)
+    public function setFirstName(string $FirstName): static
     {
         $this->FirstName = $FirstName;
         return $this;
     }
 
-    /**
-     * @return boolean
-     */
-    public function getIsCompany()
+    public function getIsCompany(): ?bool
     {
         return $this->IsCompany;
     }
 
-    /**
-     * @param boolean $IsCompany
-     *
-     * @return CustomerDataBase
-     */
-    public function setIsCompany($IsCompany)
+    public function setIsCompany(bool $IsCompany): static
     {
         $this->IsCompany = $IsCompany;
         return $this;
     }
 
-    /**
-     * @return \DateTime
-     */
-    public function getLastModificationDate()
+    public function getLastModificationDate(): \DateTime|bool|null
     {
         if ($this->LastModificationDate == null) {
             return null;
@@ -332,12 +176,7 @@ class CustomerDataBase
         }
     }
 
-    /**
-     * @param \DateTime $LastModificationDate
-     *
-     * @return CustomerDataBase
-     */
-    public function setLastModificationDate(\DateTime $LastModificationDate = null)
+    public function setLastModificationDate(\DateTime|null $LastModificationDate = null): static
     {
         if ($LastModificationDate == null) {
             $this->LastModificationDate = null;
@@ -347,324 +186,188 @@ class CustomerDataBase
         return $this;
     }
 
-    /**
-     * @return string
-     */
-    public function getLastName()
+    public function getLastName(): ?string
     {
         return $this->LastName;
     }
 
-    /**
-     * @param string $LastName
-     *
-     * @return CustomerDataBase
-     */
-    public function setLastName($LastName)
+    public function setLastName(string $LastName): static
     {
         $this->LastName = $LastName;
         return $this;
     }
 
-    /**
-     * @return string
-     */
-    public function getMunicipalRegistration()
+    public function getMunicipalRegistration(): ?string
     {
         return $this->MunicipalRegistration;
     }
 
-    /**
-     * @param string $MunicipalRegistration
-     *
-     * @return CustomerDataBase
-     */
-    public function setMunicipalRegistration($MunicipalRegistration)
+    public function setMunicipalRegistration(string $MunicipalRegistration): static
     {
         $this->MunicipalRegistration = $MunicipalRegistration;
         return $this;
     }
 
-    /**
-     * @return string
-     */
-    public function getOriginCode()
+    public function getOriginCode(): ?string
     {
         return $this->OriginCode;
     }
 
-    /**
-     * @param string $OriginCode
-     *
-     * @return CustomerDataBase
-     */
-    public function setOriginCode($OriginCode)
+    public function setOriginCode(string $OriginCode): static
     {
         $this->OriginCode = $OriginCode;
         return $this;
     }
 
-    /**
-     * @return PhoneDataType
-     */
-    public function getPhoneData()
+    public function getPhoneData(): ?PhoneDataType
     {
         return $this->PhoneData;
     }
 
-    /**
-     * @param PhoneDataType $PhoneData
-     *
-     * @return CustomerDataBase
-     */
-    public function setPhoneData($PhoneData)
+    public function setPhoneData(PhoneDataType $PhoneData): static
     {
         $this->PhoneData = $PhoneData;
         return $this;
     }
 
-    /**
-     * @return string
-     */
-    public function getPriceListCode()
+    public function getPriceListCode(): ?string
     {
         return $this->PriceListCode;
     }
 
-    /**
-     * @param string $PriceListCode
-     *
-     * @return CustomerDataBase
-     */
-    public function setPriceListCode($PriceListCode)
+    public function setPriceListCode(string $PriceListCode): static
     {
         $this->PriceListCode = $PriceListCode;
         return $this;
     }
 
-    /**
-     * @return string
-     */
-    public function getRegionalRegistration()
+    public function getRegionalRegistration(): ?string
     {
         return $this->RegionalRegistration;
     }
 
-    /**
-     * @param string $RegionalRegistration
-     *
-     * @return CustomerDataBase
-     */
-    public function setRegionalRegistration($RegionalRegistration)
+    public function setRegionalRegistration(string $RegionalRegistration): static
     {
         $this->RegionalRegistration = $RegionalRegistration;
         return $this;
     }
 
-    /**
-     * @return string
-     */
-    public function getRiskLevel()
+    public function getRiskLevel(): ?string
     {
         return $this->RiskLevel;
     }
 
-    /**
-     * @param string $RiskLevel
-     *
-     * @return CustomerDataBase
-     */
-    public function setRiskLevel($RiskLevel)
+    public function setRiskLevel(string $RiskLevel): static
     {
         $this->RiskLevel = $RiskLevel;
         return $this;
     }
 
-    /**
-     * @return string
-     */
-    public function getSalesPerson2Id()
+    public function getSalesPerson2Id(): ?string
     {
         return $this->SalesPerson2Id;
     }
 
-    /**
-     * @param string $SalesPerson2Id
-     *
-     * @return CustomerDataBase
-     */
-    public function setSalesPerson2Id($SalesPerson2Id)
+    public function setSalesPerson2Id(string $SalesPerson2Id): static
     {
         $this->SalesPerson2Id = $SalesPerson2Id;
         return $this;
     }
 
-    /**
-     * @return string
-     */
-    public function getSalesPerson3Id()
+    public function getSalesPerson3Id(): ?string
     {
         return $this->SalesPerson3Id;
     }
 
-    /**
-     * @param string $SalesPerson3Id
-     *
-     * @return CustomerDataBase
-     */
-    public function setSalesPerson3Id($SalesPerson3Id)
+    public function setSalesPerson3Id(string $SalesPerson3Id): static
     {
         $this->SalesPerson3Id = $SalesPerson3Id;
         return $this;
     }
 
-    /**
-     * @return string
-     */
-    public function getSalesPersonId()
+    public function getSalesPersonId(): ?string
     {
         return $this->SalesPersonId;
     }
 
-    /**
-     * @param string $SalesPersonId
-     *
-     * @return CustomerDataBase
-     */
-    public function setSalesPersonId($SalesPersonId)
+    public function setSalesPersonId(string $SalesPersonId): static
     {
         $this->SalesPersonId = $SalesPersonId;
         return $this;
     }
 
-    /**
-     * @return string
-     */
-    public function getTitleId()
+    public function getTitleId(): ?string
     {
         return $this->TitleId;
     }
 
-    /**
-     * @param string $TitleId
-     *
-     * @return CustomerDataBase
-     */
-    public function setTitleId($TitleId)
+    public function setTitleId(string $TitleId): static
     {
         $this->TitleId = $TitleId;
         return $this;
     }
 
-    /**
-     * @return ArrayOfUserDefinedBoolean
-     */
-    public function getUserDefinedBooleans()
+    public function getUserDefinedBooleans(): ?ArrayOfUserDefinedBoolean
     {
         return $this->UserDefinedBooleans;
     }
 
-    /**
-     * @param ArrayOfUserDefinedBoolean $UserDefinedBooleans
-     *
-     * @return CustomerDataBase
-     */
-    public function setUserDefinedBooleans($UserDefinedBooleans)
+    public function setUserDefinedBooleans(ArrayOfUserDefinedBoolean $UserDefinedBooleans): static
     {
         $this->UserDefinedBooleans = $UserDefinedBooleans;
         return $this;
     }
 
-    /**
-     * @return UserDefinedDataType
-     */
-    public function getUserDefinedData()
+    public function getUserDefinedData(): ?UserDefinedDataType
     {
         return $this->UserDefinedData;
     }
 
-    /**
-     * @param UserDefinedDataType $UserDefinedData
-     *
-     * @return CustomerDataBase
-     */
-    public function setUserDefinedData($UserDefinedData)
+    public function setUserDefinedData(UserDefinedDataType $UserDefinedData): static
     {
         $this->UserDefinedData = $UserDefinedData;
         return $this;
     }
 
-    /**
-     * @return ArrayOfUserDefinedDate
-     */
-    public function getUserDefinedDates()
+    public function getUserDefinedDates(): ?ArrayOfUserDefinedDate
     {
         return $this->UserDefinedDates;
     }
 
-    /**
-     * @param ArrayOfUserDefinedDate $UserDefinedDates
-     *
-     * @return CustomerDataBase
-     */
-    public function setUserDefinedDates($UserDefinedDates)
+    public function setUserDefinedDates(ArrayOfUserDefinedDate $UserDefinedDates): static
     {
         $this->UserDefinedDates = $UserDefinedDates;
         return $this;
     }
 
-    /**
-     * @return ArrayOfUserDefinedText
-     */
-    public function getUserDefinedTexts()
+    public function getUserDefinedTexts(): ?ArrayOfUserDefinedText
     {
         return $this->UserDefinedTexts;
     }
 
-    /**
-     * @param ArrayOfUserDefinedText $UserDefinedTexts
-     *
-     * @return CustomerDataBase
-     */
-    public function setUserDefinedTexts($UserDefinedTexts)
+    public function setUserDefinedTexts(ArrayOfUserDefinedText $UserDefinedTexts): static
     {
         $this->UserDefinedTexts = $UserDefinedTexts;
         return $this;
     }
 
-    /**
-     * @return ArrayOfUserDefinedValue
-     */
-    public function getUserDefinedValues()
+    public function getUserDefinedValues(): ?ArrayOfUserDefinedValue
     {
         return $this->UserDefinedValues;
     }
 
-    /**
-     * @param ArrayOfUserDefinedValue $UserDefinedValues
-     *
-     * @return CustomerDataBase
-     */
-    public function setUserDefinedValues($UserDefinedValues)
+    public function setUserDefinedValues(ArrayOfUserDefinedValue $UserDefinedValues): static
     {
         $this->UserDefinedValues = $UserDefinedValues;
         return $this;
     }
 
-    /**
-     * @return string
-     */
-    public function getUsualStoreId()
+    public function getUsualStoreId(): ?string
     {
         return $this->UsualStoreId;
     }
 
-    /**
-     * @param string $UsualStoreId
-     *
-     * @return CustomerDataBase
-     */
-    public function setUsualStoreId($UsualStoreId)
+    public function setUsualStoreId(string $UsualStoreId): static
     {
         $this->UsualStoreId = $UsualStoreId;
         return $this;

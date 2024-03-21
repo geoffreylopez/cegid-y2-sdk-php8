@@ -4,54 +4,32 @@ namespace Y2\Customer;
 
 class CustomerInsertData extends CustomerInputData
 {
-    /**
-     * @var InternalGuid $CustomerGuid
-     */
-    protected $CustomerGuid = null;
+    protected ?InternalGuid $CustomerGuid = null;
 
-    /**
-     * @var string $CustomerId
-     */
-    protected $CustomerId = null;
+    protected ?string $CustomerId = null;
 
     public function __construct()
     {
         parent::__construct();
     }
 
-    /**
-     * @return InternalGuid
-     */
-    public function getCustomerGuid()
+    public function getCustomerGuid(): ?InternalGuid
     {
         return $this->CustomerGuid;
     }
 
-    /**
-     * @param InternalGuid $CustomerGuid
-     *
-     * @return CustomerInsertData
-     */
-    public function setCustomerGuid($CustomerGuid)
+    public function setCustomerGuid(InternalGuid $CustomerGuid): static
     {
         $this->CustomerGuid = $CustomerGuid;
         return $this;
     }
 
-    /**
-     * @return string
-     */
-    public function getCustomerId()
+    public function getCustomerId(): ?string
     {
         return $this->CustomerId;
     }
 
-    /**
-     * @param string $CustomerId
-     *
-     * @return CustomerInsertData
-     */
-    public function setCustomerId($CustomerId)
+    public function setCustomerId(string $CustomerId): static
     {
         $this->CustomerId = $CustomerId;
         return $this;

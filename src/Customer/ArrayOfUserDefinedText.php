@@ -4,30 +4,19 @@ namespace Y2\Customer;
 
 class ArrayOfUserDefinedText implements \ArrayAccess, \Iterator, \Countable
 {
-    /**
-     * @var UserDefinedText[] $UserDefinedText
-     */
-    protected $UserDefinedText = null;
+    protected ?array $UserDefinedText = null;
 
     public function __construct()
     {
 
     }
 
-    /**
-     * @return UserDefinedText[]
-     */
-    public function getUserDefinedText()
+    public function getUserDefinedText(): ?array
     {
         return $this->UserDefinedText;
     }
 
-    /**
-     * @param UserDefinedText[] $UserDefinedText
-     *
-     * @return ArrayOfUserDefinedText
-     */
-    public function setUserDefinedText(array $UserDefinedText = null)
+    public function setUserDefinedText(array $UserDefinedText = null): static
     {
         $this->UserDefinedText = $UserDefinedText;
         return $this;
@@ -35,37 +24,24 @@ class ArrayOfUserDefinedText implements \ArrayAccess, \Iterator, \Countable
 
     /**
      * ArrayAccess implementation
-     *
-     * @param mixed $offset An offset to check for
-     *
-     * @return boolean true on success or false on failure
      */
-    public function offsetExists($offset)
+    public function offsetExists($offset): bool
     {
         return isset($this->UserDefinedText[$offset]);
     }
 
     /**
      * ArrayAccess implementation
-     *
-     * @param mixed $offset The offset to retrieve
-     *
-     * @return UserDefinedText
      */
-    public function offsetGet($offset)
+    public function offsetGet(mixed $offset): mixed
     {
         return $this->UserDefinedText[$offset];
     }
 
     /**
      * ArrayAccess implementation
-     *
-     * @param mixed           $offset The offset to assign the value to
-     * @param UserDefinedText $value The value to set
-     *
-     * @return void
      */
-    public function offsetSet($offset, $value)
+    public function offsetSet(mixed $offset, $value): void
     {
         if (!isset($offset)) {
             $this->UserDefinedText[] = $value;
@@ -76,22 +52,16 @@ class ArrayOfUserDefinedText implements \ArrayAccess, \Iterator, \Countable
 
     /**
      * ArrayAccess implementation
-     *
-     * @param mixed $offset The offset to unset
-     *
-     * @return void
      */
-    public function offsetUnset($offset)
+    public function offsetUnset(mixed $offset): void
     {
         unset($this->UserDefinedText[$offset]);
     }
 
     /**
      * Iterator implementation
-     *
-     * @return UserDefinedText Return the current element
      */
-    public function current()
+    public function current(): mixed
     {
         return current($this->UserDefinedText);
     }
@@ -99,30 +69,24 @@ class ArrayOfUserDefinedText implements \ArrayAccess, \Iterator, \Countable
     /**
      * Iterator implementation
      * Move forward to next element
-     *
-     * @return void
      */
-    public function next()
+    public function next(): void
     {
         next($this->UserDefinedText);
     }
 
     /**
      * Iterator implementation
-     *
-     * @return string|null Return the key of the current element or null
      */
-    public function key()
+    public function key(): string|int|null
     {
         return key($this->UserDefinedText);
     }
 
     /**
      * Iterator implementation
-     *
-     * @return boolean Return the validity of the current position
      */
-    public function valid()
+    public function valid(): bool
     {
         return $this->key() !== null;
     }
@@ -130,20 +94,16 @@ class ArrayOfUserDefinedText implements \ArrayAccess, \Iterator, \Countable
     /**
      * Iterator implementation
      * Rewind the Iterator to the first element
-     *
-     * @return void
      */
-    public function rewind()
+    public function rewind(): void
     {
         reset($this->UserDefinedText);
     }
 
     /**
      * Countable implementation
-     *
-     * @return UserDefinedText Return count of elements
      */
-    public function count()
+    public function count(): int
     {
         return count($this->UserDefinedText);
     }

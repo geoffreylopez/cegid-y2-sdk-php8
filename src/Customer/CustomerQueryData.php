@@ -4,45 +4,22 @@ namespace Y2\Customer;
 
 class CustomerQueryData extends CustomerData
 {
-    /**
-     * @var boolean $Closed
-     */
-    protected $Closed = null;
 
-    /**
-     * @var string $CreationStoreId
-     */
-    protected $CreationStoreId = null;
+    protected ?bool $Closed = null;
 
-    /**
-     * @var string $CustomerId
-     */
-    protected $CustomerId = null;
+    protected ?string $CreationStoreId = null;
 
-    /**
-     * @var string $InvoiceCustomerId
-     */
-    protected $InvoiceCustomerId = null;
+    protected ?string $CustomerId = null;
 
-    /**
-     * @var boolean $IsProspect
-     */
-    protected $IsProspect = null;
+    protected ?string $InvoiceCustomerId = null;
 
-    /**
-     * @var boolean $IsVirtual
-     */
-    protected $IsVirtual = null;
+    protected ?bool $IsProspect = null;
 
-    /**
-     * @var \DateTime $LastDateUpdate
-     */
-    protected $LastDateUpdate = null;
+    protected ?bool $IsVirtual = null;
 
-    /**
-     * @var string $Notepad
-     */
-    protected $Notepad = null;
+    protected ?\DateTime $LastDateUpdate = null;
+
+    protected ?string $Notepad = null;
 
 
     public function __construct()
@@ -50,124 +27,73 @@ class CustomerQueryData extends CustomerData
         parent::__construct();
     }
 
-    /**
-     * @return boolean
-     */
-    public function getClosed()
+    public function getClosed(): ?bool
     {
         return $this->Closed;
     }
 
-    /**
-     * @param boolean $Closed
-     *
-     * @return CustomerQueryData
-     */
-    public function setClosed($Closed)
+    public function setClosed(bool $Closed): static
     {
         $this->Closed = $Closed;
         return $this;
     }
 
-    /**
-     * @return string
-     */
-    public function getCreationStoreId()
+    public function getCreationStoreId(): ?string
     {
         return $this->CreationStoreId;
     }
 
-    /**
-     * @param string $CreationStoreId
-     *
-     * @return CustomerQueryData
-     */
-    public function setCreationStoreId($CreationStoreId)
+    public function setCreationStoreId(string $CreationStoreId): static
     {
         $this->CreationStoreId = $CreationStoreId;
         return $this;
     }
 
-    /**
-     * @return string
-     */
-    public function getCustomerId()
+    public function getCustomerId(): ?string
     {
         return $this->CustomerId;
     }
 
-    /**
-     * @param string $CustomerId
-     *
-     * @return CustomerQueryData
-     */
-    public function setCustomerId($CustomerId)
+    public function setCustomerId(string $CustomerId): static
     {
         $this->CustomerId = $CustomerId;
         return $this;
     }
 
-    /**
-     * @return string
-     */
-    public function getInvoiceCustomerId()
+    public function getInvoiceCustomerId(): ?string
     {
         return $this->InvoiceCustomerId;
     }
 
-    /**
-     * @param string $InvoiceCustomerId
-     *
-     * @return CustomerQueryData
-     */
-    public function setInvoiceCustomerId($InvoiceCustomerId)
+    public function setInvoiceCustomerId(string $InvoiceCustomerId): static
     {
         $this->InvoiceCustomerId = $InvoiceCustomerId;
         return $this;
     }
 
-    /**
-     * @return boolean
-     */
-    public function getIsProspect()
+    public function getIsProspect(): ?bool
     {
         return $this->IsProspect;
     }
 
-    /**
-     * @param boolean $IsProspect
-     *
-     * @return CustomerQueryData
-     */
-    public function setIsProspect($IsProspect)
+    public function setIsProspect(bool $IsProspect): static
     {
         $this->IsProspect = $IsProspect;
         return $this;
     }
 
-    /**
-     * @return boolean
-     */
-    public function getIsVirtual()
+    public function getIsVirtual(): ?bool
     {
         return $this->IsVirtual;
     }
 
-    /**
-     * @param boolean $IsVirtual
-     *
-     * @return CustomerQueryData
-     */
-    public function setIsVirtual($IsVirtual)
+    public function setIsVirtual(bool $IsVirtual): static
     {
         $this->IsVirtual = $IsVirtual;
         return $this;
     }
 
-    /**
-     * @return \DateTime
-     */
-    public function getLastDateUpdate()
+    public function getLastDateUpdate(): \DateTime|bool|null
     {
         if ($this->LastDateUpdate == null) {
             return null;
@@ -180,12 +106,7 @@ class CustomerQueryData extends CustomerData
         }
     }
 
-    /**
-     * @param \DateTime $LastDateUpdate
-     *
-     * @return CustomerQueryData
-     */
-    public function setLastDateUpdate(\DateTime $LastDateUpdate = null)
+    public function setLastDateUpdate(\DateTime $LastDateUpdate = null): static
     {
         if ($LastDateUpdate == null) {
             $this->LastDateUpdate = null;
@@ -195,20 +116,12 @@ class CustomerQueryData extends CustomerData
         return $this;
     }
 
-    /**
-     * @return string
-     */
-    public function getNotepad()
+    public function getNotepad(): ?string
     {
         return $this->Notepad;
     }
 
-    /**
-     * @param string $Notepad
-     *
-     * @return CustomerQueryData
-     */
-    public function setNotepad($Notepad)
+    public function setNotepad(string $Notepad): static
     {
         $this->Notepad = $Notepad;
         return $this;

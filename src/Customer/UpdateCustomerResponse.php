@@ -4,33 +4,19 @@ namespace Y2\Customer;
 
 class UpdateCustomerResponse
 {
-    /**
-     * @var string $UpdateCustomerResult
-     */
-    protected $UpdateCustomerResult = null;
+    protected ?string $UpdateCustomerResult = null;
 
-    /**
-     * @param string $UpdateCustomerResult
-     */
-    public function __construct($UpdateCustomerResult)
+    public function __construct(string $UpdateCustomerResult)
     {
         $this->UpdateCustomerResult = $UpdateCustomerResult;
     }
 
-    /**
-     * @return string
-     */
-    public function getUpdateCustomerResult()
+    public function getUpdateCustomerResult(): ?string
     {
         return $this->UpdateCustomerResult;
     }
 
-    /**
-     * @param string $UpdateCustomerResult
-     *
-     * @return UpdateCustomerResponse
-     */
-    public function setUpdateCustomerResult($UpdateCustomerResult)
+    public function setUpdateCustomerResult(string $UpdateCustomerResult): static
     {
         $this->UpdateCustomerResult = $UpdateCustomerResult;
         return $this;

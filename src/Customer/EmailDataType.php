@@ -4,102 +4,58 @@ namespace Y2\Customer;
 
 class EmailDataType
 {
-    /**
-     * @var string $AlternativeEmail
-     */
-    protected $AlternativeEmail = null;
+    protected ?string $AlternativeEmail = null;
 
-    /**
-     * @var string $Email
-     */
-    protected $Email = null;
+    protected ?string $Email = null;
 
-    /**
-     * @var boolean $EmailingAccepted
-     */
-    protected $EmailingAccepted = null;
+    protected ?bool $EmailingAccepted = null;
 
-    /**
-     * @var boolean $SendReceiptByMail
-     */
-    protected $SendReceiptByMail = null;
+    protected ?bool $SendReceiptByMail = null;
 
     public function __construct()
     {
 
     }
 
-    /**
-     * @return string
-     */
-    public function getAlternativeEmail()
+    public function getAlternativeEmail(): ?string
     {
         return $this->AlternativeEmail;
     }
 
-    /**
-     * @param string $AlternativeEmail
-     *
-     * @return EmailDataType
-     */
-    public function setAlternativeEmail($AlternativeEmail)
+    public function setAlternativeEmail(string $AlternativeEmail): static
     {
         $this->AlternativeEmail = $AlternativeEmail;
         return $this;
     }
 
-    /**
-     * @return string
-     */
-    public function getEmail()
+    public function getEmail(): ?string
     {
         return $this->Email;
     }
 
-    /**
-     * @param string $Email
-     *
-     * @return EmailDataType
-     */
-    public function setEmail($Email)
+    public function setEmail(string $Email): static
     {
         $this->Email = $Email;
         return $this;
     }
 
-    /**
-     * @return boolean
-     */
-    public function getEmailingAccepted()
+    public function getEmailingAccepted(): ?bool
     {
         return $this->EmailingAccepted;
     }
 
-    /**
-     * @param boolean $EmailingAccepted
-     *
-     * @return EmailDataType
-     */
-    public function setEmailingAccepted($EmailingAccepted)
+    public function setEmailingAccepted(bool $EmailingAccepted): static
     {
         $this->EmailingAccepted = $EmailingAccepted;
         return $this;
     }
 
-    /**
-     * @return boolean
-     */
-    public function getSendReceiptByMail()
+    public function getSendReceiptByMail(): ?bool
     {
         return $this->SendReceiptByMail;
     }
 
-    /**
-     * @param boolean $SendReceiptByMail
-     *
-     * @return EmailDataType
-     */
-    public function setSendReceiptByMail($SendReceiptByMail)
+    public function setSendReceiptByMail(bool $SendReceiptByMail): static
     {
         $this->SendReceiptByMail = $SendReceiptByMail;
         return $this;

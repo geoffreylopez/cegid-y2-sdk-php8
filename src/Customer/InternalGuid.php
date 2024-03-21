@@ -4,54 +4,32 @@ namespace Y2\Customer;
 
 class InternalGuid
 {
-    /**
-     * @var boolean $CheckGuid
-     */
-    protected $CheckGuid = null;
+    protected ?bool $CheckGuid = null;
 
-    /**
-     * @var guid $Guid
-     */
-    protected $Guid = null;
+    protected ?guid $Guid = null;
 
     public function __construct()
     {
 
     }
 
-    /**
-     * @return boolean
-     */
-    public function getCheckGuid()
+    public function getCheckGuid(): ?bool
     {
         return $this->CheckGuid;
     }
 
-    /**
-     * @param boolean $CheckGuid
-     *
-     * @return InternalGuid
-     */
-    public function setCheckGuid($CheckGuid)
+    public function setCheckGuid(bool $CheckGuid): static
     {
         $this->CheckGuid = $CheckGuid;
         return $this;
     }
 
-    /**
-     * @return guid
-     */
-    public function getGuid()
+    public function getGuid(): ?guid
     {
         return $this->Guid;
     }
 
-    /**
-     * @param guid $Guid
-     *
-     * @return InternalGuid
-     */
-    public function setGuid($Guid)
+    public function setGuid(guid $Guid): static
     {
         $this->Guid = $Guid;
         return $this;

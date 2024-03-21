@@ -4,59 +4,33 @@ namespace Y2\Customer;
 
 class SearchCustomerIds
 {
-    /**
-     * @var CustomerSearchDataType $searchData
-     */
-    protected $searchData = null;
+    protected ?CustomerSearchDataType $searchData = null;
 
-    /**
-     * @var RetailContext $clientContext
-     */
-    protected $clientContext = null;
+    protected ?RetailContext $clientContext = null;
 
-    /**
-     * @param CustomerSearchDataType $searchData
-     * @param RetailContext          $clientContext
-     */
-    public function __construct($searchData, $clientContext)
+    public function __construct(CustomerSearchDataType $searchData, RetailContext $clientContext)
     {
         $this->searchData    = $searchData;
         $this->clientContext = $clientContext;
     }
 
-    /**
-     * @return CustomerSearchDataType
-     */
-    public function getSearchData()
+    public function getSearchData(): ?CustomerSearchDataType
     {
         return $this->searchData;
     }
 
-    /**
-     * @param CustomerSearchDataType $searchData
-     *
-     * @return SearchCustomerIds
-     */
-    public function setSearchData($searchData)
+    public function setSearchData(CustomerSearchDataType $searchData): static
     {
         $this->searchData = $searchData;
         return $this;
     }
 
-    /**
-     * @return RetailContext
-     */
-    public function getClientContext()
+    public function getClientContext(): ?RetailContext
     {
         return $this->clientContext;
     }
 
-    /**
-     * @param RetailContext $clientContext
-     *
-     * @return SearchCustomerIds
-     */
-    public function setClientContext($clientContext)
+    public function setClientContext(RetailContext $clientContext): static
     {
         $this->clientContext = $clientContext;
         return $this;

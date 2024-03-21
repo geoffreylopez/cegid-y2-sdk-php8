@@ -4,54 +4,32 @@ namespace Y2\Customer;
 
 class CbpExceptionDetail extends ExceptionDetail
 {
-    /**
-     * @var string $Id
-     */
-    protected $Id = null;
+    protected ?string $Id = null;
 
-    /**
-     * @var string $ToDo
-     */
-    protected $ToDo = null;
+    protected ?string $ToDo = null;
 
     public function __construct()
     {
         parent::__construct();
     }
 
-    /**
-     * @return string
-     */
-    public function getId()
+    public function getId(): ?string
     {
         return $this->Id;
     }
 
-    /**
-     * @param string $Id
-     *
-     * @return CbpExceptionDetail
-     */
-    public function setId($Id)
+    public function setId(string $Id): static
     {
         $this->Id = $Id;
         return $this;
     }
 
-    /**
-     * @return string
-     */
-    public function getToDo()
+    public function getToDo(): ?string
     {
         return $this->ToDo;
     }
 
-    /**
-     * @param string $ToDo
-     *
-     * @return CbpExceptionDetail
-     */
-    public function setToDo($ToDo)
+    public function setToDo(string $ToDo): static
     {
         $this->ToDo = $ToDo;
         return $this;

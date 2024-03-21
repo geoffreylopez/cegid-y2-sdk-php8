@@ -4,247 +4,136 @@ namespace Y2\Customer;
 
 class AddressDataType
 {
-    /**
-     * @var string $AddressLine1
-     */
-    protected $AddressLine1 = null;
+    protected ?string $AddressLine1 = null;
 
-    /**
-     * @var string $AddressLine2
-     */
-    protected $AddressLine2 = null;
+    protected ?string $AddressLine2 = null;
 
-    /**
-     * @var string $AddressLine3
-     */
-    protected $AddressLine3 = null;
+    protected ?string $AddressLine3 = null;
 
-    /**
-     * @var string $BrandName
-     */
-    protected $BrandName = null;
+    protected ?string $BrandName = null;
 
-    /**
-     * @var string $City
-     */
-    protected $City = null;
+    protected ?string $City = null;
 
-    /**
-     * @var string $CountryId
-     */
-    protected $CountryId = null;
+    protected ?string $CountryId = null;
 
-    /**
-     * @var CountryIdType $CountryIdType
-     */
-    protected $CountryIdType = null;
+    protected ?CountryIdType $CountryIdType = null;
 
-    /**
-     * @var boolean $Nata
-     */
-    protected $Nata = null;
+    protected ?bool $Nata = null;
 
-    /**
-     * @var string $RegionId
-     */
-    protected $RegionId = null;
+    protected ?string $RegionId = null;
 
-    /**
-     * @var string $ZipCode
-     */
-    protected $ZipCode = null;
-
+    protected ?string $ZipCode = null;
 
     public function __construct()
     {
 
     }
 
-    /**
-     * @return string
-     */
-    public function getAddressLine1()
+    public function getAddressLine1(): ?string
     {
         return $this->AddressLine1;
     }
 
-    /**
-     * @param string $AddressLine1
-     *
-     * @return AddressDataType
-     */
-    public function setAddressLine1($AddressLine1)
+    public function setAddressLine1(string $AddressLine1): static
     {
         $this->AddressLine1 = $AddressLine1;
         return $this;
     }
 
-    /**
-     * @return string
-     */
-    public function getAddressLine2()
+    public function getAddressLine2(): ?string
     {
         return $this->AddressLine2;
     }
 
-    /**
-     * @param string $AddressLine2
-     *
-     * @return AddressDataType
-     */
-    public function setAddressLine2($AddressLine2)
+    public function setAddressLine2(string $AddressLine2): static
     {
         $this->AddressLine2 = $AddressLine2;
         return $this;
     }
 
-    /**
-     * @return string
-     */
-    public function getAddressLine3()
+    public function getAddressLine3(): ?string
     {
         return $this->AddressLine3;
     }
 
-    /**
-     * @param string $AddressLine3
-     *
-     * @return AddressDataType
-     */
-    public function setAddressLine3($AddressLine3)
+    public function setAddressLine3(string $AddressLine3): static
     {
         $this->AddressLine3 = $AddressLine3;
         return $this;
     }
 
-    /**
-     * @return string
-     */
-    public function getBrandName()
+    public function getBrandName(): ?string
     {
         return $this->BrandName;
     }
 
-    /**
-     * @param string $BrandName
-     *
-     * @return AddressDataType
-     */
-    public function setBrandName($BrandName)
+    public function setBrandName(string $BrandName): static
     {
         $this->BrandName = $BrandName;
         return $this;
     }
 
-    /**
-     * @return string
-     */
-    public function getCity()
+    public function getCity(): ?string
     {
         return $this->City;
     }
 
-    /**
-     * @param string $City
-     *
-     * @return AddressDataType
-     */
-    public function setCity($City)
+    public function setCity(string $City): static
     {
         $this->City = $City;
         return $this;
     }
 
-    /**
-     * @return string
-     */
-    public function getCountryId()
+    public function getCountryId(): ?string
     {
         return $this->CountryId;
     }
 
-    /**
-     * @param string $CountryId
-     *
-     * @return AddressDataType
-     */
-    public function setCountryId($CountryId)
+    public function setCountryId(string $CountryId): static
     {
         $this->CountryId = $CountryId;
         return $this;
     }
 
-    /**
-     * @return CountryIdType
-     */
-    public function getCountryIdType()
+    public function getCountryIdType(): ?CountryIdType
     {
         return $this->CountryIdType;
     }
 
-    /**
-     * @param CountryIdType $CountryIdType
-     *
-     * @return AddressDataType
-     */
-    public function setCountryIdType($CountryIdType)
+    public function setCountryIdType(CountryIdType $CountryIdType): static
     {
         $this->CountryIdType = $CountryIdType;
         return $this;
     }
 
-    /**
-     * @return boolean
-     */
-    public function getNata()
+    public function getNata(): ?bool
     {
         return $this->Nata;
     }
 
-    /**
-     * @param boolean $Nata
-     *
-     * @return AddressDataType
-     */
-    public function setNata($Nata)
+    public function setNata(bool $Nata): static
     {
         $this->Nata = $Nata;
         return $this;
     }
 
-    /**
-     * @return string
-     */
-    public function getRegionId()
+    public function getRegionId(): ?string
     {
         return $this->RegionId;
     }
 
-    /**
-     * @param string $RegionId
-     *
-     * @return AddressDataType
-     */
-    public function setRegionId($RegionId)
+    public function setRegionId(string $RegionId): static
     {
         $this->RegionId = $RegionId;
         return $this;
     }
 
-    /**
-     * @return string
-     */
-    public function getZipCode()
+    public function getZipCode(): ?string
     {
         return $this->ZipCode;
     }
 
-    /**
-     * @param string $ZipCode
-     *
-     * @return AddressDataType
-     */
-    public function setZipCode($ZipCode)
+    public function setZipCode(string $ZipCode): static
     {
         $this->ZipCode = $ZipCode;
         return $this;

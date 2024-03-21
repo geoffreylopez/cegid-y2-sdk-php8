@@ -4,102 +4,58 @@ namespace Y2\Customer;
 
 class PhoneDataType
 {
-    /**
-     * @var string $AlternativePhoneNumber
-     */
-    protected $AlternativePhoneNumber = null;
+    protected ?string $AlternativePhoneNumber = null;
 
-    /**
-     * @var string $CellularPhoneNumber
-     */
-    protected $CellularPhoneNumber = null;
+    protected ?string $CellularPhoneNumber = null;
 
-    /**
-     * @var string $HomePhoneNumber
-     */
-    protected $HomePhoneNumber = null;
+    protected ?string $HomePhoneNumber = null;
 
-    /**
-     * @var string $OfficePhoneNumber
-     */
-    protected $OfficePhoneNumber = null;
+    protected ?string $OfficePhoneNumber = null;
 
     public function __construct()
     {
 
     }
 
-    /**
-     * @return string
-     */
-    public function getAlternativePhoneNumber()
+    public function getAlternativePhoneNumber(): ?string
     {
         return $this->AlternativePhoneNumber;
     }
 
-    /**
-     * @param string $AlternativePhoneNumber
-     *
-     * @return PhoneDataType
-     */
-    public function setAlternativePhoneNumber($AlternativePhoneNumber)
+    public function setAlternativePhoneNumber($AlternativePhoneNumber): static
     {
         $this->AlternativePhoneNumber = $AlternativePhoneNumber;
         return $this;
     }
 
-    /**
-     * @return string
-     */
-    public function getCellularPhoneNumber()
+    public function getCellularPhoneNumber(): ?string
     {
         return $this->CellularPhoneNumber;
     }
 
-    /**
-     * @param string $CellularPhoneNumber
-     *
-     * @return PhoneDataType
-     */
-    public function setCellularPhoneNumber($CellularPhoneNumber)
+    public function setCellularPhoneNumber(string $CellularPhoneNumber): static
     {
         $this->CellularPhoneNumber = $CellularPhoneNumber;
         return $this;
     }
 
-    /**
-     * @return string
-     */
-    public function getHomePhoneNumber()
+    public function getHomePhoneNumber(): ?string
     {
         return $this->HomePhoneNumber;
     }
 
-    /**
-     * @param string $HomePhoneNumber
-     *
-     * @return PhoneDataType
-     */
-    public function setHomePhoneNumber($HomePhoneNumber)
+    public function setHomePhoneNumber(string $HomePhoneNumber): static
     {
         $this->HomePhoneNumber = $HomePhoneNumber;
         return $this;
     }
 
-    /**
-     * @return string
-     */
-    public function getOfficePhoneNumber()
+    public function getOfficePhoneNumber(): ?string
     {
         return $this->OfficePhoneNumber;
     }
 
-    /**
-     * @param string $OfficePhoneNumber
-     *
-     * @return PhoneDataType
-     */
-    public function setOfficePhoneNumber($OfficePhoneNumber)
+    public function setOfficePhoneNumber(string $OfficePhoneNumber): static
     {
         $this->OfficePhoneNumber = $OfficePhoneNumber;
         return $this;

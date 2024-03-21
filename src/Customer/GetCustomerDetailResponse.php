@@ -4,33 +4,19 @@ namespace Y2\Customer;
 
 class GetCustomerDetailResponse
 {
-    /**
-     * @var CustomerQueryData $GetCustomerDetailResult
-     */
-    protected $GetCustomerDetailResult = null;
+    protected ?CustomerQueryData $GetCustomerDetailResult = null;
 
-    /**
-     * @param CustomerQueryData $GetCustomerDetailResult
-     */
-    public function __construct($GetCustomerDetailResult)
+    public function __construct(CustomerQueryData $GetCustomerDetailResult)
     {
         $this->GetCustomerDetailResult = $GetCustomerDetailResult;
     }
 
-    /**
-     * @return CustomerQueryData
-     */
-    public function getGetCustomerDetailResult()
+    public function getGetCustomerDetailResult(): ?CustomerQueryData
     {
         return $this->GetCustomerDetailResult;
     }
 
-    /**
-     * @param CustomerQueryData $GetCustomerDetailResult
-     *
-     * @return GetCustomerDetailResponse
-     */
-    public function setGetCustomerDetailResult($GetCustomerDetailResult)
+    public function setGetCustomerDetailResult(CustomerQueryData $GetCustomerDetailResult): static
     {
         $this->GetCustomerDetailResult = $GetCustomerDetailResult;
         return $this;

@@ -4,85 +4,47 @@ namespace Y2\Customer;
 
 class UpdateCustomer
 {
-    /**
-     * @var string $customerId
-     */
-    protected $customerId = null;
+    protected ?string $customerId = null;
 
-    /**
-     * @var CustomerInputData $modifiedData
-     */
-    protected $modifiedData = null;
+    protected ?CustomerInputData $modifiedData = null;
 
-    /**
-     * @var RetailContext $clientContext
-     */
-    protected $clientContext = null;
+    protected ?RetailContext $clientContext = null;
 
-    /**
-     * @param string            $customerId
-     * @param CustomerInputData $modifiedData
-     * @param RetailContext     $clientContext
-     */
-    public function __construct($customerId, $modifiedData, $clientContext)
+    public function __construct(string $customerId, CustomerInputData $modifiedData, RetailContext $clientContext)
     {
         $this->customerId    = $customerId;
         $this->modifiedData  = $modifiedData;
         $this->clientContext = $clientContext;
     }
 
-    /**
-     * @return string
-     */
-    public function getCustomerId()
+    public function getCustomerId(): ?string
     {
         return $this->customerId;
     }
 
-    /**
-     * @param string $customerId
-     *
-     * @return UpdateCustomer
-     */
-    public function setCustomerId($customerId)
+    public function setCustomerId(string $customerId): static
     {
         $this->customerId = $customerId;
         return $this;
     }
 
-    /**
-     * @return CustomerInputData
-     */
-    public function getModifiedData()
+    public function getModifiedData(): ?CustomerInputData
     {
         return $this->modifiedData;
     }
 
-    /**
-     * @param CustomerInputData $modifiedData
-     *
-     * @return UpdateCustomer
-     */
-    public function setModifiedData($modifiedData)
+    public function setModifiedData(CustomerInputData $modifiedData): static
     {
         $this->modifiedData = $modifiedData;
         return $this;
     }
 
-    /**
-     * @return RetailContext
-     */
-    public function getClientContext()
+    public function getClientContext(): ?RetailContext
     {
         return $this->clientContext;
     }
 
-    /**
-     * @param RetailContext $clientContext
-     *
-     * @return UpdateCustomer
-     */
-    public function setClientContext($clientContext)
+    public function setClientContext(RetailContext $clientContext): static
     {
         $this->clientContext = $clientContext;
         return $this;

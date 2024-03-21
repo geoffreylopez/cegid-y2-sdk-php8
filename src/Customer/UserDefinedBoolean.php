@@ -4,54 +4,32 @@ namespace Y2\Customer;
 
 class UserDefinedBoolean
 {
-    /**
-     * @var UserDefinedId $Id
-     */
-    protected $Id = null;
+    protected ?UserDefinedId $Id = null;
 
-    /**
-     * @var boolean $Value
-     */
-    protected $Value = null;
+    protected ?bool $Value = null;
 
     public function __construct()
     {
 
     }
 
-    /**
-     * @return UserDefinedId
-     */
-    public function getId()
+    public function getId(): ?UserDefinedId
     {
         return $this->Id;
     }
 
-    /**
-     * @param UserDefinedId $Id
-     *
-     * @return UserDefinedBoolean
-     */
-    public function setId($Id)
+    public function setId(UserDefinedId $Id): static
     {
         $this->Id = $Id;
         return $this;
     }
 
-    /**
-     * @return boolean
-     */
-    public function getValue()
+    public function getValue(): ?bool
     {
         return $this->Value;
     }
 
-    /**
-     * @param boolean $Value
-     *
-     * @return UserDefinedBoolean
-     */
-    public function setValue($Value)
+    public function setValue(bool $Value): static
     {
         $this->Value = $Value;
         return $this;

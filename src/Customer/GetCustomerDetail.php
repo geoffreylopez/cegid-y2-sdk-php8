@@ -4,59 +4,33 @@ namespace Y2\Customer;
 
 class GetCustomerDetail
 {
-    /**
-     * @var string $customerId
-     */
-    protected $customerId = null;
+    protected ?string $customerId = null;
 
-    /**
-     * @var RetailContext $clientContext
-     */
-    protected $clientContext = null;
+    protected ?RetailContext $clientContext = null;
 
-    /**
-     * @param string        $customerId
-     * @param RetailContext $clientContext
-     */
-    public function __construct($customerId, $clientContext)
+    public function __construct(string $customerId, RetailContext $clientContext)
     {
         $this->customerId    = $customerId;
         $this->clientContext = $clientContext;
     }
 
-    /**
-     * @return string
-     */
-    public function getCustomerId()
+    public function getCustomerId(): ?string
     {
         return $this->customerId;
     }
 
-    /**
-     * @param string $customerId
-     *
-     * @return GetCustomerDetail
-     */
-    public function setCustomerId($customerId)
+    public function setCustomerId(string $customerId): static
     {
         $this->customerId = $customerId;
         return $this;
     }
 
-    /**
-     * @return RetailContext
-     */
-    public function getClientContext()
+    public function getClientContext(): ?RetailContext
     {
         return $this->clientContext;
     }
 
-    /**
-     * @param RetailContext $clientContext
-     *
-     * @return GetCustomerDetail
-     */
-    public function setClientContext($clientContext)
+    public function setClientContext(RetailContext $clientContext): static
     {
         $this->clientContext = $clientContext;
         return $this;

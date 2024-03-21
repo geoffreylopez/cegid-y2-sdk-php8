@@ -4,145 +4,61 @@ namespace Y2\Customer;
 
 class CustomerData extends CustomerDataBase
 {
-    /**
-     * @var string $ActivityCode
-     */
-    protected $ActivityCode = null;
+    protected ?string $ActivityCode = null;
 
-    /**
-     * @var string $Barcode
-     */
-    protected $Barcode = null;
+    protected ?string $Barcode = null;
 
-    /**
-     * @var BirthDateDataType $BirthDateData
-     */
-    protected $BirthDateData = null;
+    protected ?BirthDateDataType $BirthDateData = null;
 
-    /**
-     * @var string $CompanyIdNumber
-     */
-    protected $CompanyIdNumber = null;
+    protected ?string $CompanyIdNumber = null;
 
-    /**
-     * @var string $CompanyTitleId
-     */
-    protected $CompanyTitleId = null;
+    protected ?string $CompanyTitleId = null;
 
-    /**
-     * @var string $CurrencyId
-     */
-    protected $CurrencyId = null;
+    protected ?string $CurrencyId = null;
 
-    /**
-     * @var boolean $DirectMail
-     */
-    protected $DirectMail = null;
+    protected ?bool $DirectMail = null;
 
-    /**
-     * @var string $FiscalId
-     */
-    protected $FiscalId = null;
+    protected ?string $FiscalId = null;
 
-    /**
-     * @var string $ItalianFiscalId
-     */
-    protected $ItalianFiscalId = null;
+    protected ?string $ItalianFiscalId = null;
 
-    /**
-     * @var string $LanguageId
-     */
-    protected $LanguageId = null;
+    protected ?string $LanguageId = null;
 
-    /**
-     * @var string $LongDescription
-     */
-    protected $LongDescription = null;
+    protected ?string $LongDescription = null;
 
-    /**
-     * @var string $NationalityId
-     */
-    protected $NationalityId = null;
+    protected ?string $NationalityId = null;
 
-    /**
-     * @var CustomerInformationType $OptinAlternativeEmail
-     */
-    protected $OptinAlternativeEmail = null;
+    protected ?CustomerInformationType $OptinAlternativeEmail = null;
 
-    /**
-     * @var CustomerInformationType $OptinEmail
-     */
-    protected $OptinEmail = null;
+    protected ?CustomerInformationType $OptinEmail = null;
 
-    /**
-     * @var CustomerInformationType $OptinHomePhone
-     */
-    protected $OptinHomePhone = null;
+    protected ?CustomerInformationType $OptinHomePhone = null;
 
-    /**
-     * @var CustomerInformationType $OptinMobile
-     */
-    protected $OptinMobile = null;
+    protected ?CustomerInformationType $OptinMobile = null;
 
-    /**
-     * @var CustomerInformationType $OptinOfficePhone
-     */
-    protected $OptinOfficePhone = null;
+    protected ?CustomerInformationType $OptinOfficePhone = null;
 
-    /**
-     * @var CustomerInformationType $OptinPostal
-     */
-    protected $OptinPostal = null;
+    protected ?CustomerInformationType $OptinPostal = null;
 
-    /**
-     * @var string $PassportNumber
-     */
-    protected $PassportNumber = null;
+    protected ?string $PassportNumber = null;
 
-    /**
-     * @var string $Sex
-     */
-    protected $Sex = null;
+    protected ?string $Sex = null;
 
-    /**
-     * @var string $ShortName
-     */
-    protected $ShortName = null;
+    protected ?string $ShortName = null;
 
-    /**
-     * @var ArrayOfUserField $UserFields
-     */
-    protected $UserFields = null;
+    protected ?ArrayOfUserField $UserFields = null;
 
-    /**
-     * @var string $VATSystem
-     */
-    protected $VATSystem = null;
+    protected ?string $VATSystem = null;
 
-    /**
-     * @var boolean $ValidAlternativeEmail
-     */
-    protected $ValidAlternativeEmail = null;
+    protected ?bool $ValidAlternativeEmail = null;
 
-    /**
-     * @var boolean $ValidEmail
-     */
-    protected $ValidEmail = null;
+    protected ?bool $ValidEmail = null;
 
-    /**
-     * @var boolean $ValidHomePhone
-     */
-    protected $ValidHomePhone = null;
+    protected ?bool $ValidHomePhone = null;
 
-    /**
-     * @var boolean $ValidMobile
-     */
-    protected $ValidMobile = null;
+    protected ?bool $ValidMobile = null;
 
-    /**
-     * @var boolean $ValidOfficePhone
-     */
-    protected $ValidOfficePhone = null;
+    protected ?bool $ValidOfficePhone = null;
 
 
     public function __construct()
@@ -150,533 +66,309 @@ class CustomerData extends CustomerDataBase
         parent::__construct();
     }
 
-    /**
-     * @return string
-     */
-    public function getActivityCode()
+    public function getActivityCode(): ?string
     {
         return $this->ActivityCode;
     }
 
-    /**
-     * @param string $ActivityCode
-     *
-     * @return CustomerData
-     */
-    public function setActivityCode($ActivityCode)
+    public function setActivityCode(string $ActivityCode): static
     {
         $this->ActivityCode = $ActivityCode;
         return $this;
     }
 
-    /**
-     * @return string
-     */
-    public function getBarcode()
+    public function getBarcode(): ?string
     {
         return $this->Barcode;
     }
 
-    /**
-     * @param string $Barcode
-     *
-     * @return CustomerData
-     */
-    public function setBarcode($Barcode)
+    public function setBarcode(string $Barcode): static
     {
         $this->Barcode = $Barcode;
         return $this;
     }
 
-    /**
-     * @return BirthDateDataType
-     */
-    public function getBirthDateData()
+    public function getBirthDateData(): ?BirthDateDataType
     {
         return $this->BirthDateData;
     }
 
-    /**
-     * @param BirthDateDataType $BirthDateData
-     *
-     * @return CustomerData
-     */
-    public function setBirthDateData($BirthDateData)
+    public function setBirthDateData(BirthDateDataType $BirthDateData): static
     {
         $this->BirthDateData = $BirthDateData;
         return $this;
     }
 
-    /**
-     * @return string
-     */
-    public function getCompanyIdNumber()
+    public function getCompanyIdNumber(): ?string
     {
         return $this->CompanyIdNumber;
     }
 
-    /**
-     * @param string $CompanyIdNumber
-     *
-     * @return CustomerData
-     */
-    public function setCompanyIdNumber($CompanyIdNumber)
+    public function setCompanyIdNumber(string $CompanyIdNumber): static
     {
         $this->CompanyIdNumber = $CompanyIdNumber;
         return $this;
     }
 
-    /**
-     * @return string
-     */
-    public function getCompanyTitleId()
+    public function getCompanyTitleId(): ?string
     {
         return $this->CompanyTitleId;
     }
 
-    /**
-     * @param string $CompanyTitleId
-     *
-     * @return CustomerData
-     */
-    public function setCompanyTitleId($CompanyTitleId)
+    public function setCompanyTitleId(string $CompanyTitleId): static
     {
         $this->CompanyTitleId = $CompanyTitleId;
         return $this;
     }
 
-    /**
-     * @return string
-     */
-    public function getCurrencyId()
+    public function getCurrencyId(): ?string
     {
         return $this->CurrencyId;
     }
 
-    /**
-     * @param string $CurrencyId
-     *
-     * @return CustomerData
-     */
-    public function setCurrencyId($CurrencyId)
+    public function setCurrencyId(string $CurrencyId): static
     {
         $this->CurrencyId = $CurrencyId;
         return $this;
     }
 
-    /**
-     * @return boolean
-     */
-    public function getDirectMail()
+    public function getDirectMail(): ?bool
     {
         return $this->DirectMail;
     }
 
-    /**
-     * @param boolean $DirectMail
-     *
-     * @return CustomerData
-     */
-    public function setDirectMail($DirectMail)
+    public function setDirectMail(bool $DirectMail): static
     {
         $this->DirectMail = $DirectMail;
         return $this;
     }
 
-    /**
-     * @return string
-     */
-    public function getFiscalId()
+    public function getFiscalId(): ?string
     {
         return $this->FiscalId;
     }
 
-    /**
-     * @param string $FiscalId
-     *
-     * @return CustomerData
-     */
-    public function setFiscalId($FiscalId)
+    public function setFiscalId(string $FiscalId): static
     {
         $this->FiscalId = $FiscalId;
         return $this;
     }
 
-    /**
-     * @return string
-     */
-    public function getItalianFiscalId()
+    public function getItalianFiscalId(): ?string
     {
         return $this->ItalianFiscalId;
     }
 
-    /**
-     * @param string $ItalianFiscalId
-     *
-     * @return CustomerData
-     */
-    public function setItalianFiscalId($ItalianFiscalId)
+    public function setItalianFiscalId(string $ItalianFiscalId): static
     {
         $this->ItalianFiscalId = $ItalianFiscalId;
         return $this;
     }
 
-    /**
-     * @return string
-     */
-    public function getLanguageId()
+    public function getLanguageId(): ?string
     {
         return $this->LanguageId;
     }
 
-    /**
-     * @param string $LanguageId
-     *
-     * @return CustomerData
-     */
-    public function setLanguageId($LanguageId)
+    public function setLanguageId(string $LanguageId): static
     {
         $this->LanguageId = $LanguageId;
         return $this;
     }
 
-    /**
-     * @return string
-     */
-    public function getLongDescription()
+    public function getLongDescription(): ?string
     {
         return $this->LongDescription;
     }
 
-    /**
-     * @param string $LongDescription
-     *
-     * @return CustomerData
-     */
-    public function setLongDescription($LongDescription)
+    public function setLongDescription(string $LongDescription): static
     {
         $this->LongDescription = $LongDescription;
         return $this;
     }
 
-    /**
-     * @return string
-     */
-    public function getNationalityId()
+    public function getNationalityId(): ?string
     {
         return $this->NationalityId;
     }
 
-    /**
-     * @param string $NationalityId
-     *
-     * @return CustomerData
-     */
-    public function setNationalityId($NationalityId)
+    public function setNationalityId(string $NationalityId): static
     {
         $this->NationalityId = $NationalityId;
         return $this;
     }
 
-    /**
-     * @return CustomerInformationType
-     */
-    public function getOptinAlternativeEmail()
+    public function getOptinAlternativeEmail(): ?CustomerInformationType
     {
         return $this->OptinAlternativeEmail;
     }
 
-    /**
-     * @param CustomerInformationType $OptinAlternativeEmail
-     *
-     * @return CustomerData
-     */
-    public function setOptinAlternativeEmail($OptinAlternativeEmail)
+    public function setOptinAlternativeEmail(CustomerInformationType $OptinAlternativeEmail): static
     {
         $this->OptinAlternativeEmail = $OptinAlternativeEmail;
         return $this;
     }
 
-    /**
-     * @return CustomerInformationType
-     */
-    public function getOptinEmail()
+    public function getOptinEmail(): ?CustomerInformationType
     {
         return $this->OptinEmail;
     }
 
-    /**
-     * @param CustomerInformationType $OptinEmail
-     *
-     * @return CustomerData
-     */
-    public function setOptinEmail($OptinEmail)
+    public function setOptinEmail(CustomerInformationType $OptinEmail): static
     {
         $this->OptinEmail = $OptinEmail;
         return $this;
     }
 
-    /**
-     * @return CustomerInformationType
-     */
-    public function getOptinHomePhone()
+    public function getOptinHomePhone(): ?CustomerInformationType
     {
         return $this->OptinHomePhone;
     }
 
-    /**
-     * @param CustomerInformationType $OptinHomePhone
-     *
-     * @return CustomerData
-     */
-    public function setOptinHomePhone($OptinHomePhone)
+    public function setOptinHomePhone(CustomerInformationType $OptinHomePhone): static
     {
         $this->OptinHomePhone = $OptinHomePhone;
         return $this;
     }
 
-    /**
-     * @return CustomerInformationType
-     */
-    public function getOptinMobile()
+    public function getOptinMobile(): ?CustomerInformationType
     {
         return $this->OptinMobile;
     }
 
-    /**
-     * @param CustomerInformationType $OptinMobile
-     *
-     * @return CustomerData
-     */
-    public function setOptinMobile($OptinMobile)
+    public function setOptinMobile(CustomerInformationType $OptinMobile): static
     {
         $this->OptinMobile = $OptinMobile;
         return $this;
     }
 
-    /**
-     * @return CustomerInformationType
-     */
-    public function getOptinOfficePhone()
+    public function getOptinOfficePhone(): ?CustomerInformationType
     {
         return $this->OptinOfficePhone;
     }
 
-    /**
-     * @param CustomerInformationType $OptinOfficePhone
-     *
-     * @return CustomerData
-     */
-    public function setOptinOfficePhone($OptinOfficePhone)
+    public function setOptinOfficePhone(CustomerInformationType $OptinOfficePhone): static
     {
         $this->OptinOfficePhone = $OptinOfficePhone;
         return $this;
     }
 
-    /**
-     * @return CustomerInformationType
-     */
-    public function getOptinPostal()
+    public function getOptinPostal(): ?CustomerInformationType
     {
         return $this->OptinPostal;
     }
 
-    /**
-     * @param CustomerInformationType $OptinPostal
-     *
-     * @return CustomerData
-     */
-    public function setOptinPostal($OptinPostal)
+    public function setOptinPostal(CustomerInformationType $OptinPostal): static
     {
         $this->OptinPostal = $OptinPostal;
         return $this;
     }
 
-    /**
-     * @return string
-     */
-    public function getPassportNumber()
+    public function getPassportNumber(): ?string
     {
         return $this->PassportNumber;
     }
 
-    /**
-     * @param string $PassportNumber
-     *
-     * @return CustomerData
-     */
-    public function setPassportNumber($PassportNumber)
+    public function setPassportNumber(string $PassportNumber): static
     {
         $this->PassportNumber = $PassportNumber;
         return $this;
     }
 
-    /**
-     * @return string
-     */
-    public function getSex()
+    public function getSex(): ?string
     {
         return $this->Sex;
     }
 
-    /**
-     * @param string $Sex
-     *
-     * @return CustomerData
-     */
-    public function setSex($Sex)
+    public function setSex(string $Sex): static
     {
         $this->Sex = $Sex;
         return $this;
     }
 
-    /**
-     * @return string
-     */
-    public function getShortName()
+    public function getShortName(): ?string
     {
         return $this->ShortName;
     }
 
-    /**
-     * @param string $ShortName
-     *
-     * @return CustomerData
-     */
-    public function setShortName($ShortName)
+    public function setShortName(string $ShortName): static
     {
         $this->ShortName = $ShortName;
         return $this;
     }
 
-    /**
-     * @return ArrayOfUserField
-     */
-    public function getUserFields()
+    public function getUserFields(): ?ArrayOfUserField
     {
         return $this->UserFields;
     }
 
-    /**
-     * @param ArrayOfUserField $UserFields
-     *
-     * @return CustomerData
-     */
-    public function setUserFields($UserFields)
+    public function setUserFields(ArrayOfUserField $UserFields): static
     {
         $this->UserFields = $UserFields;
         return $this;
     }
 
-    /**
-     * @return string
-     */
-    public function getVATSystem()
+    public function getVATSystem(): ?string
     {
         return $this->VATSystem;
     }
 
-    /**
-     * @param string $VATSystem
-     *
-     * @return CustomerData
-     */
-    public function setVATSystem($VATSystem)
+    public function setVATSystem(string $VATSystem): static
     {
         $this->VATSystem = $VATSystem;
         return $this;
     }
 
-    /**
-     * @return boolean
-     */
-    public function getValidAlternativeEmail()
+    public function getValidAlternativeEmail(): ?bool
     {
         return $this->ValidAlternativeEmail;
     }
 
-    /**
-     * @param boolean $ValidAlternativeEmail
-     *
-     * @return CustomerData
-     */
-    public function setValidAlternativeEmail($ValidAlternativeEmail)
+    public function setValidAlternativeEmail(bool $ValidAlternativeEmail): static
     {
         $this->ValidAlternativeEmail = $ValidAlternativeEmail;
         return $this;
     }
 
-    /**
-     * @return boolean
-     */
-    public function getValidEmail()
+    public function getValidEmail(): ?bool
     {
         return $this->ValidEmail;
     }
 
-    /**
-     * @param boolean $ValidEmail
-     *
-     * @return CustomerData
-     */
-    public function setValidEmail($ValidEmail)
+    public function setValidEmail(bool $ValidEmail): static
     {
         $this->ValidEmail = $ValidEmail;
         return $this;
     }
 
-    /**
-     * @return boolean
-     */
-    public function getValidHomePhone()
+    public function getValidHomePhone(): ?bool
     {
         return $this->ValidHomePhone;
     }
 
-    /**
-     * @param boolean $ValidHomePhone
-     *
-     * @return CustomerData
-     */
-    public function setValidHomePhone($ValidHomePhone)
+    public function setValidHomePhone(bool $ValidHomePhone): static
     {
         $this->ValidHomePhone = $ValidHomePhone;
         return $this;
     }
 
-    /**
-     * @return boolean
-     */
-    public function getValidMobile()
+    public function getValidMobile(): ?bool
     {
         return $this->ValidMobile;
     }
 
-    /**
-     * @param boolean $ValidMobile
-     *
-     * @return CustomerData
-     */
-    public function setValidMobile($ValidMobile)
+    public function setValidMobile(bool $ValidMobile): static
     {
         $this->ValidMobile = $ValidMobile;
         return $this;
     }
 
-    /**
-     * @return boolean
-     */
-    public function getValidOfficePhone()
+    public function getValidOfficePhone(): ?bool
     {
         return $this->ValidOfficePhone;
     }
 
-    /**
-     * @param boolean $ValidOfficePhone
-     *
-     * @return CustomerData
-     */
-    public function setValidOfficePhone($ValidOfficePhone)
+    public function setValidOfficePhone(bool $ValidOfficePhone): static
     {
         $this->ValidOfficePhone = $ValidOfficePhone;
         return $this;
