@@ -1,10 +1,12 @@
 # CEGID / Y2 - SDK
 
+Forked from https://github.com/pgrimaud/cegid-y2-sdk
+
 Consume CEGID/Y2's SOAP API.
 
 ## Requirements
 
- - PHP >= 5.6
+ - PHP >= 8.1
  - Package php-soap (ext-soap extension)
 
 ## Installation
