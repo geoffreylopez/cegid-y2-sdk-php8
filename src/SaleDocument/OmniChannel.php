@@ -4,135 +4,63 @@ namespace Y2\SaleDocument;
 
 class OmniChannel
 {
+    protected ?BillingStatus $BillingStatus = null;
 
-    /**
-     * @var BillingStatus $BillingStatus
-     */
-    protected $BillingStatus = null;
+    protected ?\DateTime $CancelDate = null;
 
-    /**
-     * @var \DateTime $CancelDate
-     */
-    protected $CancelDate = null;
+    protected ?string $CancelReasonId = null;
 
-    /**
-     * @var string $CancelReasonId
-     */
-    protected $CancelReasonId = null;
+    protected ?CancelStatus $CancelStatus = null;
 
-    /**
-     * @var CancelStatus $CancelStatus
-     */
-    protected $CancelStatus = null;
+    protected ?string $Comment = null;
 
-    /**
-     * @var string $Comment
-     */
-    protected $Comment = null;
+    protected ?string $DeliveryStoreId = null;
 
-    /**
-     * @var string $DeliveryStoreId
-     */
-    protected $DeliveryStoreId = null;
+    protected ?DeliveryType $DeliveryType = null;
 
-    /**
-     * @var DeliveryType $DeliveryType
-     */
-    protected $DeliveryType = null;
+    protected ?string $DeliveryWarehouseId = null;
 
-    /**
-     * @var string $DeliveryWarehouseId
-     */
-    protected $DeliveryWarehouseId = null;
+    protected ?FollowUpStatus $FollowUpStatus = null;
 
-    /**
-     * @var FollowUpStatus $FollowUpStatus
-     */
-    protected $FollowUpStatus = null;
+    protected ?string $GiftMessage = null;
 
-    /**
-     * @var string $GiftMessage
-     */
-    protected $GiftMessage = null;
+    protected ?GiftMessageType $GiftMessageType = null;
 
-    /**
-     * @var GiftMessageType $GiftMessageType
-     */
-    protected $GiftMessageType = null;
+    protected ?\DateTime $LockingDate = null;
 
-    /**
-     * @var \DateTime $LockingDate
-     */
-    protected $LockingDate = null;
+    protected ?SaleDocumentIdentifier $OriginalDocument = null;
 
-    /**
-     * @var SaleDocumentIdentifier $OriginalDocument
-     */
-    protected $OriginalDocument = null;
+    protected ?string $PaymentMethodId = null;
 
-    /**
-     * @var string $PaymentMethodId
-     */
-    protected $PaymentMethodId = null;
+    protected ?PaymentStatus $PaymentStatus = null;
 
-    /**
-     * @var PaymentStatus $PaymentStatus
-     */
-    protected $PaymentStatus = null;
+    protected ?OrderReturnStatus $ReturnStatus = null;
 
-    /**
-     * @var OrderReturnStatus $ReturnStatus
-     */
-    protected $ReturnStatus = null;
+    protected ?ReturnType $ReturnType = null;
 
-    /**
-     * @var ReturnType $ReturnType
-     */
-    protected $ReturnType = null;
+    protected ?ShippingStatus $ShippingStatus = null;
 
-    /**
-     * @var ShippingStatus $ShippingStatus
-     */
-    protected $ShippingStatus = null;
+    protected ?string $Tracking = null;
 
-    /**
-     * @var string $Tracking
-     */
-    protected $Tracking = null;
+    protected ?string $Transporter = null;
 
-    /**
-     * @var string $Transporter
-     */
-    protected $Transporter = null;
-
-    
     public function __construct()
     {
     
     }
 
-    /**
-     * @return string
-     */
-    public function getBillingStatus()
+    public function getBillingStatus(): BillingStatus|string|null
     {
       return $this->BillingStatus;
     }
 
-    /**
-     * @param string $BillingStatus
-     * @return OmniChannel
-     */
-    public function setBillingStatus($BillingStatus)
+    public function setBillingStatus(string $BillingStatus): static
     {
       $this->BillingStatus = $BillingStatus;
       return $this;
     }
 
-    /**
-     * @return \DateTime
-     */
-    public function getCancelDate()
+    public function getCancelDate(): \DateTime|bool|null
     {
       if ($this->CancelDate == null) {
         return null;
@@ -145,11 +73,7 @@ class OmniChannel
       }
     }
 
-    /**
-     * @param \DateTime $CancelDate
-     * @return OmniChannel
-     */
-    public function setCancelDate(\DateTime $CancelDate = null)
+    public function setCancelDate(\DateTime $CancelDate = null): static
     {
       if ($CancelDate == null) {
        $this->CancelDate = null;
@@ -159,172 +83,106 @@ class OmniChannel
       return $this;
     }
 
-    /**
-     * @return string
-     */
-    public function getCancelReasonId()
+    public function getCancelReasonId(): ?string
     {
       return $this->CancelReasonId;
     }
 
-    /**
-     * @param string $CancelReasonId
-     * @return OmniChannel
-     */
-    public function setCancelReasonId($CancelReasonId)
+    public function setCancelReasonId(string $CancelReasonId): static
     {
       $this->CancelReasonId = $CancelReasonId;
       return $this;
     }
 
-    /**
-     * @return CancelStatus
-     */
-    public function getCancelStatus()
+    public function getCancelStatus(): ?CancelStatus
     {
       return $this->CancelStatus;
     }
 
-    /**
-     * @param CancelStatus $CancelStatus
-     * @return OmniChannel
-     */
-    public function setCancelStatus($CancelStatus)
+    public function setCancelStatus(CancelStatus $CancelStatus): static
     {
       $this->CancelStatus = $CancelStatus;
       return $this;
     }
 
-    /**
-     * @return string
-     */
-    public function getComment()
+    public function getComment(): ?string
     {
       return $this->Comment;
     }
 
-    /**
-     * @param string $Comment
-     * @return OmniChannel
-     */
-    public function setComment($Comment)
+    public function setComment(string $Comment): static
     {
       $this->Comment = $Comment;
       return $this;
     }
 
-    /**
-     * @return string
-     */
-    public function getDeliveryStoreId()
+    public function getDeliveryStoreId(): ?string
     {
       return $this->DeliveryStoreId;
     }
 
-    /**
-     * @param string $DeliveryStoreId
-     * @return OmniChannel
-     */
-    public function setDeliveryStoreId($DeliveryStoreId)
+    public function setDeliveryStoreId(string $DeliveryStoreId): static
     {
       $this->DeliveryStoreId = $DeliveryStoreId;
       return $this;
     }
 
-    /**
-     * @return string
-     */
-    public function getDeliveryType()
+    public function getDeliveryType(): DeliveryType|string|null
     {
       return $this->DeliveryType;
     }
 
-    /**
-     * @param string $DeliveryType
-     * @return OmniChannel
-     */
-    public function setDeliveryType($DeliveryType)
+    public function setDeliveryType(string $DeliveryType): static
     {
       $this->DeliveryType = $DeliveryType;
       return $this;
     }
 
-    /**
-     * @return string
-     */
-    public function getDeliveryWarehouseId()
+    public function getDeliveryWarehouseId(): ?string
     {
       return $this->DeliveryWarehouseId;
     }
 
-    /**
-     * @param string $DeliveryWarehouseId
-     * @return OmniChannel
-     */
-    public function setDeliveryWarehouseId($DeliveryWarehouseId)
+    public function setDeliveryWarehouseId(string $DeliveryWarehouseId): static
     {
       $this->DeliveryWarehouseId = $DeliveryWarehouseId;
       return $this;
     }
 
-    /**
-     * @return string
-     */
-    public function getFollowUpStatus()
+    public function getFollowUpStatus(): FollowUpStatus|string|null
     {
       return $this->FollowUpStatus;
     }
 
-    /**
-     * @param string $FollowUpStatus
-     * @return OmniChannel
-     */
-    public function setFollowUpStatus($FollowUpStatus)
+    public function setFollowUpStatus(string $FollowUpStatus): static
     {
       $this->FollowUpStatus = $FollowUpStatus;
       return $this;
     }
 
-    /**
-     * @return string
-     */
-    public function getGiftMessage()
+    public function getGiftMessage(): ?string
     {
       return $this->GiftMessage;
     }
 
-    /**
-     * @param string $GiftMessage
-     * @return OmniChannel
-     */
-    public function setGiftMessage($GiftMessage)
+    public function setGiftMessage(string $GiftMessage): static
     {
       $this->GiftMessage = $GiftMessage;
       return $this;
     }
 
-    /**
-     * @return GiftMessageType
-     */
-    public function getGiftMessageType()
+    public function getGiftMessageType(): ?GiftMessageType
     {
       return $this->GiftMessageType;
     }
 
-    /**
-     * @param GiftMessageType $GiftMessageType
-     * @return OmniChannel
-     */
-    public function setGiftMessageType($GiftMessageType)
+    public function setGiftMessageType(GiftMessageType $GiftMessageType): static
     {
       $this->GiftMessageType = $GiftMessageType;
       return $this;
     }
 
-    /**
-     * @return \DateTime
-     */
-    public function getLockingDate()
+    public function getLockingDate(): \DateTime|bool|null
     {
       if ($this->LockingDate == null) {
         return null;
@@ -337,11 +195,7 @@ class OmniChannel
       }
     }
 
-    /**
-     * @param \DateTime $LockingDate
-     * @return OmniChannel
-     */
-    public function setLockingDate(\DateTime $LockingDate = null)
+    public function setLockingDate(\DateTime $LockingDate = null): static
     {
       if ($LockingDate == null) {
        $this->LockingDate = null;
@@ -351,145 +205,89 @@ class OmniChannel
       return $this;
     }
 
-    /**
-     * @return SaleDocumentIdentifier
-     */
-    public function getOriginalDocument()
+    public function getOriginalDocument(): ?SaleDocumentIdentifier
     {
       return $this->OriginalDocument;
     }
 
-    /**
-     * @param SaleDocumentIdentifier $OriginalDocument
-     * @return OmniChannel
-     */
-    public function setOriginalDocument($OriginalDocument)
+    public function setOriginalDocument(SaleDocumentIdentifier $OriginalDocument): static
     {
       $this->OriginalDocument = $OriginalDocument;
       return $this;
     }
 
-    /**
-     * @return string
-     */
-    public function getPaymentMethodId()
+    public function getPaymentMethodId(): ?string
     {
       return $this->PaymentMethodId;
     }
 
-    /**
-     * @param string $PaymentMethodId
-     * @return OmniChannel
-     */
-    public function setPaymentMethodId($PaymentMethodId)
+    public function setPaymentMethodId(string $PaymentMethodId): static
     {
       $this->PaymentMethodId = $PaymentMethodId;
       return $this;
     }
 
-    /**
-     * @return string
-     */
-    public function getPaymentStatus()
+    public function getPaymentStatus(): string|PaymentStatus|null
     {
       return $this->PaymentStatus;
     }
 
-    /**
-     * @param string $PaymentStatus
-     * @return OmniChannel
-     */
-    public function setPaymentStatus($PaymentStatus)
+    public function setPaymentStatus(string $PaymentStatus): static
     {
       $this->PaymentStatus = $PaymentStatus;
       return $this;
     }
 
-    /**
-     * @return string
-     */
-    public function getReturnStatus()
+    public function getReturnStatus(): OrderReturnStatus|string|null
     {
       return $this->ReturnStatus;
     }
 
-    /**
-     * @param string $ReturnStatus
-     * @return OmniChannel
-     */
-    public function setReturnStatus($ReturnStatus)
+    public function setReturnStatus(string $ReturnStatus): static
     {
       $this->ReturnStatus = $ReturnStatus;
       return $this;
     }
 
-    /**
-     * @return string
-     */
-    public function getReturnType()
+    public function getReturnType(): string|ReturnType|null
     {
       return $this->ReturnType;
     }
 
-    /**
-     * @param string $ReturnType
-     * @return OmniChannel
-     */
-    public function setReturnType($ReturnType)
+    public function setReturnType(string $ReturnType): static
     {
       $this->ReturnType = $ReturnType;
       return $this;
     }
 
-    /**
-     * @return string
-     */
-    public function getShippingStatus()
+    public function getShippingStatus(): ShippingStatus|string|null
     {
       return $this->ShippingStatus;
     }
 
-    /**
-     * @param string $ShippingStatus
-     * @return OmniChannel
-     */
-    public function setShippingStatus($ShippingStatus)
+    public function setShippingStatus(string $ShippingStatus): static
     {
       $this->ShippingStatus = $ShippingStatus;
       return $this;
     }
 
-    /**
-     * @return string
-     */
-    public function getTracking()
+    public function getTracking(): ?string
     {
       return $this->Tracking;
     }
 
-    /**
-     * @param string $Tracking
-     * @return OmniChannel
-     */
-    public function setTracking($Tracking)
+    public function setTracking(string $Tracking): static
     {
       $this->Tracking = $Tracking;
       return $this;
     }
 
-    /**
-     * @return string
-     */
-    public function getTransporter()
+    public function getTransporter(): ?string
     {
       return $this->Transporter;
     }
 
-    /**
-     * @param string $Transporter
-     * @return OmniChannel
-     */
-    public function setTransporter($Transporter)
+    public function setTransporter(string $Transporter): static
     {
       $this->Transporter = $Transporter;
       return $this;

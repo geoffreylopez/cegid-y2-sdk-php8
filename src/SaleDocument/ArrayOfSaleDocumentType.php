@@ -4,66 +4,41 @@ namespace Y2\SaleDocument;
 
 class ArrayOfSaleDocumentType implements \ArrayAccess, \Iterator, \Countable
 {
-
-    /**
-     * @var SaleDocumentType[] $SaleDocumentType
-     */
-    protected $SaleDocumentType = null;
-
+    protected ?array $SaleDocumentType = null;
     
     public function __construct()
     {
     
     }
 
-    /**
-     * @return SaleDocumentType[]
-     */
-    public function getSaleDocumentType()
+    public function getSaleDocumentType(): ?array
     {
       return $this->SaleDocumentType;
     }
 
-    /**
-     * @param SaleDocumentType[] $SaleDocumentType
-     * @return ArrayOfSaleDocumentType
-     */
-    public function setSaleDocumentType(array $SaleDocumentType = null)
+    public function setSaleDocumentType(array $SaleDocumentType = null): static
     {
       $this->SaleDocumentType = $SaleDocumentType;
       return $this;
     }
 
-    /**
-     * ArrayAccess implementation
-     *
-     * @param mixed $offset An offset to check for
-     * @return boolean true on success or false on failure
-     */
-    public function offsetExists($offset)
+    public function offsetExists(mixed $offset): bool
     {
       return isset($this->SaleDocumentType[$offset]);
     }
 
     /**
      * ArrayAccess implementation
-     *
-     * @param mixed $offset The offset to retrieve
-     * @return SaleDocumentType
      */
-    public function offsetGet($offset)
+    public function offsetGet(mixed $offset): mixed
     {
       return $this->SaleDocumentType[$offset];
     }
 
     /**
      * ArrayAccess implementation
-     *
-     * @param mixed $offset The offset to assign the value to
-     * @param SaleDocumentType $value The value to set
-     * @return void
      */
-    public function offsetSet($offset, $value)
+    public function offsetSet(mixed $offset, $value): void
     {
       if (!isset($offset)) {
         $this->SaleDocumentType[] = $value;
@@ -74,21 +49,16 @@ class ArrayOfSaleDocumentType implements \ArrayAccess, \Iterator, \Countable
 
     /**
      * ArrayAccess implementation
-     *
-     * @param mixed $offset The offset to unset
-     * @return void
      */
-    public function offsetUnset($offset)
+    public function offsetUnset(mixed $offset): void
     {
       unset($this->SaleDocumentType[$offset]);
     }
 
     /**
      * Iterator implementation
-     *
-     * @return SaleDocumentType Return the current element
      */
-    public function current()
+    public function current(): mixed
     {
       return current($this->SaleDocumentType);
     }
@@ -96,30 +66,24 @@ class ArrayOfSaleDocumentType implements \ArrayAccess, \Iterator, \Countable
     /**
      * Iterator implementation
      * Move forward to next element
-     *
-     * @return void
      */
-    public function next()
+    public function next(): void
     {
       next($this->SaleDocumentType);
     }
 
     /**
      * Iterator implementation
-     *
-     * @return string|null Return the key of the current element or null
      */
-    public function key()
+    public function key(): string|int|null
     {
       return key($this->SaleDocumentType);
     }
 
     /**
      * Iterator implementation
-     *
-     * @return boolean Return the validity of the current position
      */
-    public function valid()
+    public function valid(): bool
     {
       return $this->key() !== null;
     }
@@ -127,20 +91,16 @@ class ArrayOfSaleDocumentType implements \ArrayAccess, \Iterator, \Countable
     /**
      * Iterator implementation
      * Rewind the Iterator to the first element
-     *
-     * @return void
      */
-    public function rewind()
+    public function rewind(): void
     {
       reset($this->SaleDocumentType);
     }
 
     /**
      * Countable implementation
-     *
-     * @return SaleDocumentType Return count of elements
      */
-    public function count()
+    public function count(): int
     {
       return count($this->SaleDocumentType);
     }

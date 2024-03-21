@@ -4,54 +4,32 @@ namespace Y2\SaleDocument;
 
 class CreditCard
 {
+    protected ?string $AuthorizationNumber = null;
 
-    /**
-     * @var string $AuthorizationNumber
-     */
-    protected $AuthorizationNumber = null;
-
-    /**
-     * @var string $TransactionNumber
-     */
-    protected $TransactionNumber = null;
-
+    protected ?string $TransactionNumber = null;
     
     public function __construct()
     {
     
     }
 
-    /**
-     * @return string
-     */
-    public function getAuthorizationNumber()
+    public function getAuthorizationNumber(): ?string
     {
       return $this->AuthorizationNumber;
     }
 
-    /**
-     * @param string $AuthorizationNumber
-     * @return CreditCard
-     */
-    public function setAuthorizationNumber($AuthorizationNumber)
+    public function setAuthorizationNumber(string $AuthorizationNumber): static
     {
       $this->AuthorizationNumber = $AuthorizationNumber;
       return $this;
     }
 
-    /**
-     * @return string
-     */
-    public function getTransactionNumber()
+    public function getTransactionNumber(): ?string
     {
       return $this->TransactionNumber;
     }
 
-    /**
-     * @param string $TransactionNumber
-     * @return CreditCard
-     */
-    public function setTransactionNumber($TransactionNumber)
+    public function setTransactionNumber(string $TransactionNumber): static
     {
       $this->TransactionNumber = $TransactionNumber;
       return $this;

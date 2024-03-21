@@ -4,170 +4,96 @@ namespace Y2\SaleDocument;
 
 class Get_Payment
 {
+    protected ?float $Amount = null;
 
-    /**
-     * @var float $Amount
-     */
-    protected $Amount = null;
+    protected ?float $CashAmount = null;
 
-    /**
-     * @var float $CashAmount
-     */
-    protected $CashAmount = null;
+    protected ?string $Code = null;
 
-    /**
-     * @var string $Code
-     */
-    protected $Code = null;
+    protected ?CreditCard $CreditCard = null;
 
-    /**
-     * @var CreditCard $CreditCard
-     */
-    protected $CreditCard = null;
+    protected ?string $Currency = null;
 
-    /**
-     * @var string $Currency
-     */
-    protected $Currency = null;
+    protected ?string $CurrencySymbol = null;
 
-    /**
-     * @var string $CurrencySymbol
-     */
-    protected $CurrencySymbol = null;
+    protected ?\DateTime $DueDate = null;
 
-    /**
-     * @var \DateTime $DueDate
-     */
-    protected $DueDate = null;
+    protected ?bool $IsReceivedPayment = null;
 
-    /**
-     * @var boolean $IsReceivedPayment
-     */
-    protected $IsReceivedPayment = null;
-
-    /**
-     * @var string $Label
-     */
-    protected $Label = null;
-
+    protected ?string $Label = null;
     
     public function __construct()
     {
     
     }
 
-    /**
-     * @return float
-     */
-    public function getAmount()
+    public function getAmount(): ?float
     {
       return $this->Amount;
     }
 
-    /**
-     * @param float $Amount
-     * @return Get_Payment
-     */
-    public function setAmount($Amount)
+    public function setAmount(float $Amount): static
     {
       $this->Amount = $Amount;
       return $this;
     }
 
-    /**
-     * @return float
-     */
-    public function getCashAmount()
+    public function getCashAmount(): ?float
     {
       return $this->CashAmount;
     }
 
-    /**
-     * @param float $CashAmount
-     * @return Get_Payment
-     */
-    public function setCashAmount($CashAmount)
+    public function setCashAmount(float $CashAmount): static
     {
       $this->CashAmount = $CashAmount;
       return $this;
     }
 
-    /**
-     * @return string
-     */
-    public function getCode()
+    public function getCode(): ?string
     {
       return $this->Code;
     }
 
-    /**
-     * @param string $Code
-     * @return Get_Payment
-     */
-    public function setCode($Code)
+    public function setCode(string $Code): static
     {
       $this->Code = $Code;
       return $this;
     }
 
-    /**
-     * @return CreditCard
-     */
-    public function getCreditCard()
+    public function getCreditCard(): ?CreditCard
     {
       return $this->CreditCard;
     }
 
-    /**
-     * @param CreditCard $CreditCard
-     * @return Get_Payment
-     */
-    public function setCreditCard($CreditCard)
+    public function setCreditCard(CreditCard $CreditCard): static
     {
       $this->CreditCard = $CreditCard;
       return $this;
     }
 
-    /**
-     * @return string
-     */
-    public function getCurrency()
+    public function getCurrency(): ?string
     {
       return $this->Currency;
     }
 
-    /**
-     * @param string $Currency
-     * @return Get_Payment
-     */
-    public function setCurrency($Currency)
+    public function setCurrency(string $Currency): static
     {
       $this->Currency = $Currency;
       return $this;
     }
 
-    /**
-     * @return string
-     */
-    public function getCurrencySymbol()
+    public function getCurrencySymbol(): ?string
     {
       return $this->CurrencySymbol;
     }
 
-    /**
-     * @param string $CurrencySymbol
-     * @return Get_Payment
-     */
-    public function setCurrencySymbol($CurrencySymbol)
+    public function setCurrencySymbol(string $CurrencySymbol): static
     {
       $this->CurrencySymbol = $CurrencySymbol;
       return $this;
     }
 
-    /**
-     * @return \DateTime
-     */
-    public function getDueDate()
+    public function getDueDate(): \DateTime|bool|null
     {
       if ($this->DueDate == null) {
         return null;
@@ -180,11 +106,7 @@ class Get_Payment
       }
     }
 
-    /**
-     * @param \DateTime $DueDate
-     * @return Get_Payment
-     */
-    public function setDueDate(\DateTime $DueDate = null)
+    public function setDueDate(\DateTime $DueDate = null): static
     {
       if ($DueDate == null) {
        $this->DueDate = null;
@@ -194,37 +116,23 @@ class Get_Payment
       return $this;
     }
 
-    /**
-     * @return boolean
-     */
-    public function getIsReceivedPayment()
+    public function getIsReceivedPayment(): ?bool
     {
       return $this->IsReceivedPayment;
     }
 
-    /**
-     * @param boolean $IsReceivedPayment
-     * @return Get_Payment
-     */
-    public function setIsReceivedPayment($IsReceivedPayment)
+    public function setIsReceivedPayment(bool $IsReceivedPayment): static
     {
       $this->IsReceivedPayment = $IsReceivedPayment;
       return $this;
     }
 
-    /**
-     * @return string
-     */
-    public function getLabel()
+    public function getLabel(): ?string
     {
       return $this->Label;
     }
 
-    /**
-     * @param string $Label
-     * @return Get_Payment
-     */
-    public function setLabel($Label)
+    public function setLabel(string $Label): static
     {
       $this->Label = $Label;
       return $this;

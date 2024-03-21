@@ -4,77 +4,45 @@ namespace Y2\SaleDocument;
 
 class SaleDocumentReference
 {
+    protected ?string $CustomerId = null;
 
-    /**
-     * @var string $CustomerId
-     */
-    protected $CustomerId = null;
+    protected ?string $InternalReference = null;
 
-    /**
-     * @var string $InternalReference
-     */
-    protected $InternalReference = null;
+    protected ?string $Type = null;
 
-    /**
-     * @var string $Type
-     */
-    protected $Type = null;
-
-    
     public function __construct()
     {
     
     }
 
-    /**
-     * @return string
-     */
-    public function getCustomerId()
+    public function getCustomerId(): ?string
     {
       return $this->CustomerId;
     }
 
-    /**
-     * @param string $CustomerId
-     * @return SaleDocumentReference
-     */
-    public function setCustomerId($CustomerId)
+    public function setCustomerId(string $CustomerId): static
     {
       $this->CustomerId = $CustomerId;
       return $this;
     }
 
-    /**
-     * @return string
-     */
-    public function getInternalReference()
+    public function getInternalReference(): ?string
     {
       return $this->InternalReference;
     }
 
-    /**
-     * @param string $InternalReference
-     * @return SaleDocumentReference
-     */
-    public function setInternalReference($InternalReference)
+    public function setInternalReference(string $InternalReference): static
     {
       $this->InternalReference = $InternalReference;
       return $this;
     }
 
-    /**
-     * @return string
-     */
-    public function getType()
+    public function getType(): ?string
     {
       return $this->Type;
     }
 
-    /**
-     * @param string $Type
-     * @return SaleDocumentReference
-     */
-    public function setType($Type)
+    public function setType(string $Type): static
     {
       $this->Type = $Type;
       return $this;

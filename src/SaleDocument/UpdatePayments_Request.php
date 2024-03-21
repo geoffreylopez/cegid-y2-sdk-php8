@@ -4,54 +4,32 @@ namespace Y2\SaleDocument;
 
 class UpdatePayments_Request
 {
+    protected ?SaleDocumentIdentifier $Identifier = null;
 
-    /**
-     * @var SaleDocumentIdentifier $Identifier
-     */
-    protected $Identifier = null;
-
-    /**
-     * @var ArrayOfUpdate_Payment $Payments
-     */
-    protected $Payments = null;
-
+    protected ?ArrayOfUpdate_Payment $Payments = null;
     
     public function __construct()
     {
     
     }
 
-    /**
-     * @return SaleDocumentIdentifier
-     */
-    public function getIdentifier()
+    public function getIdentifier(): ?SaleDocumentIdentifier
     {
       return $this->Identifier;
     }
 
-    /**
-     * @param SaleDocumentIdentifier $Identifier
-     * @return UpdatePayments_Request
-     */
-    public function setIdentifier($Identifier)
+    public function setIdentifier(SaleDocumentIdentifier $Identifier): static
     {
       $this->Identifier = $Identifier;
       return $this;
     }
 
-    /**
-     * @return ArrayOfUpdate_Payment
-     */
-    public function getPayments()
+    public function getPayments(): ?ArrayOfUpdate_Payment
     {
       return $this->Payments;
     }
 
-    /**
-     * @param ArrayOfUpdate_Payment $Payments
-     * @return UpdatePayments_Request
-     */
-    public function setPayments($Payments)
+    public function setPayments(ArrayOfUpdate_Payment $Payments): static
     {
       $this->Payments = $Payments;
       return $this;

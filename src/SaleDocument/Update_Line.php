@@ -4,156 +4,79 @@ namespace Y2\SaleDocument;
 
 class Update_Line
 {
+    protected ?string $CatalogReference = null;
 
-    /**
-     * @var string $CatalogReference
-     */
-    protected $CatalogReference = null;
+    protected ?string $Comment = null;
 
-    /**
-     * @var string $Comment
-     */
-    protected $Comment = null;
+    protected ?string $ComplementaryDescription = null;
 
-    /**
-     * @var string $ComplementaryDescription
-     */
-    protected $ComplementaryDescription = null;
+    protected ?\DateTime $DeliveryDate = null;
 
-    /**
-     * @var \DateTime $DeliveryDate
-     */
-    protected $DeliveryDate = null;
+    protected ?string $DiscountTypeId = null;
 
-    /**
-     * @var string $DiscountTypeId
-     */
-    protected $DiscountTypeId = null;
+    protected ?\DateTime $InitialDeliveryDate = null;
 
-    /**
-     * @var \DateTime $InitialDeliveryDate
-     */
-    protected $InitialDeliveryDate = null;
+    protected ?ItemIdentifier $ItemIdentifier = null;
 
-    /**
-     * @var ItemIdentifier $ItemIdentifier
-     */
-    protected $ItemIdentifier = null;
+    protected ?string $Label = null;
 
-    /**
-     * @var string $Label
-     */
-    protected $Label = null;
+    protected ?float $NetUnitPrice = null;
 
-    /**
-     * @var float $NetUnitPrice
-     */
-    protected $NetUnitPrice = null;
+    protected ?OmniChannelLine $OmniChannel = null;
 
-    /**
-     * @var OmniChannelLine $OmniChannel
-     */
-    protected $OmniChannel = null;
+    protected ?DocumentOrigin $Origin = null;
 
-    /**
-     * @var DocumentOrigin $Origin
-     */
-    protected $Origin = null;
+    protected ?string $PackageReference = null;
 
-    /**
-     * @var string $PackageReference
-     */
-    protected $PackageReference = null;
+    protected ?float $Quantity = null;
 
-    /**
-     * @var float $Quantity
-     */
-    protected $Quantity = null;
+    protected ?string $SalesPersonId = null;
 
-    /**
-     * @var string $SalesPersonId
-     */
-    protected $SalesPersonId = null;
+    protected ?string $SerialNumberId = null;
 
-    /**
-     * @var string $SerialNumberId
-     */
-    protected $SerialNumberId = null;
+    protected ?ArrayOfUpdate_Tax $Taxes = null;
 
-    /**
-     * @var ArrayOfUpdate_Tax $Taxes
-     */
-    protected $Taxes = null;
-
-    /**
-     * @var float $UnitPrice
-     */
-    protected $UnitPrice = null;
-
+    protected ?float $UnitPrice = null;
     
     public function __construct()
     {
     
     }
 
-    /**
-     * @return string
-     */
-    public function getCatalogReference()
+    public function getCatalogReference(): ?string
     {
       return $this->CatalogReference;
     }
 
-    /**
-     * @param string $CatalogReference
-     * @return Update_Line
-     */
-    public function setCatalogReference($CatalogReference)
+    public function setCatalogReference(string $CatalogReference): static
     {
       $this->CatalogReference = $CatalogReference;
       return $this;
     }
 
-    /**
-     * @return string
-     */
-    public function getComment()
+    public function getComment(): ?string
     {
       return $this->Comment;
     }
 
-    /**
-     * @param string $Comment
-     * @return Update_Line
-     */
-    public function setComment($Comment)
+    public function setComment(string $Comment): static
     {
       $this->Comment = $Comment;
       return $this;
     }
 
-    /**
-     * @return string
-     */
-    public function getComplementaryDescription()
+    public function getComplementaryDescription(): ?string
     {
       return $this->ComplementaryDescription;
     }
 
-    /**
-     * @param string $ComplementaryDescription
-     * @return Update_Line
-     */
-    public function setComplementaryDescription($ComplementaryDescription)
+    public function setComplementaryDescription(string $ComplementaryDescription): static
     {
       $this->ComplementaryDescription = $ComplementaryDescription;
       return $this;
     }
 
-    /**
-     * @return \DateTime
-     */
-    public function getDeliveryDate()
+    public function getDeliveryDate(): \DateTime|bool|null
     {
       if ($this->DeliveryDate == null) {
         return null;
@@ -166,11 +89,7 @@ class Update_Line
       }
     }
 
-    /**
-     * @param \DateTime $DeliveryDate
-     * @return Update_Line
-     */
-    public function setDeliveryDate(\DateTime $DeliveryDate = null)
+    public function setDeliveryDate(\DateTime $DeliveryDate = null): static
     {
       if ($DeliveryDate == null) {
        $this->DeliveryDate = null;
@@ -180,28 +99,18 @@ class Update_Line
       return $this;
     }
 
-    /**
-     * @return string
-     */
-    public function getDiscountTypeId()
+    public function getDiscountTypeId(): ?string
     {
       return $this->DiscountTypeId;
     }
 
-    /**
-     * @param string $DiscountTypeId
-     * @return Update_Line
-     */
-    public function setDiscountTypeId($DiscountTypeId)
+    public function setDiscountTypeId(string $DiscountTypeId): static
     {
       $this->DiscountTypeId = $DiscountTypeId;
       return $this;
     }
 
-    /**
-     * @return \DateTime
-     */
-    public function getInitialDeliveryDate()
+    public function getInitialDeliveryDate(): \DateTime|bool|null
     {
       if ($this->InitialDeliveryDate == null) {
         return null;
@@ -214,11 +123,7 @@ class Update_Line
       }
     }
 
-    /**
-     * @param \DateTime $InitialDeliveryDate
-     * @return Update_Line
-     */
-    public function setInitialDeliveryDate(\DateTime $InitialDeliveryDate = null)
+    public function setInitialDeliveryDate(\DateTime $InitialDeliveryDate = null): static
     {
       if ($InitialDeliveryDate == null) {
        $this->InitialDeliveryDate = null;
@@ -228,199 +133,122 @@ class Update_Line
       return $this;
     }
 
-    /**
-     * @return ItemIdentifier
-     */
-    public function getItemIdentifier()
+    public function getItemIdentifier(): ?ItemIdentifier
     {
       return $this->ItemIdentifier;
     }
 
-    /**
-     * @param ItemIdentifier $ItemIdentifier
-     * @return Update_Line
-     */
-    public function setItemIdentifier($ItemIdentifier)
+    public function setItemIdentifier(ItemIdentifier $ItemIdentifier): static
     {
       $this->ItemIdentifier = $ItemIdentifier;
       return $this;
     }
 
-    /**
-     * @return string
-     */
-    public function getLabel()
+    public function getLabel(): ?string
     {
       return $this->Label;
     }
 
-    /**
-     * @param string $Label
-     * @return Update_Line
-     */
-    public function setLabel($Label)
+    public function setLabel(string $Label): static
     {
       $this->Label = $Label;
       return $this;
     }
 
-    /**
-     * @return float
-     */
-    public function getNetUnitPrice()
+    public function getNetUnitPrice(): ?float
     {
       return $this->NetUnitPrice;
     }
 
-    /**
-     * @param float $NetUnitPrice
-     * @return Update_Line
-     */
-    public function setNetUnitPrice($NetUnitPrice)
+    public function setNetUnitPrice(float $NetUnitPrice): static
     {
       $this->NetUnitPrice = $NetUnitPrice;
       return $this;
     }
 
-    /**
-     * @return OmniChannelLine
-     */
-    public function getOmniChannel()
+    public function getOmniChannel(): ?OmniChannelLine
     {
       return $this->OmniChannel;
     }
 
-    /**
-     * @param OmniChannelLine $OmniChannel
-     * @return Update_Line
-     */
-    public function setOmniChannel($OmniChannel)
+    public function setOmniChannel(OmniChannelLine $OmniChannel): static
     {
       $this->OmniChannel = $OmniChannel;
       return $this;
     }
 
-    /**
-     * @return DocumentOrigin
-     */
-    public function getOrigin()
+    public function getOrigin(): ?DocumentOrigin
     {
       return $this->Origin;
     }
 
-    /**
-     * @param DocumentOrigin $Origin
-     * @return Update_Line
-     */
-    public function setOrigin($Origin)
+    public function setOrigin(DocumentOrigin $Origin): static
     {
       $this->Origin = $Origin;
       return $this;
     }
 
-    /**
-     * @return string
-     */
-    public function getPackageReference()
+    public function getPackageReference(): ?string
     {
       return $this->PackageReference;
     }
 
-    /**
-     * @param string $PackageReference
-     * @return Update_Line
-     */
-    public function setPackageReference($PackageReference)
+    public function setPackageReference(string $PackageReference): static
     {
       $this->PackageReference = $PackageReference;
       return $this;
     }
 
-    /**
-     * @return float
-     */
-    public function getQuantity()
+    public function getQuantity(): ?float
     {
       return $this->Quantity;
     }
 
-    /**
-     * @param float $Quantity
-     * @return Update_Line
-     */
-    public function setQuantity($Quantity)
+    public function setQuantity(float $Quantity): static
     {
       $this->Quantity = $Quantity;
       return $this;
     }
 
-    /**
-     * @return string
-     */
-    public function getSalesPersonId()
+    public function getSalesPersonId(): ?string
     {
       return $this->SalesPersonId;
     }
 
-    /**
-     * @param string $SalesPersonId
-     * @return Update_Line
-     */
-    public function setSalesPersonId($SalesPersonId)
+    public function setSalesPersonId(string $SalesPersonId): static
     {
       $this->SalesPersonId = $SalesPersonId;
       return $this;
     }
 
-    /**
-     * @return string
-     */
-    public function getSerialNumberId()
+    public function getSerialNumberId(): ?string
     {
       return $this->SerialNumberId;
     }
 
-    /**
-     * @param string $SerialNumberId
-     * @return Update_Line
-     */
-    public function setSerialNumberId($SerialNumberId)
+    public function setSerialNumberId(string $SerialNumberId): static
     {
       $this->SerialNumberId = $SerialNumberId;
       return $this;
     }
 
-    /**
-     * @return ArrayOfUpdate_Tax
-     */
-    public function getTaxes()
+    public function getTaxes(): ?ArrayOfUpdate_Tax
     {
       return $this->Taxes;
     }
 
-    /**
-     * @param ArrayOfUpdate_Tax $Taxes
-     * @return Update_Line
-     */
-    public function setTaxes($Taxes)
+    public function setTaxes(ArrayOfUpdate_Tax $Taxes): static
     {
       $this->Taxes = $Taxes;
       return $this;
     }
 
-    /**
-     * @return float
-     */
-    public function getUnitPrice()
+    public function getUnitPrice(): ?float
     {
       return $this->UnitPrice;
     }
 
-    /**
-     * @param float $UnitPrice
-     * @return Update_Line
-     */
-    public function setUnitPrice($UnitPrice)
+    public function setUnitPrice(float $UnitPrice): static
     {
       $this->UnitPrice = $UnitPrice;
       return $this;

@@ -4,33 +4,19 @@ namespace Y2\SaleDocument;
 
 class HelloWorldResponse
 {
+    protected ?string $HelloWorldResult = null;
 
-    /**
-     * @var string $HelloWorldResult
-     */
-    protected $HelloWorldResult = null;
-
-    /**
-     * @param string $HelloWorldResult
-     */
-    public function __construct($HelloWorldResult)
+    public function __construct(string $HelloWorldResult)
     {
       $this->HelloWorldResult = $HelloWorldResult;
     }
 
-    /**
-     * @return string
-     */
-    public function getHelloWorldResult()
+    public function getHelloWorldResult(): ?string
     {
       return $this->HelloWorldResult;
     }
 
-    /**
-     * @param string $HelloWorldResult
-     * @return HelloWorldResponse
-     */
-    public function setHelloWorldResult($HelloWorldResult)
+    public function setHelloWorldResult(string $HelloWorldResult): static
     {
       $this->HelloWorldResult = $HelloWorldResult;
       return $this;

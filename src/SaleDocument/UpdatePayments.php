@@ -4,58 +4,34 @@ namespace Y2\SaleDocument;
 
 class UpdatePayments
 {
+    protected ?UpdatePayments_Request $updatePaymentsRequest = null;
 
-    /**
-     * @var UpdatePayments_Request $updatePaymentsRequest
-     */
-    protected $updatePaymentsRequest = null;
+    protected ?RetailContext $clientContext = null;
 
-    /**
-     * @var RetailContext $clientContext
-     */
-    protected $clientContext = null;
-
-    /**
-     * @param UpdatePayments_Request $updatePaymentsRequest
-     * @param RetailContext $clientContext
-     */
-    public function __construct($updatePaymentsRequest, $clientContext)
+    public function __construct(UpdatePayments_Request $updatePaymentsRequest, RetailContext $clientContext)
     {
       $this->updatePaymentsRequest = $updatePaymentsRequest;
       $this->clientContext = $clientContext;
     }
 
-    /**
-     * @return UpdatePayments_Request
-     */
-    public function getUpdatePaymentsRequest()
+
+    public function getUpdatePaymentsRequest(): ?UpdatePayments_Request
     {
       return $this->updatePaymentsRequest;
     }
 
-    /**
-     * @param UpdatePayments_Request $updatePaymentsRequest
-     * @return UpdatePayments
-     */
-    public function setUpdatePaymentsRequest($updatePaymentsRequest)
+    public function setUpdatePaymentsRequest(UpdatePayments_Request $updatePaymentsRequest): static
     {
       $this->updatePaymentsRequest = $updatePaymentsRequest;
       return $this;
     }
 
-    /**
-     * @return RetailContext
-     */
-    public function getClientContext()
+    public function getClientContext(): ?RetailContext
     {
       return $this->clientContext;
     }
 
-    /**
-     * @param RetailContext $clientContext
-     * @return UpdatePayments
-     */
-    public function setClientContext($clientContext)
+    public function setClientContext(RetailContext $clientContext): static
     {
       $this->clientContext = $clientContext;
       return $this;

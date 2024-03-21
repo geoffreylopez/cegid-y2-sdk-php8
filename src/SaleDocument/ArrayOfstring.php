@@ -4,31 +4,19 @@ namespace Y2\SaleDocument;
 
 class ArrayOfstring implements \ArrayAccess, \Iterator, \Countable
 {
+    protected ?array $string = null;
 
-    /**
-     * @var string[] $string
-     */
-    protected $string = null;
-
-    
     public function __construct()
     {
     
     }
 
-    /**
-     * @return string[]
-     */
-    public function getString()
+    public function getString(): ?array
     {
       return $this->string;
     }
 
-    /**
-     * @param string[] $string
-     * @return ArrayOfstring
-     */
-    public function setString(array $string = null)
+    public function setString(array $string = null): static
     {
       $this->string = $string;
       return $this;
@@ -36,34 +24,24 @@ class ArrayOfstring implements \ArrayAccess, \Iterator, \Countable
 
     /**
      * ArrayAccess implementation
-     *
-     * @param mixed $offset An offset to check for
-     * @return boolean true on success or false on failure
      */
-    public function offsetExists($offset)
+    public function offsetExists(mixed $offset): bool
     {
       return isset($this->string[$offset]);
     }
 
     /**
      * ArrayAccess implementation
-     *
-     * @param mixed $offset The offset to retrieve
-     * @return string
      */
-    public function offsetGet($offset)
+    public function offsetGet(mixed $offset): mixed
     {
       return $this->string[$offset];
     }
 
     /**
      * ArrayAccess implementation
-     *
-     * @param mixed $offset The offset to assign the value to
-     * @param string $value The value to set
-     * @return void
      */
-    public function offsetSet($offset, $value)
+    public function offsetSet(mixed $offset, $value): void
     {
       if (!isset($offset)) {
         $this->string[] = $value;
@@ -74,21 +52,16 @@ class ArrayOfstring implements \ArrayAccess, \Iterator, \Countable
 
     /**
      * ArrayAccess implementation
-     *
-     * @param mixed $offset The offset to unset
-     * @return void
      */
-    public function offsetUnset($offset)
+    public function offsetUnset(mixed $offset): void
     {
       unset($this->string[$offset]);
     }
 
     /**
      * Iterator implementation
-     *
-     * @return string Return the current element
      */
-    public function current()
+    public function current(): mixed
     {
       return current($this->string);
     }
@@ -96,30 +69,24 @@ class ArrayOfstring implements \ArrayAccess, \Iterator, \Countable
     /**
      * Iterator implementation
      * Move forward to next element
-     *
-     * @return void
      */
-    public function next()
+    public function next(): void
     {
       next($this->string);
     }
 
     /**
      * Iterator implementation
-     *
-     * @return string|null Return the key of the current element or null
      */
-    public function key()
+    public function key(): string|int|null
     {
       return key($this->string);
     }
 
     /**
      * Iterator implementation
-     *
-     * @return boolean Return the validity of the current position
      */
-    public function valid()
+    public function valid(): bool
     {
       return $this->key() !== null;
     }
@@ -127,20 +94,16 @@ class ArrayOfstring implements \ArrayAccess, \Iterator, \Countable
     /**
      * Iterator implementation
      * Rewind the Iterator to the first element
-     *
-     * @return void
      */
-    public function rewind()
+    public function rewind(): void
     {
       reset($this->string);
     }
 
     /**
      * Countable implementation
-     *
-     * @return string Return count of elements
      */
-    public function count()
+    public function count(): int
     {
       return count($this->string);
     }

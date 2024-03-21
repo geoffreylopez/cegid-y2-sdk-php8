@@ -4,33 +4,19 @@ namespace Y2\SaleDocument;
 
 class GetHeaderListResponse
 {
+    protected ?GetHeaderList_Reply $GetHeaderListResult = null;
 
-    /**
-     * @var GetHeaderList_Reply $GetHeaderListResult
-     */
-    protected $GetHeaderListResult = null;
-
-    /**
-     * @param GetHeaderList_Reply $GetHeaderListResult
-     */
-    public function __construct($GetHeaderListResult)
+    public function __construct(GetHeaderList_Reply $GetHeaderListResult)
     {
       $this->GetHeaderListResult = $GetHeaderListResult;
     }
 
-    /**
-     * @return GetHeaderList_Reply
-     */
-    public function getGetHeaderListResult()
+    public function getGetHeaderListResult(): ?GetHeaderList_Reply
     {
       return $this->GetHeaderListResult;
     }
 
-    /**
-     * @param GetHeaderList_Reply $GetHeaderListResult
-     * @return GetHeaderListResponse
-     */
-    public function setGetHeaderListResult($GetHeaderListResult)
+    public function setGetHeaderListResult(GetHeaderList_Reply $GetHeaderListResult): static
     {
       $this->GetHeaderListResult = $GetHeaderListResult;
       return $this;

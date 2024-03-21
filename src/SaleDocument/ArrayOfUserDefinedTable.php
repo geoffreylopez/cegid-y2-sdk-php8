@@ -4,66 +4,41 @@ namespace Y2\SaleDocument;
 
 class ArrayOfUserDefinedTable implements \ArrayAccess, \Iterator, \Countable
 {
+    protected ?array $UserDefinedTable = null;
 
-    /**
-     * @var UserDefinedTable[] $UserDefinedTable
-     */
-    protected $UserDefinedTable = null;
-
-    
     public function __construct()
     {
     
     }
 
-    /**
-     * @return UserDefinedTable[]
-     */
-    public function getUserDefinedTable()
+    public function getUserDefinedTable(): ?array
     {
       return $this->UserDefinedTable;
     }
 
-    /**
-     * @param UserDefinedTable[] $UserDefinedTable
-     * @return ArrayOfUserDefinedTable
-     */
-    public function setUserDefinedTable(array $UserDefinedTable = null)
+    public function setUserDefinedTable(array $UserDefinedTable = null): static
     {
       $this->UserDefinedTable = $UserDefinedTable;
       return $this;
     }
 
-    /**
-     * ArrayAccess implementation
-     *
-     * @param mixed $offset An offset to check for
-     * @return boolean true on success or false on failure
-     */
-    public function offsetExists($offset)
+    public function offsetExists(mixed $offset): bool
     {
       return isset($this->UserDefinedTable[$offset]);
     }
 
     /**
      * ArrayAccess implementation
-     *
-     * @param mixed $offset The offset to retrieve
-     * @return UserDefinedTable
      */
-    public function offsetGet($offset)
+    public function offsetGet(mixed $offset): mixed
     {
       return $this->UserDefinedTable[$offset];
     }
 
     /**
      * ArrayAccess implementation
-     *
-     * @param mixed $offset The offset to assign the value to
-     * @param UserDefinedTable $value The value to set
-     * @return void
      */
-    public function offsetSet($offset, $value)
+    public function offsetSet(mixed $offset, $value): void
     {
       if (!isset($offset)) {
         $this->UserDefinedTable[] = $value;
@@ -74,21 +49,16 @@ class ArrayOfUserDefinedTable implements \ArrayAccess, \Iterator, \Countable
 
     /**
      * ArrayAccess implementation
-     *
-     * @param mixed $offset The offset to unset
-     * @return void
      */
-    public function offsetUnset($offset)
+    public function offsetUnset(mixed $offset): void
     {
       unset($this->UserDefinedTable[$offset]);
     }
 
     /**
      * Iterator implementation
-     *
-     * @return UserDefinedTable Return the current element
      */
-    public function current()
+    public function current(): mixed
     {
       return current($this->UserDefinedTable);
     }
@@ -96,30 +66,24 @@ class ArrayOfUserDefinedTable implements \ArrayAccess, \Iterator, \Countable
     /**
      * Iterator implementation
      * Move forward to next element
-     *
-     * @return void
      */
-    public function next()
+    public function next(): void
     {
       next($this->UserDefinedTable);
     }
 
     /**
      * Iterator implementation
-     *
-     * @return string|null Return the key of the current element or null
      */
-    public function key()
+    public function key(): string|int|null
     {
       return key($this->UserDefinedTable);
     }
 
     /**
      * Iterator implementation
-     *
-     * @return boolean Return the validity of the current position
      */
-    public function valid()
+    public function valid(): bool
     {
       return $this->key() !== null;
     }
@@ -127,20 +91,16 @@ class ArrayOfUserDefinedTable implements \ArrayAccess, \Iterator, \Countable
     /**
      * Iterator implementation
      * Rewind the Iterator to the first element
-     *
-     * @return void
      */
-    public function rewind()
+    public function rewind(): void
     {
       reset($this->UserDefinedTable);
     }
 
     /**
      * Countable implementation
-     *
-     * @return UserDefinedTable Return count of elements
      */
-    public function count()
+    public function count(): int
     {
       return count($this->UserDefinedTable);
     }

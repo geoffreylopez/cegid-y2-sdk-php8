@@ -4,58 +4,33 @@ namespace Y2\SaleDocument;
 
 class GetHeaderList
 {
+    protected ?GetHeaderList_Request $searchRequest = null;
 
-    /**
-     * @var GetHeaderList_Request $searchRequest
-     */
-    protected $searchRequest = null;
+    protected ?RetailContext $clientContext = null;
 
-    /**
-     * @var RetailContext $clientContext
-     */
-    protected $clientContext = null;
-
-    /**
-     * @param GetHeaderList_Request $searchRequest
-     * @param RetailContext $clientContext
-     */
-    public function __construct($searchRequest, $clientContext)
+    public function __construct(GetHeaderList_Request $searchRequest, RetailContext $clientContext)
     {
       $this->searchRequest = $searchRequest;
       $this->clientContext = $clientContext;
     }
 
-    /**
-     * @return GetHeaderList_Request
-     */
-    public function getSearchRequest()
+    public function getSearchRequest(): ?GetHeaderList_Request
     {
       return $this->searchRequest;
     }
 
-    /**
-     * @param GetHeaderList_Request $searchRequest
-     * @return GetHeaderList
-     */
-    public function setSearchRequest($searchRequest)
+    public function setSearchRequest(GetHeaderList_Request $searchRequest): static
     {
       $this->searchRequest = $searchRequest;
       return $this;
     }
 
-    /**
-     * @return RetailContext
-     */
-    public function getClientContext()
+    public function getClientContext(): ?RetailContext
     {
       return $this->clientContext;
     }
 
-    /**
-     * @param RetailContext $clientContext
-     * @return GetHeaderList
-     */
-    public function setClientContext($clientContext)
+    public function setClientContext(RetailContext $clientContext): static
     {
       $this->clientContext = $clientContext;
       return $this;

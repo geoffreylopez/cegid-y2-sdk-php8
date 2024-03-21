@@ -4,31 +4,19 @@ namespace Y2\SaleDocument;
 
 class GetHeaderList_Reply
 {
+    protected ?ArrayOfGet_Header $Headers = null;
 
-    /**
-     * @var ArrayOfGet_Header $Headers
-     */
-    protected $Headers = null;
-
-    
     public function __construct()
     {
     
     }
 
-    /**
-     * @return ArrayOfGet_Header
-     */
-    public function getHeaders()
+    public function getHeaders(): ?ArrayOfGet_Header
     {
       return $this->Headers;
     }
 
-    /**
-     * @param ArrayOfGet_Header $Headers
-     * @return GetHeaderList_Reply
-     */
-    public function setHeaders($Headers)
+    public function setHeaders(ArrayOfGet_Header $Headers): static
     {
       $this->Headers = $Headers;
       return $this;

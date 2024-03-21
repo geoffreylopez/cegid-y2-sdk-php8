@@ -4,54 +4,32 @@ namespace Y2\SaleDocument;
 
 class Update_ShippingTax
 {
+    protected ?float $Amount = null;
 
-    /**
-     * @var float $Amount
-     */
-    protected $Amount = null;
+    protected ?string $Id = null;
 
-    /**
-     * @var string $Id
-     */
-    protected $Id = null;
-
-    
     public function __construct()
     {
     
     }
 
-    /**
-     * @return float
-     */
-    public function getAmount()
+    public function getAmount(): ?float
     {
       return $this->Amount;
     }
 
-    /**
-     * @param float $Amount
-     * @return Update_ShippingTax
-     */
-    public function setAmount($Amount)
+    public function setAmount(float $Amount): static
     {
       $this->Amount = $Amount;
       return $this;
     }
 
-    /**
-     * @return string
-     */
-    public function getId()
+    public function getId(): ?string
     {
       return $this->Id;
     }
 
-    /**
-     * @param string $Id
-     * @return Update_ShippingTax
-     */
-    public function setId($Id)
+    public function setId(string $Id): static
     {
       $this->Id = $Id;
       return $this;

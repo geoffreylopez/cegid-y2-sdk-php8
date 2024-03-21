@@ -4,140 +4,74 @@ namespace Y2\SaleDocument;
 
 class Create_Payment
 {
+    protected ?float $Amount = null;
 
-    /**
-     * @var float $Amount
-     */
-    protected $Amount = null;
+    protected ?string $BonId = null;
 
-    /**
-     * @var string $BonId
-     */
-    protected $BonId = null;
+    protected ?CreditCard $CreditCard = null;
 
-    /**
-     * @var CreditCard $CreditCard
-     */
-    protected $CreditCard = null;
+    protected ?string $CurrencyId = null;
 
-    /**
-     * @var string $CurrencyId
-     */
-    protected $CurrencyId = null;
+    protected ?\DateTime $DueDate = null;
 
-    /**
-     * @var \DateTime $DueDate
-     */
-    protected $DueDate = null;
+    protected ?int $Id = null;
 
-    /**
-     * @var int $Id
-     */
-    protected $Id = null;
+    protected ?bool $IsReceivedPayment = null;
 
-    /**
-     * @var boolean $IsReceivedPayment
-     */
-    protected $IsReceivedPayment = null;
+    protected ?string $MethodId = null;
 
-    /**
-     * @var string $MethodId
-     */
-    protected $MethodId = null;
+    protected ?string $RegisterOperationForReceivedPayment = null;
 
-    /**
-     * @var string $RegisterOperationForReceivedPayment
-     */
-    protected $RegisterOperationForReceivedPayment = null;
-
-    /**
-     * @param int $Id
-     */
-    public function __construct($Id)
+    public function __construct(int $Id)
     {
         $this->Id = $Id;
     }
 
-    /**
-     * @return float
-     */
-    public function getAmount()
+    public function getAmount(): ?float
     {
         return $this->Amount;
     }
 
-    /**
-     * @param float $Amount
-     *
-     * @return Create_Payment
-     */
-    public function setAmount($Amount)
+    public function setAmount(float $Amount): static
     {
         $this->Amount = $Amount;
         return $this;
     }
 
-    /**
-     * @return string
-     */
-    public function getBonId()
+    public function getBonId(): ?string
     {
         return $this->BonId;
     }
 
-    /**
-     * @param string $BonId
-     *
-     * @return Create_Payment
-     */
-    public function setBonId($BonId)
+    public function setBonId(string $BonId): static
     {
         $this->BonId = $BonId;
         return $this;
     }
 
-    /**
-     * @return CreditCard
-     */
-    public function getCreditCard()
+    public function getCreditCard(): ?CreditCard
     {
         return $this->CreditCard;
     }
 
-    /**
-     * @param CreditCard $CreditCard
-     *
-     * @return Create_Payment
-     */
-    public function setCreditCard($CreditCard)
+    public function setCreditCard(CreditCard $CreditCard): static
     {
         $this->CreditCard = $CreditCard;
         return $this;
     }
 
-    /**
-     * @return string
-     */
-    public function getCurrencyId()
+    public function getCurrencyId(): ?string
     {
         return $this->CurrencyId;
     }
 
-    /**
-     * @param string $CurrencyId
-     *
-     * @return Create_Payment
-     */
-    public function setCurrencyId($CurrencyId)
+    public function setCurrencyId(string $CurrencyId): static
     {
         $this->CurrencyId = $CurrencyId;
         return $this;
     }
 
-    /**
-     * @return \DateTime
-     */
-    public function getDueDate()
+    public function getDueDate(): \DateTime|bool|null
     {
         if ($this->DueDate == null) {
             return null;
@@ -150,12 +84,7 @@ class Create_Payment
         }
     }
 
-    /**
-     * @param \DateTime $DueDate
-     *
-     * @return Create_Payment
-     */
-    public function setDueDate(\DateTime $DueDate = null)
+    public function setDueDate(\DateTime $DueDate = null): static
     {
         if ($DueDate == null) {
             $this->DueDate = null;
@@ -165,77 +94,45 @@ class Create_Payment
         return $this;
     }
 
-    /**
-     * @return int
-     */
-    public function getId()
+    public function getId(): ?int
     {
         return $this->Id;
     }
 
-    /**
-     * @param int $Id
-     *
-     * @return Create_Payment
-     */
-    public function setId($Id)
+    public function setId(int $Id): static
     {
         $this->Id = $Id;
         return $this;
     }
 
-    /**
-     * @return boolean
-     */
-    public function getIsReceivedPayment()
+    public function getIsReceivedPayment(): ?bool
     {
         return $this->IsReceivedPayment;
     }
 
-    /**
-     * @param boolean $IsReceivedPayment
-     *
-     * @return Create_Payment
-     */
-    public function setIsReceivedPayment($IsReceivedPayment)
+    public function setIsReceivedPayment(bool $IsReceivedPayment): static
     {
         $this->IsReceivedPayment = $IsReceivedPayment;
         return $this;
     }
 
-    /**
-     * @return string
-     */
-    public function getMethodId()
+    public function getMethodId(): ?string
     {
         return $this->MethodId;
     }
 
-    /**
-     * @param string $MethodId
-     *
-     * @return Create_Payment
-     */
-    public function setMethodId($MethodId)
+    public function setMethodId(string $MethodId): static
     {
         $this->MethodId = $MethodId;
         return $this;
     }
 
-    /**
-     * @return string
-     */
-    public function getRegisterOperationForReceivedPayment()
+    public function getRegisterOperationForReceivedPayment(): ?string
     {
         return $this->RegisterOperationForReceivedPayment;
     }
 
-    /**
-     * @param string $RegisterOperationForReceivedPayment
-     *
-     * @return Create_Payment
-     */
-    public function setRegisterOperationForReceivedPayment($RegisterOperationForReceivedPayment)
+    public function setRegisterOperationForReceivedPayment(string $RegisterOperationForReceivedPayment): static
     {
         $this->RegisterOperationForReceivedPayment = $RegisterOperationForReceivedPayment;
         return $this;

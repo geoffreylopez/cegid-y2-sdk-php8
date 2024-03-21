@@ -4,77 +4,45 @@ namespace Y2\SaleDocument;
 
 class Get_ShippingTax
 {
+    protected ?string $ShippingTaxCode = null;
 
-    /**
-     * @var string $ShippingTaxCode
-     */
-    protected $ShippingTaxCode = null;
+    protected ?float $TaxExcludedAmount = null;
 
-    /**
-     * @var float $TaxExcludedAmount
-     */
-    protected $TaxExcludedAmount = null;
+    protected ?float $TaxIncludedAmount = null;
 
-    /**
-     * @var float $TaxIncludedAmount
-     */
-    protected $TaxIncludedAmount = null;
-
-    
     public function __construct()
     {
     
     }
 
-    /**
-     * @return string
-     */
-    public function getShippingTaxCode()
+    public function getShippingTaxCode(): ?string
     {
       return $this->ShippingTaxCode;
     }
 
-    /**
-     * @param string $ShippingTaxCode
-     * @return Get_ShippingTax
-     */
-    public function setShippingTaxCode($ShippingTaxCode)
+    public function setShippingTaxCode(string $ShippingTaxCode): static
     {
       $this->ShippingTaxCode = $ShippingTaxCode;
       return $this;
     }
 
-    /**
-     * @return float
-     */
-    public function getTaxExcludedAmount()
+    public function getTaxExcludedAmount(): ?float
     {
       return $this->TaxExcludedAmount;
     }
 
-    /**
-     * @param float $TaxExcludedAmount
-     * @return Get_ShippingTax
-     */
-    public function setTaxExcludedAmount($TaxExcludedAmount)
+    public function setTaxExcludedAmount(float $TaxExcludedAmount): static
     {
       $this->TaxExcludedAmount = $TaxExcludedAmount;
       return $this;
     }
 
-    /**
-     * @return float
-     */
-    public function getTaxIncludedAmount()
+    public function getTaxIncludedAmount(): ?float
     {
       return $this->TaxIncludedAmount;
     }
 
-    /**
-     * @param float $TaxIncludedAmount
-     * @return Get_ShippingTax
-     */
-    public function setTaxIncludedAmount($TaxIncludedAmount)
+    public function setTaxIncludedAmount(float $TaxIncludedAmount): static
     {
       $this->TaxIncludedAmount = $TaxIncludedAmount;
       return $this;

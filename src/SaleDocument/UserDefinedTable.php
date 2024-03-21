@@ -4,54 +4,32 @@ namespace Y2\SaleDocument;
 
 class UserDefinedTable
 {
+    protected ?UserDefinedId $Id = null;
 
-    /**
-     * @var UserDefinedId $Id
-     */
-    protected $Id = null;
+    protected ?string $Value = null;
 
-    /**
-     * @var string $Value
-     */
-    protected $Value = null;
-
-    
     public function __construct()
     {
     
     }
 
-    /**
-     * @return UserDefinedId
-     */
-    public function getId()
+    public function getId(): ?UserDefinedId
     {
       return $this->Id;
     }
 
-    /**
-     * @param UserDefinedId $Id
-     * @return UserDefinedTable
-     */
-    public function setId($Id)
+    public function setId(UserDefinedId $Id): static
     {
       $this->Id = $Id;
       return $this;
     }
 
-    /**
-     * @return string
-     */
-    public function getValue()
+    public function getValue(): ?string
     {
       return $this->Value;
     }
 
-    /**
-     * @param string $Value
-     * @return UserDefinedTable
-     */
-    public function setValue($Value)
+    public function setValue(string $Value): static
     {
       $this->Value = $Value;
       return $this;

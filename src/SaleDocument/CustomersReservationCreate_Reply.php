@@ -4,31 +4,19 @@ namespace Y2\SaleDocument;
 
 class CustomersReservationCreate_Reply
 {
+    protected ?SaleDocumentKey $Key = null;
 
-    /**
-     * @var SaleDocumentKey $Key
-     */
-    protected $Key = null;
-
-    
     public function __construct()
     {
     
     }
 
-    /**
-     * @return SaleDocumentKey
-     */
-    public function getKey()
+    public function getKey(): ?SaleDocumentKey
     {
       return $this->Key;
     }
 
-    /**
-     * @param SaleDocumentKey $Key
-     * @return CustomersReservationCreate_Reply
-     */
-    public function setKey($Key)
+    public function setKey(SaleDocumentKey $Key): static
     {
       $this->Key = $Key;
       return $this;

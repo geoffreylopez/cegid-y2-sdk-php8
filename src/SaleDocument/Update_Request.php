@@ -4,169 +4,97 @@ namespace Y2\SaleDocument;
 
 class Update_Request
 {
+    protected ?Address $DeliveryAddress = null;
 
-    /**
-     * @var Address $DeliveryAddress
-     */
-    protected $DeliveryAddress = null;
+    protected ?Update_Header $Header = null;
 
-    /**
-     * @var Update_Header $Header
-     */
-    protected $Header = null;
+    protected ?SaleDocumentIdentifier $Identifier = null;
 
-    /**
-     * @var SaleDocumentIdentifier $Identifier
-     */
-    protected $Identifier = null;
+    protected ?Address $InvoicingAddress = null;
 
-    /**
-     * @var Address $InvoicingAddress
-     */
-    protected $InvoicingAddress = null;
+    protected ?ArrayOfUpdate_Line $Lines = null;
 
-    /**
-     * @var ArrayOfUpdate_Line $Lines
-     */
-    protected $Lines = null;
+    protected ?ArrayOfUpdate_Payment $Payments = null;
 
-    /**
-     * @var ArrayOfUpdate_Payment $Payments
-     */
-    protected $Payments = null;
+    protected ?ArrayOfUpdate_ShippingTax $ShippingTaxes = null;
 
-    /**
-     * @var ArrayOfUpdate_ShippingTax $ShippingTaxes
-     */
-    protected $ShippingTaxes = null;
-
-    
     public function __construct()
     {
     
     }
 
-    /**
-     * @return Address
-     */
-    public function getDeliveryAddress()
+    public function getDeliveryAddress(): ?Address
     {
       return $this->DeliveryAddress;
     }
 
-    /**
-     * @param Address $DeliveryAddress
-     * @return Update_Request
-     */
-    public function setDeliveryAddress($DeliveryAddress)
+    public function setDeliveryAddress(Address $DeliveryAddress): static
     {
       $this->DeliveryAddress = $DeliveryAddress;
       return $this;
     }
 
-    /**
-     * @return Update_Header
-     */
-    public function getHeader()
+    public function getHeader(): ?Update_Header
     {
       return $this->Header;
     }
 
-    /**
-     * @param Update_Header $Header
-     * @return Update_Request
-     */
-    public function setHeader($Header)
+    public function setHeader(Update_Header $Header): static
     {
       $this->Header = $Header;
       return $this;
     }
 
-    /**
-     * @return SaleDocumentIdentifier
-     */
-    public function getIdentifier()
+    public function getIdentifier(): ?SaleDocumentIdentifier
     {
       return $this->Identifier;
     }
 
-    /**
-     * @param SaleDocumentIdentifier $Identifier
-     * @return Update_Request
-     */
-    public function setIdentifier($Identifier)
+    public function setIdentifier(SaleDocumentIdentifier $Identifier): static
     {
       $this->Identifier = $Identifier;
       return $this;
     }
 
-    /**
-     * @return Address
-     */
-    public function getInvoicingAddress()
+    public function getInvoicingAddress(): ?Address
     {
       return $this->InvoicingAddress;
     }
 
-    /**
-     * @param Address $InvoicingAddress
-     * @return Update_Request
-     */
-    public function setInvoicingAddress($InvoicingAddress)
+    public function setInvoicingAddress(Address $InvoicingAddress): static
     {
       $this->InvoicingAddress = $InvoicingAddress;
       return $this;
     }
 
-    /**
-     * @return ArrayOfUpdate_Line
-     */
-    public function getLines()
+    public function getLines(): ?ArrayOfUpdate_Line
     {
       return $this->Lines;
     }
 
-    /**
-     * @param ArrayOfUpdate_Line $Lines
-     * @return Update_Request
-     */
-    public function setLines($Lines)
+    public function setLines(ArrayOfUpdate_Line $Lines): static
     {
       $this->Lines = $Lines;
       return $this;
     }
 
-    /**
-     * @return ArrayOfUpdate_Payment
-     */
-    public function getPayments()
+    public function getPayments(): ?ArrayOfUpdate_Payment
     {
       return $this->Payments;
     }
 
-    /**
-     * @param ArrayOfUpdate_Payment $Payments
-     * @return Update_Request
-     */
-    public function setPayments($Payments)
+    public function setPayments(ArrayOfUpdate_Payment $Payments): static
     {
       $this->Payments = $Payments;
       return $this;
     }
 
-    /**
-     * @return ArrayOfUpdate_ShippingTax
-     */
-    public function getShippingTaxes()
+    public function getShippingTaxes(): ?ArrayOfUpdate_ShippingTax
     {
       return $this->ShippingTaxes;
     }
 
-    /**
-     * @param ArrayOfUpdate_ShippingTax $ShippingTaxes
-     * @return Update_Request
-     */
-    public function setShippingTaxes($ShippingTaxes)
+    public function setShippingTaxes(ArrayOfUpdate_ShippingTax $ShippingTaxes): static
     {
       $this->ShippingTaxes = $ShippingTaxes;
       return $this;

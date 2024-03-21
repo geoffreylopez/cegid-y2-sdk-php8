@@ -4,58 +4,33 @@ namespace Y2\SaleDocument;
 
 class UpdateHeader
 {
+    protected ?UpdateHeader_Request $updateHeaderRequest = null;
 
-    /**
-     * @var UpdateHeader_Request $updateHeaderRequest
-     */
-    protected $updateHeaderRequest = null;
+    protected ?RetailContext $clientContext = null;
 
-    /**
-     * @var RetailContext $clientContext
-     */
-    protected $clientContext = null;
-
-    /**
-     * @param UpdateHeader_Request $updateHeaderRequest
-     * @param RetailContext $clientContext
-     */
-    public function __construct($updateHeaderRequest, $clientContext)
+    public function __construct(UpdateHeader_Request $updateHeaderRequest, RetailContext $clientContext)
     {
       $this->updateHeaderRequest = $updateHeaderRequest;
       $this->clientContext = $clientContext;
     }
 
-    /**
-     * @return UpdateHeader_Request
-     */
-    public function getUpdateHeaderRequest()
+    public function getUpdateHeaderRequest(): ?UpdateHeader_Request
     {
       return $this->updateHeaderRequest;
     }
 
-    /**
-     * @param UpdateHeader_Request $updateHeaderRequest
-     * @return UpdateHeader
-     */
-    public function setUpdateHeaderRequest($updateHeaderRequest)
+    public function setUpdateHeaderRequest(UpdateHeader_Request $updateHeaderRequest): static
     {
       $this->updateHeaderRequest = $updateHeaderRequest;
       return $this;
     }
 
-    /**
-     * @return RetailContext
-     */
-    public function getClientContext()
+    public function getClientContext(): ?RetailContext
     {
       return $this->clientContext;
     }
 
-    /**
-     * @param RetailContext $clientContext
-     * @return UpdateHeader
-     */
-    public function setClientContext($clientContext)
+    public function setClientContext(RetailContext $clientContext): static
     {
       $this->clientContext = $clientContext;
       return $this;

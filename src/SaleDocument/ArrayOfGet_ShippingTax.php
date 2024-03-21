@@ -4,31 +4,19 @@ namespace Y2\SaleDocument;
 
 class ArrayOfGet_ShippingTax implements \ArrayAccess, \Iterator, \Countable
 {
+    protected ?array $Get_ShippingTax = null;
 
-    /**
-     * @var Get_ShippingTax[] $Get_ShippingTax
-     */
-    protected $Get_ShippingTax = null;
-
-    
     public function __construct()
     {
     
     }
 
-    /**
-     * @return Get_ShippingTax[]
-     */
-    public function getGet_ShippingTax()
+    public function getGet_ShippingTax(): ?array
     {
       return $this->Get_ShippingTax;
     }
 
-    /**
-     * @param Get_ShippingTax[] $Get_ShippingTax
-     * @return ArrayOfGet_ShippingTax
-     */
-    public function setGet_ShippingTax(array $Get_ShippingTax = null)
+    public function setGet_ShippingTax(array $Get_ShippingTax = null): static
     {
       $this->Get_ShippingTax = $Get_ShippingTax;
       return $this;
@@ -36,34 +24,24 @@ class ArrayOfGet_ShippingTax implements \ArrayAccess, \Iterator, \Countable
 
     /**
      * ArrayAccess implementation
-     *
-     * @param mixed $offset An offset to check for
-     * @return boolean true on success or false on failure
      */
-    public function offsetExists($offset)
+    public function offsetExists(mixed $offset): bool
     {
       return isset($this->Get_ShippingTax[$offset]);
     }
 
     /**
      * ArrayAccess implementation
-     *
-     * @param mixed $offset The offset to retrieve
-     * @return Get_ShippingTax
      */
-    public function offsetGet($offset)
+    public function offsetGet(mixed $offset): mixed
     {
       return $this->Get_ShippingTax[$offset];
     }
 
     /**
      * ArrayAccess implementation
-     *
-     * @param mixed $offset The offset to assign the value to
-     * @param Get_ShippingTax $value The value to set
-     * @return void
      */
-    public function offsetSet($offset, $value)
+    public function offsetSet(mixed $offset, $value): void
     {
       if (!isset($offset)) {
         $this->Get_ShippingTax[] = $value;
@@ -74,21 +52,16 @@ class ArrayOfGet_ShippingTax implements \ArrayAccess, \Iterator, \Countable
 
     /**
      * ArrayAccess implementation
-     *
-     * @param mixed $offset The offset to unset
-     * @return void
      */
-    public function offsetUnset($offset)
+    public function offsetUnset(mixed $offset): void
     {
       unset($this->Get_ShippingTax[$offset]);
     }
 
     /**
      * Iterator implementation
-     *
-     * @return Get_ShippingTax Return the current element
      */
-    public function current()
+    public function current(): mixed
     {
       return current($this->Get_ShippingTax);
     }
@@ -96,30 +69,24 @@ class ArrayOfGet_ShippingTax implements \ArrayAccess, \Iterator, \Countable
     /**
      * Iterator implementation
      * Move forward to next element
-     *
-     * @return void
      */
-    public function next()
+    public function next(): void
     {
       next($this->Get_ShippingTax);
     }
 
     /**
      * Iterator implementation
-     *
-     * @return string|null Return the key of the current element or null
      */
-    public function key()
+    public function key(): string|int|null
     {
       return key($this->Get_ShippingTax);
     }
 
     /**
      * Iterator implementation
-     *
-     * @return boolean Return the validity of the current position
      */
-    public function valid()
+    public function valid(): bool
     {
       return $this->key() !== null;
     }
@@ -127,20 +94,16 @@ class ArrayOfGet_ShippingTax implements \ArrayAccess, \Iterator, \Countable
     /**
      * Iterator implementation
      * Rewind the Iterator to the first element
-     *
-     * @return void
      */
-    public function rewind()
+    public function rewind(): void
     {
       reset($this->Get_ShippingTax);
     }
 
     /**
      * Countable implementation
-     *
-     * @return Get_ShippingTax Return count of elements
      */
-    public function count()
+    public function count(): int
     {
       return count($this->Get_ShippingTax);
     }

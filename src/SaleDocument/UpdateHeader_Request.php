@@ -4,136 +4,71 @@ namespace Y2\SaleDocument;
 
 class UpdateHeader_Request
 {
+    protected ?string $Comment = null;
 
-    /**
-     * @var string $Comment
-     */
-    protected $Comment = null;
+    protected ?Address $DeliveryAddress = null;
 
-    /**
-     * @var Address $DeliveryAddress
-     */
-    protected $DeliveryAddress = null;
+    protected ?string $ExternalReference = null;
 
-    /**
-     * @var string $ExternalReference
-     */
-    protected $ExternalReference = null;
+    protected ?\DateTime $ExternalReferenceDate = null;
 
-    /**
-     * @var \DateTime $ExternalReferenceDate
-     */
-    protected $ExternalReferenceDate = null;
+    protected ?string $FollowedReference = null;
 
-    /**
-     * @var string $FollowedReference
-     */
-    protected $FollowedReference = null;
+    protected ?SaleDocumentIdentifier $Identifier = null;
 
-    /**
-     * @var SaleDocumentIdentifier $Identifier
-     */
-    protected $Identifier = null;
+    protected ?Address $InvoicingAddress = null;
 
-    /**
-     * @var Address $InvoicingAddress
-     */
-    protected $InvoicingAddress = null;
+    protected ?bool $LinesUnmodifiable = null;
 
-    /**
-     * @var boolean $LinesUnmodifiable
-     */
-    protected $LinesUnmodifiable = null;
+    protected ?OmniChannel $OmniChannel = null;
 
-    /**
-     * @var OmniChannel $OmniChannel
-     */
-    protected $OmniChannel = null;
+    protected ?string $SalesPersonId = null;
 
-    /**
-     * @var string $SalesPersonId
-     */
-    protected $SalesPersonId = null;
+    protected ?ArrayOfUserDefinedDate $UserDefinedDates = null;
 
-    /**
-     * @var ArrayOfUserDefinedDate $UserDefinedDates
-     */
-    protected $UserDefinedDates = null;
+    protected ?ArrayOfUserDefinedTable $UserDefinedTables = null;
 
-    /**
-     * @var ArrayOfUserDefinedTable $UserDefinedTables
-     */
-    protected $UserDefinedTables = null;
+    protected ?ArrayOfUserField $UserFields = null;
 
-    /**
-     * @var ArrayOfUserField $UserFields
-     */
-    protected $UserFields = null;
-
-    
     public function __construct()
     {
     
     }
 
-    /**
-     * @return string
-     */
-    public function getComment()
+    public function getComment(): ?string
     {
       return $this->Comment;
     }
 
-    /**
-     * @param string $Comment
-     * @return UpdateHeader_Request
-     */
-    public function setComment($Comment)
+    public function setComment(string $Comment): static
     {
       $this->Comment = $Comment;
       return $this;
     }
 
-    /**
-     * @return Address
-     */
-    public function getDeliveryAddress()
+    public function getDeliveryAddress(): ?Address
     {
       return $this->DeliveryAddress;
     }
 
-    /**
-     * @param Address $DeliveryAddress
-     * @return UpdateHeader_Request
-     */
-    public function setDeliveryAddress($DeliveryAddress)
+    public function setDeliveryAddress(Address $DeliveryAddress): static
     {
       $this->DeliveryAddress = $DeliveryAddress;
       return $this;
     }
 
-    /**
-     * @return string
-     */
-    public function getExternalReference()
+    public function getExternalReference(): ?string
     {
       return $this->ExternalReference;
     }
 
-    /**
-     * @param string $ExternalReference
-     * @return UpdateHeader_Request
-     */
-    public function setExternalReference($ExternalReference)
+    public function setExternalReference(string $ExternalReference): static
     {
       $this->ExternalReference = $ExternalReference;
       return $this;
     }
 
-    /**
-     * @return \DateTime
-     */
-    public function getExternalReferenceDate()
+    public function getExternalReferenceDate(): \DateTime|bool|null
     {
       if ($this->ExternalReferenceDate == null) {
         return null;
@@ -146,11 +81,7 @@ class UpdateHeader_Request
       }
     }
 
-    /**
-     * @param \DateTime $ExternalReferenceDate
-     * @return UpdateHeader_Request
-     */
-    public function setExternalReferenceDate(\DateTime $ExternalReferenceDate = null)
+    public function setExternalReferenceDate(\DateTime $ExternalReferenceDate = null): static
     {
       if ($ExternalReferenceDate == null) {
        $this->ExternalReferenceDate = null;
@@ -160,163 +91,100 @@ class UpdateHeader_Request
       return $this;
     }
 
-    /**
-     * @return string
-     */
-    public function getFollowedReference()
+    public function getFollowedReference(): ?string
     {
       return $this->FollowedReference;
     }
 
-    /**
-     * @param string $FollowedReference
-     * @return UpdateHeader_Request
-     */
-    public function setFollowedReference($FollowedReference)
+    public function setFollowedReference(string $FollowedReference): static
     {
       $this->FollowedReference = $FollowedReference;
       return $this;
     }
 
-    /**
-     * @return SaleDocumentIdentifier
-     */
-    public function getIdentifier()
+    public function getIdentifier(): ?SaleDocumentIdentifier
     {
       return $this->Identifier;
     }
 
-    /**
-     * @param SaleDocumentIdentifier $Identifier
-     * @return UpdateHeader_Request
-     */
-    public function setIdentifier($Identifier)
+    public function setIdentifier(SaleDocumentIdentifier $Identifier): static
     {
       $this->Identifier = $Identifier;
       return $this;
     }
 
-    /**
-     * @return Address
-     */
-    public function getInvoicingAddress()
+    public function getInvoicingAddress(): ?Address
     {
       return $this->InvoicingAddress;
     }
 
-    /**
-     * @param Address $InvoicingAddress
-     * @return UpdateHeader_Request
-     */
-    public function setInvoicingAddress($InvoicingAddress)
+    public function setInvoicingAddress(Address $InvoicingAddress): static
     {
       $this->InvoicingAddress = $InvoicingAddress;
       return $this;
     }
 
-    /**
-     * @return boolean
-     */
-    public function getLinesUnmodifiable()
+    public function getLinesUnmodifiable(): ?bool
     {
       return $this->LinesUnmodifiable;
     }
 
-    /**
-     * @param boolean $LinesUnmodifiable
-     * @return UpdateHeader_Request
-     */
-    public function setLinesUnmodifiable($LinesUnmodifiable)
+    public function setLinesUnmodifiable(bool $LinesUnmodifiable): static
     {
       $this->LinesUnmodifiable = $LinesUnmodifiable;
       return $this;
     }
 
-    /**
-     * @return OmniChannel
-     */
-    public function getOmniChannel()
+    public function getOmniChannel(): ?OmniChannel
     {
       return $this->OmniChannel;
     }
 
-    /**
-     * @param OmniChannel $OmniChannel
-     * @return UpdateHeader_Request
-     */
-    public function setOmniChannel($OmniChannel)
+    public function setOmniChannel(OmniChannel $OmniChannel): static
     {
       $this->OmniChannel = $OmniChannel;
       return $this;
     }
 
-    /**
-     * @return string
-     */
-    public function getSalesPersonId()
+    public function getSalesPersonId(): ?string
     {
       return $this->SalesPersonId;
     }
 
-    /**
-     * @param string $SalesPersonId
-     * @return UpdateHeader_Request
-     */
-    public function setSalesPersonId($SalesPersonId)
+    public function setSalesPersonId(string $SalesPersonId): static
     {
       $this->SalesPersonId = $SalesPersonId;
       return $this;
     }
 
-    /**
-     * @return ArrayOfUserDefinedDate
-     */
-    public function getUserDefinedDates()
+    public function getUserDefinedDates(): ?ArrayOfUserDefinedDate
     {
       return $this->UserDefinedDates;
     }
 
-    /**
-     * @param ArrayOfUserDefinedDate $UserDefinedDates
-     * @return UpdateHeader_Request
-     */
-    public function setUserDefinedDates($UserDefinedDates)
+    public function setUserDefinedDates(ArrayOfUserDefinedDate $UserDefinedDates): static
     {
       $this->UserDefinedDates = $UserDefinedDates;
       return $this;
     }
 
-    /**
-     * @return ArrayOfUserDefinedTable
-     */
-    public function getUserDefinedTables()
+    public function getUserDefinedTables(): ?ArrayOfUserDefinedTable
     {
       return $this->UserDefinedTables;
     }
 
-    /**
-     * @param ArrayOfUserDefinedTable $UserDefinedTables
-     * @return UpdateHeader_Request
-     */
-    public function setUserDefinedTables($UserDefinedTables)
+    public function setUserDefinedTables(ArrayOfUserDefinedTable $UserDefinedTables): static
     {
       $this->UserDefinedTables = $UserDefinedTables;
       return $this;
     }
 
-    /**
-     * @return ArrayOfUserField
-     */
-    public function getUserFields()
+    public function getUserFields(): ?ArrayOfUserField
     {
       return $this->UserFields;
     }
 
-    /**
-     * @param ArrayOfUserField $UserFields
-     * @return UpdateHeader_Request
-     */
-    public function setUserFields($UserFields)
+    public function setUserFields(ArrayOfUserField $UserFields): static
     {
       $this->UserFields = $UserFields;
       return $this;

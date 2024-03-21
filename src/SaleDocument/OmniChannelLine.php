@@ -4,31 +4,19 @@ namespace Y2\SaleDocument;
 
 class OmniChannelLine
 {
+    protected ?string $WarehouseId = null;
 
-    /**
-     * @var string $WarehouseId
-     */
-    protected $WarehouseId = null;
-
-    
     public function __construct()
     {
     
     }
 
-    /**
-     * @return string
-     */
-    public function getWarehouseId()
+    public function getWarehouseId(): ?string
     {
       return $this->WarehouseId;
     }
 
-    /**
-     * @param string $WarehouseId
-     * @return OmniChannelLine
-     */
-    public function setWarehouseId($WarehouseId)
+    public function setWarehouseId(string $WarehouseId): static
     {
       $this->WarehouseId = $WarehouseId;
       return $this;

@@ -4,58 +4,33 @@ namespace Y2\SaleDocument;
 
 class GetByKey
 {
+    protected ?GetByKey_Request $searchRequest = null;
 
-    /**
-     * @var GetByKey_Request $searchRequest
-     */
-    protected $searchRequest = null;
+    protected ?RetailContext $clientContext = null;
 
-    /**
-     * @var RetailContext $clientContext
-     */
-    protected $clientContext = null;
-
-    /**
-     * @param GetByKey_Request $searchRequest
-     * @param RetailContext $clientContext
-     */
-    public function __construct($searchRequest, $clientContext)
+    public function __construct(GetByKey_Request $searchRequest, RetailContext $clientContext)
     {
       $this->searchRequest = $searchRequest;
       $this->clientContext = $clientContext;
     }
 
-    /**
-     * @return GetByKey_Request
-     */
-    public function getSearchRequest()
+    public function getSearchRequest(): ?GetByKey_Request
     {
       return $this->searchRequest;
     }
 
-    /**
-     * @param GetByKey_Request $searchRequest
-     * @return GetByKey
-     */
-    public function setSearchRequest($searchRequest)
+    public function setSearchRequest(GetByKey_Request $searchRequest): static
     {
       $this->searchRequest = $searchRequest;
       return $this;
     }
 
-    /**
-     * @return RetailContext
-     */
-    public function getClientContext()
+    public function getClientContext(): ?RetailContext
     {
       return $this->clientContext;
     }
 
-    /**
-     * @param RetailContext $clientContext
-     * @return GetByKey
-     */
-    public function setClientContext($clientContext)
+    public function setClientContext(RetailContext $clientContext): static
     {
       $this->clientContext = $clientContext;
       return $this;

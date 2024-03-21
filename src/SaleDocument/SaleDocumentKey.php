@@ -4,77 +4,43 @@ namespace Y2\SaleDocument;
 
 class SaleDocumentKey
 {
-
-    /**
-     * @var int $Number
-     */
-    protected $Number = null;
-
-    /**
-     * @var string $Stump
-     */
-    protected $Stump = null;
-
-    /**
-     * @var string $Type
-     */
-    protected $Type = null;
-
+    protected ?int $Number = null;
+    protected ?string $Stump = null;
+    protected ?string $Type = null;
     
     public function __construct()
     {
     
     }
 
-    /**
-     * @return int
-     */
-    public function getNumber()
+    public function getNumber(): ?int
     {
       return $this->Number;
     }
 
-    /**
-     * @param int $Number
-     * @return SaleDocumentKey
-     */
-    public function setNumber($Number)
+    public function setNumber(int $Number): static
     {
       $this->Number = $Number;
       return $this;
     }
 
-    /**
-     * @return string
-     */
-    public function getStump()
+    public function getStump(): ?string
     {
       return $this->Stump;
     }
 
-    /**
-     * @param string $Stump
-     * @return SaleDocumentKey
-     */
-    public function setStump($Stump)
+    public function setStump(string $Stump): static
     {
       $this->Stump = $Stump;
       return $this;
     }
 
-    /**
-     * @return string
-     */
-    public function getType()
+    public function getType(): ?string
     {
       return $this->Type;
     }
 
-    /**
-     * @param string $Type
-     * @return SaleDocumentKey
-     */
-    public function setType($Type)
+    public function setType(string $Type): static
     {
       $this->Type = $Type;
       return $this;

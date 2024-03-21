@@ -4,54 +4,32 @@ namespace Y2\SaleDocument;
 
 class SaleDocumentLineIdentifier
 {
+    protected ?SaleDocumentIdentifier $DocumentId = null;
 
-    /**
-     * @var SaleDocumentIdentifier $DocumentId
-     */
-    protected $DocumentId = null;
+    protected ?int $LineId = null;
 
-    /**
-     * @var int $LineId
-     */
-    protected $LineId = null;
-
-    
     public function __construct()
     {
     
     }
 
-    /**
-     * @return SaleDocumentIdentifier
-     */
-    public function getDocumentId()
+    public function getDocumentId(): ?SaleDocumentIdentifier
     {
       return $this->DocumentId;
     }
 
-    /**
-     * @param SaleDocumentIdentifier $DocumentId
-     * @return SaleDocumentLineIdentifier
-     */
-    public function setDocumentId($DocumentId)
+    public function setDocumentId(SaleDocumentIdentifier $DocumentId): static
     {
       $this->DocumentId = $DocumentId;
       return $this;
     }
 
-    /**
-     * @return int
-     */
-    public function getLineId()
+    public function getLineId(): ?int
     {
       return $this->LineId;
     }
 
-    /**
-     * @param int $LineId
-     * @return SaleDocumentLineIdentifier
-     */
-    public function setLineId($LineId)
+    public function setLineId(int $LineId): static
     {
       $this->LineId = $LineId;
       return $this;

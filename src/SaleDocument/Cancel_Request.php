@@ -4,16 +4,9 @@ namespace Y2\SaleDocument;
 
 class Cancel_Request
 {
+    protected ?SaleDocumentIdentifier $Identifier = null;
 
-    /**
-     * @var SaleDocumentIdentifier $Identifier
-     */
-    protected $Identifier = null;
-
-    /**
-     * @var string $ReasonId
-     */
-    protected $ReasonId = null;
+    protected ?string $ReasonId = null;
 
     
     public function __construct()
@@ -21,37 +14,23 @@ class Cancel_Request
     
     }
 
-    /**
-     * @return SaleDocumentIdentifier
-     */
-    public function getIdentifier()
+    public function getIdentifier(): ?SaleDocumentIdentifier
     {
       return $this->Identifier;
     }
 
-    /**
-     * @param SaleDocumentIdentifier $Identifier
-     * @return Cancel_Request
-     */
-    public function setIdentifier($Identifier)
+    public function setIdentifier(SaleDocumentIdentifier $Identifier): static
     {
       $this->Identifier = $Identifier;
       return $this;
     }
 
-    /**
-     * @return string
-     */
-    public function getReasonId()
+    public function getReasonId(): ?string
     {
       return $this->ReasonId;
     }
 
-    /**
-     * @param string $ReasonId
-     * @return Cancel_Request
-     */
-    public function setReasonId($ReasonId)
+    public function setReasonId(string $ReasonId): static
     {
       $this->ReasonId = $ReasonId;
       return $this;

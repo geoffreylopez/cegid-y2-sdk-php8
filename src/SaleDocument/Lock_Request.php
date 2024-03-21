@@ -4,54 +4,32 @@ namespace Y2\SaleDocument;
 
 class Lock_Request
 {
+    protected ?SaleDocumentIdentifier $Identifier = null;
 
-    /**
-     * @var SaleDocumentIdentifier $Identifier
-     */
-    protected $Identifier = null;
+    protected ?string $ReasonId = null;
 
-    /**
-     * @var string $ReasonId
-     */
-    protected $ReasonId = null;
-
-    
     public function __construct()
     {
     
     }
 
-    /**
-     * @return SaleDocumentIdentifier
-     */
-    public function getIdentifier()
+    public function getIdentifier(): ?SaleDocumentIdentifier
     {
       return $this->Identifier;
     }
 
-    /**
-     * @param SaleDocumentIdentifier $Identifier
-     * @return Lock_Request
-     */
-    public function setIdentifier($Identifier)
+    public function setIdentifier(SaleDocumentIdentifier $Identifier): static
     {
       $this->Identifier = $Identifier;
       return $this;
     }
 
-    /**
-     * @return string
-     */
-    public function getReasonId()
+    public function getReasonId(): ?string
     {
       return $this->ReasonId;
     }
 
-    /**
-     * @param string $ReasonId
-     * @return Lock_Request
-     */
-    public function setReasonId($ReasonId)
+    public function setReasonId(string $ReasonId): static
     {
       $this->ReasonId = $ReasonId;
       return $this;

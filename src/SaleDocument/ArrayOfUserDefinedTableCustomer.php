@@ -4,31 +4,19 @@ namespace Y2\SaleDocument;
 
 class ArrayOfUserDefinedTableCustomer implements \ArrayAccess, \Iterator, \Countable
 {
-
-    /**
-     * @var UserDefinedTableCustomer[] $UserDefinedTableCustomer
-     */
-    protected $UserDefinedTableCustomer = null;
-
+    protected ?array $UserDefinedTableCustomer = null;
     
     public function __construct()
     {
     
     }
 
-    /**
-     * @return UserDefinedTableCustomer[]
-     */
-    public function getUserDefinedTableCustomer()
+    public function getUserDefinedTableCustomer(): ?array
     {
       return $this->UserDefinedTableCustomer;
     }
 
-    /**
-     * @param UserDefinedTableCustomer[] $UserDefinedTableCustomer
-     * @return ArrayOfUserDefinedTableCustomer
-     */
-    public function setUserDefinedTableCustomer(array $UserDefinedTableCustomer = null)
+    public function setUserDefinedTableCustomer(array $UserDefinedTableCustomer = null): static
     {
       $this->UserDefinedTableCustomer = $UserDefinedTableCustomer;
       return $this;
@@ -36,34 +24,24 @@ class ArrayOfUserDefinedTableCustomer implements \ArrayAccess, \Iterator, \Count
 
     /**
      * ArrayAccess implementation
-     *
-     * @param mixed $offset An offset to check for
-     * @return boolean true on success or false on failure
      */
-    public function offsetExists($offset)
+    public function offsetExists(mixed $offset): bool
     {
       return isset($this->UserDefinedTableCustomer[$offset]);
     }
 
     /**
      * ArrayAccess implementation
-     *
-     * @param mixed $offset The offset to retrieve
-     * @return UserDefinedTableCustomer
      */
-    public function offsetGet($offset)
+    public function offsetGet(mixed $offset): mixed
     {
       return $this->UserDefinedTableCustomer[$offset];
     }
 
     /**
      * ArrayAccess implementation
-     *
-     * @param mixed $offset The offset to assign the value to
-     * @param UserDefinedTableCustomer $value The value to set
-     * @return void
      */
-    public function offsetSet($offset, $value)
+    public function offsetSet(mixed $offset, $value): void
     {
       if (!isset($offset)) {
         $this->UserDefinedTableCustomer[] = $value;
@@ -74,21 +52,16 @@ class ArrayOfUserDefinedTableCustomer implements \ArrayAccess, \Iterator, \Count
 
     /**
      * ArrayAccess implementation
-     *
-     * @param mixed $offset The offset to unset
-     * @return void
      */
-    public function offsetUnset($offset)
+    public function offsetUnset(mixed $offset): void
     {
       unset($this->UserDefinedTableCustomer[$offset]);
     }
 
     /**
      * Iterator implementation
-     *
-     * @return UserDefinedTableCustomer Return the current element
      */
-    public function current()
+    public function current(): mixed
     {
       return current($this->UserDefinedTableCustomer);
     }
@@ -96,30 +69,24 @@ class ArrayOfUserDefinedTableCustomer implements \ArrayAccess, \Iterator, \Count
     /**
      * Iterator implementation
      * Move forward to next element
-     *
-     * @return void
      */
-    public function next()
+    public function next(): void
     {
       next($this->UserDefinedTableCustomer);
     }
 
     /**
      * Iterator implementation
-     *
-     * @return string|null Return the key of the current element or null
      */
-    public function key()
+    public function key(): string|int|null
     {
       return key($this->UserDefinedTableCustomer);
     }
 
     /**
      * Iterator implementation
-     *
-     * @return boolean Return the validity of the current position
      */
-    public function valid()
+    public function valid(): bool
     {
       return $this->key() !== null;
     }
@@ -127,20 +94,16 @@ class ArrayOfUserDefinedTableCustomer implements \ArrayAccess, \Iterator, \Count
     /**
      * Iterator implementation
      * Rewind the Iterator to the first element
-     *
-     * @return void
      */
-    public function rewind()
+    public function rewind(): void
     {
       reset($this->UserDefinedTableCustomer);
     }
 
     /**
      * Countable implementation
-     *
-     * @return UserDefinedTableCustomer Return count of elements
      */
-    public function count()
+    public function count(): int
     {
       return count($this->UserDefinedTableCustomer);
     }

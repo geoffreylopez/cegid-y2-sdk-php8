@@ -4,54 +4,32 @@ namespace Y2\SaleDocument;
 
 class SaleDocumentIdentifier
 {
+    protected ?SaleDocumentKey $Key = null;
 
-    /**
-     * @var SaleDocumentKey $Key
-     */
-    protected $Key = null;
-
-    /**
-     * @var SaleDocumentReference $Reference
-     */
-    protected $Reference = null;
-
+    protected ?SaleDocumentReference $Reference = null;
     
     public function __construct()
     {
     
     }
 
-    /**
-     * @return SaleDocumentKey
-     */
-    public function getKey()
+    public function getKey(): ?SaleDocumentKey
     {
       return $this->Key;
     }
 
-    /**
-     * @param SaleDocumentKey $Key
-     * @return SaleDocumentIdentifier
-     */
-    public function setKey($Key)
+    public function setKey(SaleDocumentKey $Key): static
     {
       $this->Key = $Key;
       return $this;
     }
 
-    /**
-     * @return SaleDocumentReference
-     */
-    public function getReference()
+    public function getReference(): ?SaleDocumentReference
     {
       return $this->Reference;
     }
 
-    /**
-     * @param SaleDocumentReference $Reference
-     * @return SaleDocumentIdentifier
-     */
-    public function setReference($Reference)
+    public function setReference(SaleDocumentReference $Reference): static
     {
       $this->Reference = $Reference;
       return $this;

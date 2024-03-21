@@ -4,31 +4,19 @@ namespace Y2\SaleDocument;
 
 class GetByReference_Request
 {
+    protected ?SaleDocumentReference $Reference = null;
 
-    /**
-     * @var SaleDocumentReference $Reference
-     */
-    protected $Reference = null;
-
-    
     public function __construct()
     {
     
     }
 
-    /**
-     * @return SaleDocumentReference
-     */
-    public function getReference()
+    public function getReference(): ?SaleDocumentReference
     {
       return $this->Reference;
     }
 
-    /**
-     * @param SaleDocumentReference $Reference
-     * @return GetByReference_Request
-     */
-    public function setReference($Reference)
+    public function setReference(SaleDocumentReference $Reference): static
     {
       $this->Reference = $Reference;
       return $this;

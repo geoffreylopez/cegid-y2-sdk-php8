@@ -4,33 +4,19 @@ namespace Y2\SaleDocument;
 
 class GetByExternalReferenceResponse
 {
+    protected ?GetByExternalReference_Reply $GetByExternalReferenceResult = null;
 
-    /**
-     * @var GetByExternalReference_Reply $GetByExternalReferenceResult
-     */
-    protected $GetByExternalReferenceResult = null;
-
-    /**
-     * @param GetByExternalReference_Reply $GetByExternalReferenceResult
-     */
-    public function __construct($GetByExternalReferenceResult)
+    public function __construct(GetByExternalReference_Reply $GetByExternalReferenceResult)
     {
       $this->GetByExternalReferenceResult = $GetByExternalReferenceResult;
     }
 
-    /**
-     * @return GetByExternalReference_Reply
-     */
-    public function getGetByExternalReferenceResult()
+    public function getGetByExternalReferenceResult(): ?GetByExternalReference_Reply
     {
       return $this->GetByExternalReferenceResult;
     }
 
-    /**
-     * @param GetByExternalReference_Reply $GetByExternalReferenceResult
-     * @return GetByExternalReferenceResponse
-     */
-    public function setGetByExternalReferenceResult($GetByExternalReferenceResult)
+    public function setGetByExternalReferenceResult(GetByExternalReference_Reply $GetByExternalReferenceResult): static
     {
       $this->GetByExternalReferenceResult = $GetByExternalReferenceResult;
       return $this;

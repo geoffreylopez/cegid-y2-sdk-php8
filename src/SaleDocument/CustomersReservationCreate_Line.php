@@ -4,123 +4,62 @@ namespace Y2\SaleDocument;
 
 class CustomersReservationCreate_Line
 {
+    protected ?string $CatalogReference = null;
 
-    /**
-     * @var string $CatalogReference
-     */
-    protected $CatalogReference = null;
+    protected ?string $ComplementaryDescription = null;
 
-    /**
-     * @var string $ComplementaryDescription
-     */
-    protected $ComplementaryDescription = null;
+    protected ?\DateTime $DeliveryDate = null;
 
-    /**
-     * @var \DateTime $DeliveryDate
-     */
-    protected $DeliveryDate = null;
+    protected ?string $DiscountTypeId = null;
 
-    /**
-     * @var string $DiscountTypeId
-     */
-    protected $DiscountTypeId = null;
+    protected ?string $ExternalReference = null;
 
-    /**
-     * @var string $ExternalReference
-     */
-    protected $ExternalReference = null;
+    protected ?\DateTime $InitialDeliveryDate = null;
 
-    /**
-     * @var \DateTime $InitialDeliveryDate
-     */
-    protected $InitialDeliveryDate = null;
+    protected ?ItemIdentifier $ItemIdentifier = null;
 
-    /**
-     * @var ItemIdentifier $ItemIdentifier
-     */
-    protected $ItemIdentifier = null;
+    protected ?string $Label = null;
 
-    /**
-     * @var string $Label
-     */
-    protected $Label = null;
+    protected ?float $NetUnitPrice = null;
 
-    /**
-     * @var float $NetUnitPrice
-     */
-    protected $NetUnitPrice = null;
+    protected ?float $Quantity = null;
 
-    /**
-     * @var float $Quantity
-     */
-    protected $Quantity = null;
+    protected ?string $SalesPersonId = null;
 
-    /**
-     * @var string $SalesPersonId
-     */
-    protected $SalesPersonId = null;
+    protected ?string $SerialNumberId = null;
 
-    /**
-     * @var string $SerialNumberId
-     */
-    protected $SerialNumberId = null;
+    protected ?ArrayOfCreate_Tax $Taxes = null;
 
-    /**
-     * @var ArrayOfCreate_Tax $Taxes
-     */
-    protected $Taxes = null;
+    protected ?float $UnitPrice = null;
 
-    /**
-     * @var float $UnitPrice
-     */
-    protected $UnitPrice = null;
-
-    
     public function __construct()
     {
     
     }
 
-    /**
-     * @return string
-     */
-    public function getCatalogReference()
+    public function getCatalogReference(): ?string
     {
       return $this->CatalogReference;
     }
 
-    /**
-     * @param string $CatalogReference
-     * @return CustomersReservationCreate_Line
-     */
-    public function setCatalogReference($CatalogReference)
+    public function setCatalogReference(string $CatalogReference): static
     {
       $this->CatalogReference = $CatalogReference;
       return $this;
     }
 
-    /**
-     * @return string
-     */
-    public function getComplementaryDescription()
+    public function getComplementaryDescription(): ?string
     {
       return $this->ComplementaryDescription;
     }
 
-    /**
-     * @param string $ComplementaryDescription
-     * @return CustomersReservationCreate_Line
-     */
-    public function setComplementaryDescription($ComplementaryDescription)
+    public function setComplementaryDescription(string $ComplementaryDescription): static
     {
       $this->ComplementaryDescription = $ComplementaryDescription;
       return $this;
     }
 
-    /**
-     * @return \DateTime
-     */
-    public function getDeliveryDate()
+    public function getDeliveryDate(): \DateTime|bool|null
     {
       if ($this->DeliveryDate == null) {
         return null;
@@ -133,11 +72,7 @@ class CustomersReservationCreate_Line
       }
     }
 
-    /**
-     * @param \DateTime $DeliveryDate
-     * @return CustomersReservationCreate_Line
-     */
-    public function setDeliveryDate(\DateTime $DeliveryDate = null)
+    public function setDeliveryDate(\DateTime $DeliveryDate = null): static
     {
       if ($DeliveryDate == null) {
        $this->DeliveryDate = null;
@@ -147,46 +82,29 @@ class CustomersReservationCreate_Line
       return $this;
     }
 
-    /**
-     * @return string
-     */
-    public function getDiscountTypeId()
+    public function getDiscountTypeId(): ?string
     {
       return $this->DiscountTypeId;
     }
 
-    /**
-     * @param string $DiscountTypeId
-     * @return CustomersReservationCreate_Line
-     */
-    public function setDiscountTypeId($DiscountTypeId)
+    public function setDiscountTypeId(string $DiscountTypeId): static
     {
       $this->DiscountTypeId = $DiscountTypeId;
       return $this;
     }
 
-    /**
-     * @return string
-     */
-    public function getExternalReference()
+    public function getExternalReference(): ?string
     {
       return $this->ExternalReference;
     }
 
-    /**
-     * @param string $ExternalReference
-     * @return CustomersReservationCreate_Line
-     */
-    public function setExternalReference($ExternalReference)
+    public function setExternalReference(string $ExternalReference): static
     {
       $this->ExternalReference = $ExternalReference;
       return $this;
     }
 
-    /**
-     * @return \DateTime
-     */
-    public function getInitialDeliveryDate()
+    public function getInitialDeliveryDate(): \DateTime|bool|null
     {
       if ($this->InitialDeliveryDate == null) {
         return null;
@@ -199,11 +117,7 @@ class CustomersReservationCreate_Line
       }
     }
 
-    /**
-     * @param \DateTime $InitialDeliveryDate
-     * @return CustomersReservationCreate_Line
-     */
-    public function setInitialDeliveryDate(\DateTime $InitialDeliveryDate = null)
+    public function setInitialDeliveryDate(\DateTime $InitialDeliveryDate = null): static
     {
       if ($InitialDeliveryDate == null) {
        $this->InitialDeliveryDate = null;
@@ -213,145 +127,89 @@ class CustomersReservationCreate_Line
       return $this;
     }
 
-    /**
-     * @return ItemIdentifier
-     */
-    public function getItemIdentifier()
+    public function getItemIdentifier(): ?ItemIdentifier
     {
       return $this->ItemIdentifier;
     }
 
-    /**
-     * @param ItemIdentifier $ItemIdentifier
-     * @return CustomersReservationCreate_Line
-     */
-    public function setItemIdentifier($ItemIdentifier)
+    public function setItemIdentifier(ItemIdentifier $ItemIdentifier): static
     {
       $this->ItemIdentifier = $ItemIdentifier;
       return $this;
     }
 
-    /**
-     * @return string
-     */
-    public function getLabel()
+    public function getLabel(): ?string
     {
       return $this->Label;
     }
 
-    /**
-     * @param string $Label
-     * @return CustomersReservationCreate_Line
-     */
-    public function setLabel($Label)
+    public function setLabel(string $Label): static
     {
       $this->Label = $Label;
       return $this;
     }
 
-    /**
-     * @return float
-     */
-    public function getNetUnitPrice()
+    public function getNetUnitPrice(): ?float
     {
       return $this->NetUnitPrice;
     }
 
-    /**
-     * @param float $NetUnitPrice
-     * @return CustomersReservationCreate_Line
-     */
-    public function setNetUnitPrice($NetUnitPrice)
+    public function setNetUnitPrice(float $NetUnitPrice): static
     {
       $this->NetUnitPrice = $NetUnitPrice;
       return $this;
     }
 
-    /**
-     * @return float
-     */
-    public function getQuantity()
+    public function getQuantity(): ?float
     {
       return $this->Quantity;
     }
 
-    /**
-     * @param float $Quantity
-     * @return CustomersReservationCreate_Line
-     */
-    public function setQuantity($Quantity)
+    public function setQuantity(float $Quantity): static
     {
       $this->Quantity = $Quantity;
       return $this;
     }
 
-    /**
-     * @return string
-     */
-    public function getSalesPersonId()
+    public function getSalesPersonId(): ?string
     {
       return $this->SalesPersonId;
     }
 
-    /**
-     * @param string $SalesPersonId
-     * @return CustomersReservationCreate_Line
-     */
-    public function setSalesPersonId($SalesPersonId)
+    public function setSalesPersonId(string $SalesPersonId): static
     {
       $this->SalesPersonId = $SalesPersonId;
       return $this;
     }
 
-    /**
-     * @return string
-     */
-    public function getSerialNumberId()
+    public function getSerialNumberId(): ?string
     {
       return $this->SerialNumberId;
     }
 
-    /**
-     * @param string $SerialNumberId
-     * @return CustomersReservationCreate_Line
-     */
-    public function setSerialNumberId($SerialNumberId)
+    public function setSerialNumberId(string $SerialNumberId): static
     {
       $this->SerialNumberId = $SerialNumberId;
       return $this;
     }
 
-    /**
-     * @return ArrayOfCreate_Tax
-     */
-    public function getTaxes()
+    public function getTaxes(): ?ArrayOfCreate_Tax
     {
       return $this->Taxes;
     }
 
-    /**
-     * @param ArrayOfCreate_Tax $Taxes
-     * @return CustomersReservationCreate_Line
-     */
-    public function setTaxes($Taxes)
+    public function setTaxes(ArrayOfCreate_Tax $Taxes): static
     {
       $this->Taxes = $Taxes;
       return $this;
     }
 
-    /**
-     * @return float
-     */
-    public function getUnitPrice()
+    public function getUnitPrice(): ?float
     {
       return $this->UnitPrice;
     }
 
-    /**
-     * @param float $UnitPrice
-     * @return CustomersReservationCreate_Line
-     */
-    public function setUnitPrice($UnitPrice)
+    public function setUnitPrice(float $UnitPrice): static
     {
       $this->UnitPrice = $UnitPrice;
       return $this;

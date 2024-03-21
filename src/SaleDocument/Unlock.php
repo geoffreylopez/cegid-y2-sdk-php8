@@ -4,58 +4,33 @@ namespace Y2\SaleDocument;
 
 class Unlock
 {
+    protected ?Unlock_Request $unlockRequest = null;
 
-    /**
-     * @var Unlock_Request $unlockRequest
-     */
-    protected $unlockRequest = null;
+    protected ?RetailContext $clientContext = null;
 
-    /**
-     * @var RetailContext $clientContext
-     */
-    protected $clientContext = null;
-
-    /**
-     * @param Unlock_Request $unlockRequest
-     * @param RetailContext $clientContext
-     */
-    public function __construct($unlockRequest, $clientContext)
+    public function __construct(Unlock_Request $unlockRequest, RetailContext $clientContext)
     {
       $this->unlockRequest = $unlockRequest;
       $this->clientContext = $clientContext;
     }
 
-    /**
-     * @return Unlock_Request
-     */
-    public function getUnlockRequest()
+    public function getUnlockRequest(): ?Unlock_Request
     {
       return $this->unlockRequest;
     }
 
-    /**
-     * @param Unlock_Request $unlockRequest
-     * @return Unlock
-     */
-    public function setUnlockRequest($unlockRequest)
+    public function setUnlockRequest(Unlock_Request $unlockRequest): static
     {
       $this->unlockRequest = $unlockRequest;
       return $this;
     }
 
-    /**
-     * @return RetailContext
-     */
-    public function getClientContext()
+    public function getClientContext(): ?RetailContext
     {
       return $this->clientContext;
     }
 
-    /**
-     * @param RetailContext $clientContext
-     * @return Unlock
-     */
-    public function setClientContext($clientContext)
+    public function setClientContext(RetailContext $clientContext): static
     {
       $this->clientContext = $clientContext;
       return $this;

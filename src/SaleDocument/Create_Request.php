@@ -4,146 +4,84 @@ namespace Y2\SaleDocument;
 
 class Create_Request
 {
+    protected ?Address $DeliveryAddress = null;
 
-    /**
-     * @var Address $DeliveryAddress
-     */
-    protected $DeliveryAddress = null;
+    protected ?Create_Header $Header = null;
 
-    /**
-     * @var Create_Header $Header
-     */
-    protected $Header = null;
+    protected ?Address $InvoicingAddress = null;
 
-    /**
-     * @var Address $InvoicingAddress
-     */
-    protected $InvoicingAddress = null;
+    protected ?ArrayOfCreate_Line $Lines = null;
 
-    /**
-     * @var ArrayOfCreate_Line $Lines
-     */
-    protected $Lines = null;
+    protected ?ArrayOfCreate_Payment $Payments = null;
 
-    /**
-     * @var ArrayOfCreate_Payment $Payments
-     */
-    protected $Payments = null;
+    protected ?ArrayOfCreate_ShippingTax $ShippingTaxes = null;
 
-    /**
-     * @var ArrayOfCreate_ShippingTax $ShippingTaxes
-     */
-    protected $ShippingTaxes = null;
-
-    
     public function __construct()
     {
     
     }
 
-    /**
-     * @return Address
-     */
-    public function getDeliveryAddress()
+    public function getDeliveryAddress(): ?Address
     {
       return $this->DeliveryAddress;
     }
 
-    /**
-     * @param Address $DeliveryAddress
-     * @return Create_Request
-     */
-    public function setDeliveryAddress($DeliveryAddress)
+    public function setDeliveryAddress(Address $DeliveryAddress): static
     {
       $this->DeliveryAddress = $DeliveryAddress;
       return $this;
     }
 
-    /**
-     * @return Create_Header
-     */
-    public function getHeader()
+    public function getHeader(): ?Create_Header
     {
       return $this->Header;
     }
 
-    /**
-     * @param Create_Header $Header
-     * @return Create_Request
-     */
-    public function setHeader($Header)
+    public function setHeader(Create_Header $Header): static
     {
       $this->Header = $Header;
       return $this;
     }
 
-    /**
-     * @return Address
-     */
-    public function getInvoicingAddress()
+    public function getInvoicingAddress(): ?Address
     {
       return $this->InvoicingAddress;
     }
 
-    /**
-     * @param Address $InvoicingAddress
-     * @return Create_Request
-     */
-    public function setInvoicingAddress($InvoicingAddress)
+    public function setInvoicingAddress(Address $InvoicingAddress): static
     {
       $this->InvoicingAddress = $InvoicingAddress;
       return $this;
     }
 
-    /**
-     * @return ArrayOfCreate_Line
-     */
-    public function getLines()
+    public function getLines(): ?ArrayOfCreate_Line
     {
       return $this->Lines;
     }
 
-    /**
-     * @param ArrayOfCreate_Line $Lines
-     * @return Create_Request
-     */
-    public function setLines($Lines)
+    public function setLines(ArrayOfCreate_Line $Lines): static
     {
       $this->Lines = $Lines;
       return $this;
     }
 
-    /**
-     * @return ArrayOfCreate_Payment
-     */
-    public function getPayments()
+    public function getPayments(): ?ArrayOfCreate_Payment
     {
       return $this->Payments;
     }
 
-    /**
-     * @param ArrayOfCreate_Payment $Payments
-     * @return Create_Request
-     */
-    public function setPayments($Payments)
+    public function setPayments(ArrayOfCreate_Payment $Payments): static
     {
       $this->Payments = $Payments;
       return $this;
     }
 
-    /**
-     * @return ArrayOfCreate_ShippingTax
-     */
-    public function getShippingTaxes()
+    public function getShippingTaxes(): ?ArrayOfCreate_ShippingTax
     {
       return $this->ShippingTaxes;
     }
 
-    /**
-     * @param ArrayOfCreate_ShippingTax $ShippingTaxes
-     * @return Create_Request
-     */
-    public function setShippingTaxes($ShippingTaxes)
+    public function setShippingTaxes(ArrayOfCreate_ShippingTax $ShippingTaxes): static
     {
       $this->ShippingTaxes = $ShippingTaxes;
       return $this;

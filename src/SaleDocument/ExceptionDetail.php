@@ -4,36 +4,17 @@ namespace Y2\SaleDocument;
 
 class ExceptionDetail
 {
+    protected ?string $HelpLink = null;
 
-    /**
-     * @var string $HelpLink
-     */
-    protected $HelpLink = null;
+    protected ?ExceptionDetail $InnerException = null;
 
-    /**
-     * @var ExceptionDetail $InnerException
-     */
-    protected $InnerException = null;
+    protected ?string $Message = null;
 
-    /**
-     * @var string $Message
-     */
-    protected $Message = null;
+    protected ?string $StackTrace = null;
 
-    /**
-     * @var string $StackTrace
-     */
-    protected $StackTrace = null;
+    protected ?guid $TrackingId = null;
 
-    /**
-     * @var guid $TrackingId
-     */
-    protected $TrackingId = null;
-
-    /**
-     * @var string $Type
-     */
-    protected $Type = null;
+    protected ?string $Type = null;
 
     
     public function __construct()
@@ -41,109 +22,67 @@ class ExceptionDetail
     
     }
 
-    /**
-     * @return string
-     */
-    public function getHelpLink()
+    public function getHelpLink(): ?string
     {
       return $this->HelpLink;
     }
 
-    /**
-     * @param string $HelpLink
-     * @return ExceptionDetail
-     */
-    public function setHelpLink($HelpLink)
+    public function setHelpLink(string $HelpLink): static
     {
       $this->HelpLink = $HelpLink;
       return $this;
     }
 
-    /**
-     * @return ExceptionDetail
-     */
-    public function getInnerException()
+    public function getInnerException(): ?ExceptionDetail
     {
       return $this->InnerException;
     }
 
-    /**
-     * @param ExceptionDetail $InnerException
-     * @return ExceptionDetail
-     */
-    public function setInnerException($InnerException)
+    public function setInnerException(ExceptionDetail $InnerException): static
     {
       $this->InnerException = $InnerException;
       return $this;
     }
 
-    /**
-     * @return string
-     */
-    public function getMessage()
+    public function getMessage(): ?string
     {
       return $this->Message;
     }
 
-    /**
-     * @param string $Message
-     * @return ExceptionDetail
-     */
-    public function setMessage($Message)
+    public function setMessage(string $Message): static
     {
       $this->Message = $Message;
       return $this;
     }
 
-    /**
-     * @return string
-     */
-    public function getStackTrace()
+    public function getStackTrace(): ?string
     {
       return $this->StackTrace;
     }
 
-    /**
-     * @param string $StackTrace
-     * @return ExceptionDetail
-     */
-    public function setStackTrace($StackTrace)
+    public function setStackTrace(string $StackTrace): static
     {
       $this->StackTrace = $StackTrace;
       return $this;
     }
 
-    /**
-     * @return guid
-     */
-    public function getTrackingId()
+    public function getTrackingId(): ?guid
     {
       return $this->TrackingId;
     }
 
-    /**
-     * @param guid $TrackingId
-     * @return ExceptionDetail
-     */
-    public function setTrackingId($TrackingId)
+    public function setTrackingId(guid $TrackingId): static
     {
       $this->TrackingId = $TrackingId;
       return $this;
     }
 
-    /**
-     * @return string
-     */
-    public function getType()
+    public function getType(): ?string
     {
       return $this->Type;
     }
 
-    /**
-     * @param string $Type
-     * @return ExceptionDetail
-     */
-    public function setType($Type)
+    public function setType(string $Type): static
     {
       $this->Type = $Type;
       return $this;

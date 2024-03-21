@@ -4,58 +4,33 @@ namespace Y2\SaleDocument;
 
 class Create
 {
+    protected ?Create_Request $createRequest = null;
 
-    /**
-     * @var Create_Request $createRequest
-     */
-    protected $createRequest = null;
+    protected ?RetailContext $clientContext = null;
 
-    /**
-     * @var RetailContext $clientContext
-     */
-    protected $clientContext = null;
-
-    /**
-     * @param Create_Request $createRequest
-     * @param RetailContext $clientContext
-     */
-    public function __construct($createRequest, $clientContext)
+    public function __construct(Create_Request $createRequest, RetailContext $clientContext)
     {
       $this->createRequest = $createRequest;
       $this->clientContext = $clientContext;
     }
 
-    /**
-     * @return Create_Request
-     */
-    public function getCreateRequest()
+    public function getCreateRequest(): ?Create_Request
     {
       return $this->createRequest;
     }
 
-    /**
-     * @param Create_Request $createRequest
-     * @return Create
-     */
-    public function setCreateRequest($createRequest)
+    public function setCreateRequest(Create_Request $createRequest): static
     {
       $this->createRequest = $createRequest;
       return $this;
     }
 
-    /**
-     * @return RetailContext
-     */
-    public function getClientContext()
+    public function getClientContext(): ?RetailContext
     {
       return $this->clientContext;
     }
 
-    /**
-     * @param RetailContext $clientContext
-     * @return Create
-     */
-    public function setClientContext($clientContext)
+    public function setClientContext(RetailContext $clientContext): static
     {
       $this->clientContext = $clientContext;
       return $this;

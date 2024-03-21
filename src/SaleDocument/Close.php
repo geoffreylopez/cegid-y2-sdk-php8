@@ -4,58 +4,33 @@ namespace Y2\SaleDocument;
 
 class Close
 {
+    protected ?Close_Request $closeRequest = null;
 
-    /**
-     * @var Close_Request $closeRequest
-     */
-    protected $closeRequest = null;
+    protected ?RetailContext $clientContext = null;
 
-    /**
-     * @var RetailContext $clientContext
-     */
-    protected $clientContext = null;
-
-    /**
-     * @param Close_Request $closeRequest
-     * @param RetailContext $clientContext
-     */
-    public function __construct($closeRequest, $clientContext)
+    public function __construct(Close_Request $closeRequest, RetailContext $clientContext)
     {
       $this->closeRequest = $closeRequest;
       $this->clientContext = $clientContext;
     }
 
-    /**
-     * @return Close_Request
-     */
-    public function getCloseRequest()
+    public function getCloseRequest(): ?Close_Request
     {
       return $this->closeRequest;
     }
 
-    /**
-     * @param Close_Request $closeRequest
-     * @return Close
-     */
-    public function setCloseRequest($closeRequest)
+    public function setCloseRequest(Close_Request $closeRequest): static
     {
       $this->closeRequest = $closeRequest;
       return $this;
     }
 
-    /**
-     * @return RetailContext
-     */
-    public function getClientContext()
+    public function getClientContext(): ?RetailContext
     {
       return $this->clientContext;
     }
 
-    /**
-     * @param RetailContext $clientContext
-     * @return Close
-     */
-    public function setClientContext($clientContext)
+    public function setClientContext(RetailContext $clientContext): static
     {
       $this->clientContext = $clientContext;
       return $this;

@@ -4,54 +4,32 @@ namespace Y2\SaleDocument;
 
 class GetOmniChannelLine
 {
+    protected ?string $FollowUpStatus = null;
 
-    /**
-     * @var string $FollowUpStatus
-     */
-    protected $FollowUpStatus = null;
+    protected ?string $WarehouseId = null;
 
-    /**
-     * @var string $WarehouseId
-     */
-    protected $WarehouseId = null;
-
-    
     public function __construct()
     {
     
     }
 
-    /**
-     * @return string
-     */
-    public function getFollowUpStatus()
+    public function getFollowUpStatus(): ?string
     {
       return $this->FollowUpStatus;
     }
 
-    /**
-     * @param string $FollowUpStatus
-     * @return GetOmniChannelLine
-     */
-    public function setFollowUpStatus($FollowUpStatus)
+    public function setFollowUpStatus(string $FollowUpStatus): static
     {
       $this->FollowUpStatus = $FollowUpStatus;
       return $this;
     }
 
-    /**
-     * @return string
-     */
-    public function getWarehouseId()
+    public function getWarehouseId(): ?string
     {
       return $this->WarehouseId;
     }
 
-    /**
-     * @param string $WarehouseId
-     * @return GetOmniChannelLine
-     */
-    public function setWarehouseId($WarehouseId)
+    public function setWarehouseId(string $WarehouseId): static
     {
       $this->WarehouseId = $WarehouseId;
       return $this;

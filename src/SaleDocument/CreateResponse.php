@@ -4,33 +4,19 @@ namespace Y2\SaleDocument;
 
 class CreateResponse
 {
+    protected ?Create_Reply $CreateResult = null;
 
-    /**
-     * @var Create_Reply $CreateResult
-     */
-    protected $CreateResult = null;
-
-    /**
-     * @param Create_Reply $CreateResult
-     */
-    public function __construct($CreateResult)
+    public function __construct(Create_Reply $CreateResult)
     {
       $this->CreateResult = $CreateResult;
     }
 
-    /**
-     * @return Create_Reply
-     */
-    public function getCreateResult()
+    public function getCreateResult(): ?Create_Reply
     {
       return $this->CreateResult;
     }
 
-    /**
-     * @param Create_Reply $CreateResult
-     * @return CreateResponse
-     */
-    public function setCreateResult($CreateResult)
+    public function setCreateResult(Create_Reply $CreateResult): static
     {
       $this->CreateResult = $CreateResult;
       return $this;

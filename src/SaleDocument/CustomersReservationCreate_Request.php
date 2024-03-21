@@ -4,77 +4,45 @@ namespace Y2\SaleDocument;
 
 class CustomersReservationCreate_Request
 {
+    protected ?CustomersReservationCreate_Header $Header = null;
 
-    /**
-     * @var CustomersReservationCreate_Header $Header
-     */
-    protected $Header = null;
+    protected ?ArrayOfCustomersReservationCreate_Line $Lines = null;
 
-    /**
-     * @var ArrayOfCustomersReservationCreate_Line $Lines
-     */
-    protected $Lines = null;
+    protected ?ArrayOfCreate_Payment $Payments = null;
 
-    /**
-     * @var ArrayOfCreate_Payment $Payments
-     */
-    protected $Payments = null;
-
-    
     public function __construct()
     {
     
     }
 
-    /**
-     * @return CustomersReservationCreate_Header
-     */
-    public function getHeader()
+    public function getHeader(): ?CustomersReservationCreate_Header
     {
       return $this->Header;
     }
 
-    /**
-     * @param CustomersReservationCreate_Header $Header
-     * @return CustomersReservationCreate_Request
-     */
-    public function setHeader($Header)
+    public function setHeader(CustomersReservationCreate_Header $Header): static
     {
       $this->Header = $Header;
       return $this;
     }
 
-    /**
-     * @return ArrayOfCustomersReservationCreate_Line
-     */
-    public function getLines()
+    public function getLines(): ?ArrayOfCustomersReservationCreate_Line
     {
       return $this->Lines;
     }
 
-    /**
-     * @param ArrayOfCustomersReservationCreate_Line $Lines
-     * @return CustomersReservationCreate_Request
-     */
-    public function setLines($Lines)
+    public function setLines(ArrayOfCustomersReservationCreate_Line $Lines): static
     {
       $this->Lines = $Lines;
       return $this;
     }
 
-    /**
-     * @return ArrayOfCreate_Payment
-     */
-    public function getPayments()
+    public function getPayments(): ?ArrayOfCreate_Payment
     {
       return $this->Payments;
     }
 
-    /**
-     * @param ArrayOfCreate_Payment $Payments
-     * @return CustomersReservationCreate_Request
-     */
-    public function setPayments($Payments)
+    public function setPayments(ArrayOfCreate_Payment $Payments): static
     {
       $this->Payments = $Payments;
       return $this;

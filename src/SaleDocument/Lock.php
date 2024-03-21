@@ -4,58 +4,33 @@ namespace Y2\SaleDocument;
 
 class Lock
 {
+    protected ?Lock_Request $lockRequest = null;
 
-    /**
-     * @var Lock_Request $lockRequest
-     */
-    protected $lockRequest = null;
+    protected ?RetailContext $clientContext = null;
 
-    /**
-     * @var RetailContext $clientContext
-     */
-    protected $clientContext = null;
-
-    /**
-     * @param Lock_Request $lockRequest
-     * @param RetailContext $clientContext
-     */
-    public function __construct($lockRequest, $clientContext)
+    public function __construct(Lock_Request $lockRequest, RetailContext $clientContext)
     {
       $this->lockRequest = $lockRequest;
       $this->clientContext = $clientContext;
     }
 
-    /**
-     * @return Lock_Request
-     */
-    public function getLockRequest()
+    public function getLockRequest(): ?Lock_Request
     {
       return $this->lockRequest;
     }
 
-    /**
-     * @param Lock_Request $lockRequest
-     * @return Lock
-     */
-    public function setLockRequest($lockRequest)
+    public function setLockRequest(Lock_Request $lockRequest): static
     {
       $this->lockRequest = $lockRequest;
       return $this;
     }
 
-    /**
-     * @return RetailContext
-     */
-    public function getClientContext()
+    public function getClientContext(): ?RetailContext
     {
       return $this->clientContext;
     }
 
-    /**
-     * @param RetailContext $clientContext
-     * @return Lock
-     */
-    public function setClientContext($clientContext)
+    public function setClientContext(RetailContext $clientContext): static
     {
       $this->clientContext = $clientContext;
       return $this;

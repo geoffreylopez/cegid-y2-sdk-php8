@@ -4,58 +4,33 @@ namespace Y2\SaleDocument;
 
 class CustomersReservationCreate
 {
+    protected ?CustomersReservationCreate_Request $customersReservationCreateRequest = null;
 
-    /**
-     * @var CustomersReservationCreate_Request $customersReservationCreateRequest
-     */
-    protected $customersReservationCreateRequest = null;
+    protected ?RetailContext $clientContext = null;
 
-    /**
-     * @var RetailContext $clientContext
-     */
-    protected $clientContext = null;
-
-    /**
-     * @param CustomersReservationCreate_Request $customersReservationCreateRequest
-     * @param RetailContext $clientContext
-     */
-    public function __construct($customersReservationCreateRequest, $clientContext)
+    public function __construct(CustomersReservationCreate_Request $customersReservationCreateRequest, RetailContext $clientContext)
     {
       $this->customersReservationCreateRequest = $customersReservationCreateRequest;
       $this->clientContext = $clientContext;
     }
 
-    /**
-     * @return CustomersReservationCreate_Request
-     */
-    public function getCustomersReservationCreateRequest()
+    public function getCustomersReservationCreateRequest(): ?CustomersReservationCreate_Request
     {
       return $this->customersReservationCreateRequest;
     }
 
-    /**
-     * @param CustomersReservationCreate_Request $customersReservationCreateRequest
-     * @return CustomersReservationCreate
-     */
-    public function setCustomersReservationCreateRequest($customersReservationCreateRequest)
+    public function setCustomersReservationCreateRequest(CustomersReservationCreate_Request $customersReservationCreateRequest): static
     {
       $this->customersReservationCreateRequest = $customersReservationCreateRequest;
       return $this;
     }
 
-    /**
-     * @return RetailContext
-     */
-    public function getClientContext()
+    public function getClientContext(): ?RetailContext
     {
       return $this->clientContext;
     }
 
-    /**
-     * @param RetailContext $clientContext
-     * @return CustomersReservationCreate
-     */
-    public function setClientContext($clientContext)
+    public function setClientContext(RetailContext $clientContext): static
     {
       $this->clientContext = $clientContext;
       return $this;

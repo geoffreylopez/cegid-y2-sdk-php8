@@ -4,70 +4,37 @@ namespace Y2\SaleDocument;
 
 class GetHeaderList_Request
 {
+    protected ?bool $Active = null;
 
-    /**
-     * @var boolean $Active
-     */
-    protected $Active = null;
+    protected ?\DateTime $BeginDate = null;
 
-    /**
-     * @var \DateTime $BeginDate
-     */
-    protected $BeginDate = null;
+    protected ?string $CustomerId = null;
 
-    /**
-     * @var string $CustomerId
-     */
-    protected $CustomerId = null;
+    protected ?ArrayOfSaleDocumentType $DocumentTypes = null;
 
-    /**
-     * @var ArrayOfSaleDocumentType $DocumentTypes
-     */
-    protected $DocumentTypes = null;
+    protected ?\DateTime $EndDate = null;
 
-    /**
-     * @var \DateTime $EndDate
-     */
-    protected $EndDate = null;
+    protected ?Pager $Pager = null;
 
-    /**
-     * @var Pager $Pager
-     */
-    protected $Pager = null;
+    protected ?ArrayOfstring $StoreIds = null;
 
-    /**
-     * @var ArrayOfstring $StoreIds
-     */
-    protected $StoreIds = null;
-
-    
     public function __construct()
     {
     
     }
 
-    /**
-     * @return boolean
-     */
-    public function getActive()
+    public function getActive(): ?bool
     {
       return $this->Active;
     }
 
-    /**
-     * @param boolean $Active
-     * @return GetHeaderList_Request
-     */
-    public function setActive($Active)
+    public function setActive(bool $Active): static
     {
       $this->Active = $Active;
       return $this;
     }
 
-    /**
-     * @return \DateTime
-     */
-    public function getBeginDate()
+    public function getBeginDate(): \DateTime|bool|null
     {
       if ($this->BeginDate == null) {
         return null;
@@ -80,11 +47,7 @@ class GetHeaderList_Request
       }
     }
 
-    /**
-     * @param \DateTime $BeginDate
-     * @return GetHeaderList_Request
-     */
-    public function setBeginDate(\DateTime $BeginDate = null)
+    public function setBeginDate(\DateTime $BeginDate = null): static
     {
       if ($BeginDate == null) {
        $this->BeginDate = null;
@@ -94,46 +57,29 @@ class GetHeaderList_Request
       return $this;
     }
 
-    /**
-     * @return string
-     */
-    public function getCustomerId()
+    public function getCustomerId(): ?string
     {
       return $this->CustomerId;
     }
 
-    /**
-     * @param string $CustomerId
-     * @return GetHeaderList_Request
-     */
-    public function setCustomerId($CustomerId)
+    public function setCustomerId(string $CustomerId): static
     {
       $this->CustomerId = $CustomerId;
       return $this;
     }
 
-    /**
-     * @return ArrayOfSaleDocumentType
-     */
-    public function getDocumentTypes()
+    public function getDocumentTypes(): ?ArrayOfSaleDocumentType
     {
       return $this->DocumentTypes;
     }
 
-    /**
-     * @param ArrayOfSaleDocumentType $DocumentTypes
-     * @return GetHeaderList_Request
-     */
-    public function setDocumentTypes($DocumentTypes)
+    public function setDocumentTypes(ArrayOfSaleDocumentType $DocumentTypes): static
     {
       $this->DocumentTypes = $DocumentTypes;
       return $this;
     }
 
-    /**
-     * @return \DateTime
-     */
-    public function getEndDate()
+    public function getEndDate(): \DateTime|bool|null
     {
       if ($this->EndDate == null) {
         return null;
@@ -146,11 +92,7 @@ class GetHeaderList_Request
       }
     }
 
-    /**
-     * @param \DateTime $EndDate
-     * @return GetHeaderList_Request
-     */
-    public function setEndDate(\DateTime $EndDate = null)
+    public function setEndDate(\DateTime $EndDate = null): static
     {
       if ($EndDate == null) {
        $this->EndDate = null;
@@ -160,37 +102,23 @@ class GetHeaderList_Request
       return $this;
     }
 
-    /**
-     * @return Pager
-     */
-    public function getPager()
+    public function getPager(): ?Pager
     {
       return $this->Pager;
     }
 
-    /**
-     * @param Pager $Pager
-     * @return GetHeaderList_Request
-     */
-    public function setPager($Pager)
+    public function setPager(Pager $Pager): static
     {
       $this->Pager = $Pager;
       return $this;
     }
 
-    /**
-     * @return ArrayOfstring
-     */
-    public function getStoreIds()
+    public function getStoreIds(): ?ArrayOfstring
     {
       return $this->StoreIds;
     }
 
-    /**
-     * @param ArrayOfstring $StoreIds
-     * @return GetHeaderList_Request
-     */
-    public function setStoreIds($StoreIds)
+    public function setStoreIds(ArrayOfstring $StoreIds): static
     {
       $this->StoreIds = $StoreIds;
       return $this;

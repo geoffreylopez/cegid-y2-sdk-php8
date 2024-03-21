@@ -4,202 +4,100 @@ namespace Y2\SaleDocument;
 
 class Create_Header
 {
-    /**
-     * @var boolean $Active
-     */
-    protected $Active = null;
+    protected ?bool $Active = null;
 
-    /**
-     * @var string $Comment
-     */
-    protected $Comment = null;
+    protected ?string $Comment = null;
 
-    /**
-     * @var string $CurrencyId
-     */
-    protected $CurrencyId = null;
+    protected ?string $CurrencyId = null;
 
-    /**
-     * @var string $CustomerId
-     */
-    protected $CustomerId = null;
+    protected ?string $CustomerId = null;
 
-    /**
-     * @var \DateTime $Date
-     */
-    protected $Date = null;
+    protected ?\DateTime $Date = null;
 
-    /**
-     * @var SaleDocumentLineIdentifier $Deposit
-     */
-    protected $Deposit = null;
+    protected ?SaleDocumentLineIdentifier $Deposit = null;
 
-    /**
-     * @var string $ExternalReference
-     */
-    protected $ExternalReference = null;
+    protected ?string $ExternalReference = null;
 
-    /**
-     * @var \DateTime $ExternalReferenceDate
-     */
-    protected $ExternalReferenceDate = null;
+    protected ?\DateTime $ExternalReferenceDate = null;
 
-    /**
-     * @var string $FollowedReference
-     */
-    protected $FollowedReference = null;
+    protected ?string $FollowedReference = null;
 
-    /**
-     * @var string $InternalReference
-     */
-    protected $InternalReference = null;
+    protected ?string $InternalReference = null;
 
-    /**
-     * @var boolean $LinesUnmodifiable
-     */
-    protected $LinesUnmodifiable = null;
+    protected ?bool $LinesUnmodifiable = null;
 
-    /**
-     * @var OmniChannel $OmniChannel
-     */
-    protected $OmniChannel = null;
+    protected ?OmniChannel $OmniChannel = null;
 
-    /**
-     * @var DocumentOrigin $Origin
-     */
-    protected $Origin = null;
+    protected ?DocumentOrigin $Origin = null;
 
-    /**
-     * @var string $SalesPersonId
-     */
-    protected $SalesPersonId = null;
+    protected ?string $SalesPersonId = null;
 
-    /**
-     * @var string $StoreId
-     */
-    protected $StoreId = null;
+    protected ?string $StoreId = null;
 
-    /**
-     * @var boolean $TaxExcluded
-     */
-    protected $TaxExcluded = null;
+    protected ?bool $TaxExcluded = null;
 
-    /**
-     * @var string $Type
-     */
-    protected $Type = null;
+    protected ?string $Type = null;
 
-    /**
-     * @var ArrayOfUserDefinedDate $UserDefinedDates
-     */
-    protected $UserDefinedDates = null;
+    protected ?ArrayOfUserDefinedDate $UserDefinedDates = null;
 
-    /**
-     * @var ArrayOfUserDefinedTableCustomer $UserDefinedTableCustomers
-     */
-    protected $UserDefinedTableCustomers = null;
+    protected ?ArrayOfUserDefinedTableCustomer $UserDefinedTableCustomers = null;
 
-    /**
-     * @var ArrayOfUserDefinedTable $UserDefinedTables
-     */
-    protected $UserDefinedTables = null;
+    protected ?ArrayOfUserDefinedTable $UserDefinedTables = null;
 
-    /**
-     * @var ArrayOfUserField $UserFields
-     */
-    protected $UserFields = null;
+    protected ?ArrayOfUserField $UserFields = null;
 
-    /**
-     * @var string $WarehouseId
-     */
-    protected $WarehouseId = null;
-
+    protected ?string $WarehouseId = null;
 
     public function __construct()
     {
 
     }
 
-    /**
-     * @return boolean
-     */
-    public function getActive()
+    public function getActive(): ?bool
     {
         return $this->Active;
     }
 
-    /**
-     * @param boolean $Active
-     *
-     * @return Create_Header
-     */
-    public function setActive($Active)
+    public function setActive(bool $Active): static
     {
         $this->Active = $Active;
         return $this;
     }
 
-    /**
-     * @return string
-     */
-    public function getComment()
+    public function getComment(): ?string
     {
         return $this->Comment;
     }
 
-    /**
-     * @param string $Comment
-     *
-     * @return Create_Header
-     */
-    public function setComment($Comment)
+    public function setComment(string $Comment): static
     {
         $this->Comment = $Comment;
         return $this;
     }
 
-    /**
-     * @return string
-     */
-    public function getCurrencyId()
+    public function getCurrencyId(): ?string
     {
         return $this->CurrencyId;
     }
 
-    /**
-     * @param string $CurrencyId
-     *
-     * @return Create_Header
-     */
-    public function setCurrencyId($CurrencyId)
+    public function setCurrencyId(string $CurrencyId): static
     {
         $this->CurrencyId = $CurrencyId;
         return $this;
     }
 
-    /**
-     * @return string
-     */
-    public function getCustomerId()
+    public function getCustomerId(): ?string
     {
         return $this->CustomerId;
     }
 
-    /**
-     * @param string $CustomerId
-     *
-     * @return Create_Header
-     */
-    public function setCustomerId($CustomerId)
+    public function setCustomerId(string $CustomerId): static
     {
         $this->CustomerId = $CustomerId;
         return $this;
     }
 
-    /**
-     * @return \DateTime
-     */
-    public function getDate()
+    public function getDate(): \DateTime|bool|null
     {
         if ($this->Date == null) {
             return null;
@@ -212,12 +110,7 @@ class Create_Header
         }
     }
 
-    /**
-     * @param \DateTime $Date
-     *
-     * @return Create_Header
-     */
-    public function setDate(\DateTime $Date = null)
+    public function setDate(\DateTime $Date = null): static
     {
         if ($Date == null) {
             $this->Date = null;
@@ -227,48 +120,29 @@ class Create_Header
         return $this;
     }
 
-    /**
-     * @return SaleDocumentLineIdentifier
-     */
-    public function getDeposit()
+    public function getDeposit(): ?SaleDocumentLineIdentifier
     {
         return $this->Deposit;
     }
 
-    /**
-     * @param SaleDocumentLineIdentifier $Deposit
-     *
-     * @return Create_Header
-     */
-    public function setDeposit($Deposit)
+    public function setDeposit(SaleDocumentLineIdentifier $Deposit): static
     {
         $this->Deposit = $Deposit;
         return $this;
     }
 
-    /**
-     * @return string
-     */
-    public function getExternalReference()
+    public function getExternalReference(): ?string
     {
         return $this->ExternalReference;
     }
 
-    /**
-     * @param string $ExternalReference
-     *
-     * @return Create_Header
-     */
-    public function setExternalReference($ExternalReference)
+    public function setExternalReference(string $ExternalReference): static
     {
         $this->ExternalReference = $ExternalReference;
         return $this;
     }
 
-    /**
-     * @return \DateTime
-     */
-    public function getExternalReferenceDate()
+    public function getExternalReferenceDate(): \DateTime|bool|null
     {
         if ($this->ExternalReferenceDate == null) {
             return null;
@@ -281,12 +155,7 @@ class Create_Header
         }
     }
 
-    /**
-     * @param \DateTime $ExternalReferenceDate
-     *
-     * @return Create_Header
-     */
-    public function setExternalReferenceDate(\DateTime $ExternalReferenceDate = null)
+    public function setExternalReferenceDate(\DateTime $ExternalReferenceDate = null): static
     {
         if ($ExternalReferenceDate == null) {
             $this->ExternalReferenceDate = null;
@@ -296,267 +165,155 @@ class Create_Header
         return $this;
     }
 
-    /**
-     * @return string
-     */
-    public function getFollowedReference()
+    public function getFollowedReference(): ?string
     {
         return $this->FollowedReference;
     }
 
-    /**
-     * @param string $FollowedReference
-     *
-     * @return Create_Header
-     */
-    public function setFollowedReference($FollowedReference)
+    public function setFollowedReference(string $FollowedReference): static
     {
         $this->FollowedReference = $FollowedReference;
         return $this;
     }
 
-    /**
-     * @return string
-     */
-    public function getInternalReference()
+    public function getInternalReference(): ?string
     {
         return $this->InternalReference;
     }
 
-    /**
-     * @param string $InternalReference
-     *
-     * @return Create_Header
-     */
-    public function setInternalReference($InternalReference)
+    public function setInternalReference(string $InternalReference): static
     {
         $this->InternalReference = $InternalReference;
         return $this;
     }
 
-    /**
-     * @return boolean
-     */
-    public function getLinesUnmodifiable()
+    public function getLinesUnmodifiable(): ?bool
     {
         return $this->LinesUnmodifiable;
     }
 
-    /**
-     * @param boolean $LinesUnmodifiable
-     *
-     * @return Create_Header
-     */
-    public function setLinesUnmodifiable($LinesUnmodifiable)
+    public function setLinesUnmodifiable(bool $LinesUnmodifiable): static
     {
         $this->LinesUnmodifiable = $LinesUnmodifiable;
         return $this;
     }
 
-    /**
-     * @return OmniChannel
-     */
-    public function getOmniChannel()
+    public function getOmniChannel(): ?OmniChannel
     {
         return $this->OmniChannel;
     }
 
-    /**
-     * @param OmniChannel $OmniChannel
-     *
-     * @return Create_Header
-     */
-    public function setOmniChannel($OmniChannel)
+    public function setOmniChannel(OmniChannel $OmniChannel): static
     {
         $this->OmniChannel = $OmniChannel;
         return $this;
     }
 
-    /**
-     * @return string
-     */
-    public function getOrigin()
+    public function getOrigin(): string|DocumentOrigin|null
     {
         return $this->Origin;
     }
 
-    /**
-     * @param string $Origin
-     *
-     * @return Create_Header
-     */
-    public function setOrigin($Origin)
+    public function setOrigin($Origin): static
     {
         $this->Origin = $Origin;
         return $this;
     }
 
-    /**
-     * @return string
-     */
-    public function getSalesPersonId()
+    public function getSalesPersonId(): ?string
     {
         return $this->SalesPersonId;
     }
 
-    /**
-     * @param string $SalesPersonId
-     *
-     * @return Create_Header
-     */
-    public function setSalesPersonId($SalesPersonId)
+    public function setSalesPersonId(string $SalesPersonId): static
     {
         $this->SalesPersonId = $SalesPersonId;
         return $this;
     }
 
-    /**
-     * @return string
-     */
-    public function getStoreId()
+    public function getStoreId(): ?string
     {
         return $this->StoreId;
     }
 
-    /**
-     * @param string $StoreId
-     *
-     * @return Create_Header
-     */
-    public function setStoreId($StoreId)
+    public function setStoreId(string $StoreId): static
     {
         $this->StoreId = $StoreId;
         return $this;
     }
 
-    /**
-     * @return boolean
-     */
-    public function getTaxExcluded()
+    public function getTaxExcluded(): ?bool
     {
         return $this->TaxExcluded;
     }
 
-    /**
-     * @param boolean $TaxExcluded
-     *
-     * @return Create_Header
-     */
-    public function setTaxExcluded($TaxExcluded)
+    public function setTaxExcluded(bool $TaxExcluded): static
     {
         $this->TaxExcluded = $TaxExcluded;
         return $this;
     }
 
-    /**
-     * @return string
-     */
-    public function getType()
+    public function getType(): ?string
     {
         return $this->Type;
     }
 
-    /**
-     * @param string $Type
-     *
-     * @return Create_Header
-     */
-    public function setType($Type)
+    public function setType(string $Type): static
     {
         $this->Type = $Type;
         return $this;
     }
 
-    /**
-     * @return ArrayOfUserDefinedDate
-     */
-    public function getUserDefinedDates()
+    public function getUserDefinedDates(): ?ArrayOfUserDefinedDate
     {
         return $this->UserDefinedDates;
     }
 
-    /**
-     * @param ArrayOfUserDefinedDate $UserDefinedDates
-     *
-     * @return Create_Header
-     */
-    public function setUserDefinedDates($UserDefinedDates)
+    public function setUserDefinedDates(ArrayOfUserDefinedDate $UserDefinedDates): static
     {
         $this->UserDefinedDates = $UserDefinedDates;
         return $this;
     }
 
-    /**
-     * @return ArrayOfUserDefinedTableCustomer
-     */
-    public function getUserDefinedTableCustomers()
+    public function getUserDefinedTableCustomers(): ?ArrayOfUserDefinedTableCustomer
     {
         return $this->UserDefinedTableCustomers;
     }
 
-    /**
-     * @param ArrayOfUserDefinedTableCustomer $UserDefinedTableCustomers
-     *
-     * @return Create_Header
-     */
-    public function setUserDefinedTableCustomers($UserDefinedTableCustomers)
+    public function setUserDefinedTableCustomers(ArrayOfUserDefinedTableCustomer $UserDefinedTableCustomers): static
     {
         $this->UserDefinedTableCustomers = $UserDefinedTableCustomers;
         return $this;
     }
 
-    /**
-     * @return ArrayOfUserDefinedTable
-     */
-    public function getUserDefinedTables()
+    public function getUserDefinedTables(): ?ArrayOfUserDefinedTable
     {
         return $this->UserDefinedTables;
     }
 
-    /**
-     * @param ArrayOfUserDefinedTable $UserDefinedTables
-     *
-     * @return Create_Header
-     */
-    public function setUserDefinedTables($UserDefinedTables)
+    public function setUserDefinedTables(ArrayOfUserDefinedTable $UserDefinedTables): static
     {
         $this->UserDefinedTables = $UserDefinedTables;
         return $this;
     }
 
-    /**
-     * @return ArrayOfUserField
-     */
-    public function getUserFields()
+    public function getUserFields(): ?ArrayOfUserField
     {
         return $this->UserFields;
     }
 
-    /**
-     * @param ArrayOfUserField $UserFields
-     *
-     * @return Create_Header
-     */
-    public function setUserFields($UserFields)
+    public function setUserFields(ArrayOfUserField $UserFields): static
     {
         $this->UserFields = $UserFields;
         return $this;
     }
 
-    /**
-     * @return string
-     */
-    public function getWarehouseId()
+    public function getWarehouseId(): ?string
     {
         return $this->WarehouseId;
     }
 
-    /**
-     * @param string $WarehouseId
-     *
-     * @return Create_Header
-     */
-    public function setWarehouseId($WarehouseId)
+    public function setWarehouseId(string $WarehouseId): static
     {
         $this->WarehouseId = $WarehouseId;
         return $this;

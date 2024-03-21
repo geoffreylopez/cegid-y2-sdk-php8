@@ -4,54 +4,32 @@ namespace Y2\SaleDocument;
 
 class Create_Tax
 {
+    protected ?float $Amount = null;
 
-    /**
-     * @var float $Amount
-     */
-    protected $Amount = null;
-
-    /**
-     * @var string $FamilyId
-     */
-    protected $FamilyId = null;
-
+    protected ?string $FamilyId = null;
     
     public function __construct()
     {
     
     }
 
-    /**
-     * @return float
-     */
-    public function getAmount()
+    public function getAmount(): ?float
     {
       return $this->Amount;
     }
 
-    /**
-     * @param float $Amount
-     * @return Create_Tax
-     */
-    public function setAmount($Amount)
+    public function setAmount(float $Amount): static
     {
       $this->Amount = $Amount;
       return $this;
     }
 
-    /**
-     * @return string
-     */
-    public function getFamilyId()
+    public function getFamilyId(): ?string
     {
       return $this->FamilyId;
     }
 
-    /**
-     * @param string $FamilyId
-     * @return Create_Tax
-     */
-    public function setFamilyId($FamilyId)
+    public function setFamilyId(string $FamilyId): static
     {
       $this->FamilyId = $FamilyId;
       return $this;

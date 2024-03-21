@@ -7,10 +7,7 @@ namespace Y2\SaleDocument;
  */
 class SaleDocumentService extends \SoapClient
 {
-    /**
-     * @var array $classmap The defined classes
-     */
-    private static $classmap = array(
+    private static array $classmap = array(
         'HelloWorld'                             => 'Y2\\SaleDocument\\HelloWorld',
         'RetailContext'                          => 'Y2\\SaleDocument\\RetailContext',
         'HelloWorldResponse'                     => 'Y2\\SaleDocument\\HelloWorldResponse',
@@ -116,9 +113,6 @@ class SaleDocumentService extends \SoapClient
     );
 
     /**
-     * @param       $wsdl
-     * @param array $options
-     *
      * @throws \SoapFault
      */
     public function __construct($wsdl, array $options = array())
@@ -136,142 +130,72 @@ class SaleDocumentService extends \SoapClient
         parent::__construct($wsdl, $options);
     }
 
-    /**
-     * @param HelloWorld $parameters
-     *
-     * @return HelloWorldResponse
-     */
-    public function HelloWorld(HelloWorld $parameters)
+    public function HelloWorld(HelloWorld $parameters): HelloWorldResponse
     {
         return $this->__soapCall('HelloWorld', array($parameters));
     }
 
-    /**
-     * @param GetHeaderList $parameters
-     *
-     * @return GetHeaderListResponse
-     */
-    public function GetHeaderList(GetHeaderList $parameters)
+    public function GetHeaderList(GetHeaderList $parameters): GetHeaderListResponse
     {
         return $this->__soapCall('GetHeaderList', array($parameters));
     }
 
-    /**
-     * @param GetByKey $parameters
-     *
-     * @return GetByKeyResponse
-     */
-    public function GetByKey(GetByKey $parameters)
+    public function GetByKey(GetByKey $parameters): GetByKeyResponse
     {
         return $this->__soapCall('GetByKey', array($parameters));
     }
 
-    /**
-     * @param GetByReference $parameters
-     *
-     * @return GetByReferenceResponse
-     */
-    public function GetByReference(GetByReference $parameters)
+    public function GetByReference(GetByReference $parameters): GetByReferenceResponse
     {
         return $this->__soapCall('GetByReference', array($parameters));
     }
 
-    /**
-     * @param Create $parameters
-     *
-     * @return CreateResponse
-     */
-    public function Create(Create $parameters)
+    public function Create(Create $parameters): CreateResponse
     {
         return $this->__soapCall('Create', array($parameters));
     }
 
-    /**
-     * @param Cancel $parameters
-     *
-     * @return CancelResponse
-     */
-    public function Cancel(Cancel $parameters)
+    public function Cancel(Cancel $parameters): CancelResponse
     {
         return $this->__soapCall('Cancel', array($parameters));
     }
 
-    /**
-     * @param Close $parameters
-     *
-     * @return CloseResponse
-     */
-    public function Close(Close $parameters)
+    public function Close(Close $parameters): CloseResponse
     {
         return $this->__soapCall('Close', array($parameters));
     }
 
-    /**
-     * @param Update $parameters
-     *
-     * @return UpdateResponse
-     */
-    public function Update(Update $parameters)
+    public function Update(Update $parameters): UpdateResponse
     {
         return $this->__soapCall('Update', array($parameters));
     }
 
-    /**
-     * @param UpdatePayments $parameters
-     *
-     * @return UpdatePaymentsResponse
-     */
-    public function UpdatePayments(UpdatePayments $parameters)
+    public function UpdatePayments(UpdatePayments $parameters): UpdatePaymentsResponse
     {
         return $this->__soapCall('UpdatePayments', array($parameters));
     }
 
-    /**
-     * @param UpdateHeader $parameters
-     *
-     * @return UpdateHeaderResponse
-     */
-    public function UpdateHeader(UpdateHeader $parameters)
+    public function UpdateHeader(UpdateHeader $parameters): UpdateHeaderResponse
     {
         return $this->__soapCall('UpdateHeader', array($parameters));
     }
 
-    /**
-     * @param GetByExternalReference $parameters
-     *
-     * @return GetByExternalReferenceResponse
-     */
-    public function GetByExternalReference(GetByExternalReference $parameters)
+    public function GetByExternalReference(GetByExternalReference $parameters): GetByExternalReferenceResponse
     {
         return $this->__soapCall('GetByExternalReference', array($parameters));
     }
 
-    /**
-     * @param Lock $parameters
-     *
-     * @return LockResponse
-     */
-    public function Lock(Lock $parameters)
+    public function Lock(Lock $parameters): LockResponse
     {
         return $this->__soapCall('Lock', array($parameters));
     }
 
-    /**
-     * @param Unlock $parameters
-     *
-     * @return UnlockResponse
-     */
-    public function Unlock(Unlock $parameters)
+    public function Unlock(Unlock $parameters): UnlockResponse
     {
         return $this->__soapCall('Unlock', array($parameters));
     }
 
-    /**
-     * @param CustomersReservationCreate $parameters
-     *
-     * @return CustomersReservationCreateResponse
-     */
-    public function CustomersReservationCreate(CustomersReservationCreate $parameters)
+    public function CustomersReservationCreate(CustomersReservationCreate $parameters): CustomersReservationCreateResponse
     {
         return $this->__soapCall('CustomersReservationCreate', array($parameters));
     }
