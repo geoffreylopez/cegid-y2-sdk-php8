@@ -6,7 +6,7 @@ class AvailableQtyReturn
 {
     protected ?float $AvailableQty = null;
 
-    protected ?QueryExecutionStatus $QueryStatus = null;
+    protected QueryExecutionStatus|string|null $QueryStatus = null;
 
     public function __construct()
     {
@@ -18,18 +18,18 @@ class AvailableQtyReturn
         return $this->AvailableQty;
     }
 
-    public function setAvailableQty(float $AvailableQty): static
+    public function setAvailableQty(?float $AvailableQty): static
     {
         $this->AvailableQty = $AvailableQty;
         return $this;
     }
 
-    public function getQueryStatus(): ?QueryExecutionStatus
+    public function getQueryStatus(): QueryExecutionStatus|string|null
     {
         return $this->QueryStatus;
     }
 
-    public function setQueryStatus(QueryExecutionStatus $QueryStatus): static
+    public function setQueryStatus(QueryExecutionStatus|string|null $QueryStatus): static
     {
         $this->QueryStatus = $QueryStatus;
         return $this;

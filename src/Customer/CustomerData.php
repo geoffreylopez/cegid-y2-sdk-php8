@@ -28,17 +28,17 @@ class CustomerData extends CustomerDataBase
 
     protected ?string $NationalityId = null;
 
-    protected ?CustomerInformationType $OptinAlternativeEmail = null;
+    protected ?string $OptinAlternativeEmail = null;
 
-    protected CustomerInformationType|string|null $OptinEmail = null;
+    protected ?string $OptinEmail = null;
 
-    protected ?CustomerInformationType $OptinHomePhone = null;
+    protected ?string $OptinHomePhone = null;
 
-    protected ?CustomerInformationType $OptinMobile = null;
+    protected ?string $OptinMobile = null;
 
-    protected ?CustomerInformationType $OptinOfficePhone = null;
+    protected ?string $OptinOfficePhone = null;
 
-    protected ?CustomerInformationType $OptinPostal = null;
+    protected ?string $OptinPostal = null;
 
     protected ?string $PassportNumber = null;
 
@@ -198,67 +198,67 @@ class CustomerData extends CustomerDataBase
         return $this;
     }
 
-    public function getOptinAlternativeEmail(): ?CustomerInformationType
+    public function getOptinAlternativeEmail(): ?string
     {
         return $this->OptinAlternativeEmail;
     }
 
-    public function setOptinAlternativeEmail(CustomerInformationType $OptinAlternativeEmail): static
+    public function setOptinAlternativeEmail(string $OptinAlternativeEmail): static
     {
         $this->OptinAlternativeEmail = $OptinAlternativeEmail;
         return $this;
     }
 
-    public function getOptinEmail(): ?CustomerInformationType
+    public function getOptinEmail(): ?string
     {
         return $this->OptinEmail;
     }
 
-    public function setOptinEmail(CustomerInformationType|string $OptinEmail): static
+    public function setOptinEmail(?string $OptinEmail): static
     {
         $this->OptinEmail = $OptinEmail;
         return $this;
     }
 
-    public function getOptinHomePhone(): ?CustomerInformationType
+    public function getOptinHomePhone(): ?string
     {
         return $this->OptinHomePhone;
     }
 
-    public function setOptinHomePhone(CustomerInformationType $OptinHomePhone): static
+    public function setOptinHomePhone(?string $OptinHomePhone): static
     {
         $this->OptinHomePhone = $OptinHomePhone;
         return $this;
     }
 
-    public function getOptinMobile(): ?CustomerInformationType
+    public function getOptinMobile(): ?string
     {
         return $this->OptinMobile;
     }
 
-    public function setOptinMobile(CustomerInformationType $OptinMobile): static
+    public function setOptinMobile(?string $OptinMobile): static
     {
         $this->OptinMobile = $OptinMobile;
         return $this;
     }
 
-    public function getOptinOfficePhone(): ?CustomerInformationType
+    public function getOptinOfficePhone(): ?string
     {
         return $this->OptinOfficePhone;
     }
 
-    public function setOptinOfficePhone(CustomerInformationType $OptinOfficePhone): static
+    public function setOptinOfficePhone(?string $OptinOfficePhone): static
     {
         $this->OptinOfficePhone = $OptinOfficePhone;
         return $this;
     }
 
-    public function getOptinPostal(): ?CustomerInformationType
+    public function getOptinPostal(): ?string
     {
         return $this->OptinPostal;
     }
 
-    public function setOptinPostal(CustomerInformationType $OptinPostal): static
+    public function setOptinPostal(?string $OptinPostal): static
     {
         $this->OptinPostal = $OptinPostal;
         return $this;

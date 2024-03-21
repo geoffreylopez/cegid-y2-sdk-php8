@@ -4,7 +4,7 @@ namespace Y2\SaleDocument;
 
 class OmniChannel
 {
-    protected ?BillingStatus $BillingStatus = null;
+    protected BillingStatus|string|null $BillingStatus = null;
 
     protected ?\DateTime $CancelDate = null;
 
@@ -16,11 +16,11 @@ class OmniChannel
 
     protected ?string $DeliveryStoreId = null;
 
-    protected ?DeliveryType $DeliveryType = null;
+    protected DeliveryType|string|null $DeliveryType = null;
 
     protected ?string $DeliveryWarehouseId = null;
 
-    protected ?FollowUpStatus $FollowUpStatus = null;
+    protected FollowUpStatus|string|null $FollowUpStatus = null;
 
     protected ?string $GiftMessage = null;
 
@@ -32,13 +32,13 @@ class OmniChannel
 
     protected ?string $PaymentMethodId = null;
 
-    protected ?PaymentStatus $PaymentStatus = null;
+    protected PaymentStatus|string|null $PaymentStatus = null;
 
-    protected ?OrderReturnStatus $ReturnStatus = null;
+    protected OrderReturnStatus|string|null $ReturnStatus = null;
 
     protected ?ReturnType $ReturnType = null;
 
-    protected ?ShippingStatus $ShippingStatus = null;
+    protected ShippingStatus|string|null $ShippingStatus = null;
 
     protected ?string $Tracking = null;
 
@@ -54,7 +54,7 @@ class OmniChannel
       return $this->BillingStatus;
     }
 
-    public function setBillingStatus(string $BillingStatus): static
+    public function setBillingStatus(?string $BillingStatus): static
     {
       $this->BillingStatus = $BillingStatus;
       return $this;
@@ -73,7 +73,7 @@ class OmniChannel
       }
     }
 
-    public function setCancelDate(\DateTime $CancelDate = null): static
+    public function setCancelDate(?\DateTime $CancelDate = null): static
     {
       if ($CancelDate == null) {
        $this->CancelDate = null;
@@ -88,7 +88,7 @@ class OmniChannel
       return $this->CancelReasonId;
     }
 
-    public function setCancelReasonId(string $CancelReasonId): static
+    public function setCancelReasonId(?string $CancelReasonId): static
     {
       $this->CancelReasonId = $CancelReasonId;
       return $this;
@@ -99,7 +99,7 @@ class OmniChannel
       return $this->CancelStatus;
     }
 
-    public function setCancelStatus(CancelStatus $CancelStatus): static
+    public function setCancelStatus(?CancelStatus $CancelStatus): static
     {
       $this->CancelStatus = $CancelStatus;
       return $this;
@@ -110,7 +110,7 @@ class OmniChannel
       return $this->Comment;
     }
 
-    public function setComment(string $Comment): static
+    public function setComment(?string $Comment): static
     {
       $this->Comment = $Comment;
       return $this;
@@ -121,7 +121,7 @@ class OmniChannel
       return $this->DeliveryStoreId;
     }
 
-    public function setDeliveryStoreId(string $DeliveryStoreId): static
+    public function setDeliveryStoreId(?string $DeliveryStoreId): static
     {
       $this->DeliveryStoreId = $DeliveryStoreId;
       return $this;
@@ -132,7 +132,7 @@ class OmniChannel
       return $this->DeliveryType;
     }
 
-    public function setDeliveryType(string $DeliveryType): static
+    public function setDeliveryType(?string $DeliveryType): static
     {
       $this->DeliveryType = $DeliveryType;
       return $this;
@@ -143,7 +143,7 @@ class OmniChannel
       return $this->DeliveryWarehouseId;
     }
 
-    public function setDeliveryWarehouseId(string $DeliveryWarehouseId): static
+    public function setDeliveryWarehouseId(?string $DeliveryWarehouseId): static
     {
       $this->DeliveryWarehouseId = $DeliveryWarehouseId;
       return $this;
@@ -154,7 +154,7 @@ class OmniChannel
       return $this->FollowUpStatus;
     }
 
-    public function setFollowUpStatus(string $FollowUpStatus): static
+    public function setFollowUpStatus(?string $FollowUpStatus): static
     {
       $this->FollowUpStatus = $FollowUpStatus;
       return $this;
@@ -165,7 +165,7 @@ class OmniChannel
       return $this->GiftMessage;
     }
 
-    public function setGiftMessage(string $GiftMessage): static
+    public function setGiftMessage(?string $GiftMessage): static
     {
       $this->GiftMessage = $GiftMessage;
       return $this;
@@ -176,7 +176,7 @@ class OmniChannel
       return $this->GiftMessageType;
     }
 
-    public function setGiftMessageType(GiftMessageType $GiftMessageType): static
+    public function setGiftMessageType(?GiftMessageType $GiftMessageType): static
     {
       $this->GiftMessageType = $GiftMessageType;
       return $this;
@@ -195,7 +195,7 @@ class OmniChannel
       }
     }
 
-    public function setLockingDate(\DateTime $LockingDate = null): static
+    public function setLockingDate(?\DateTime $LockingDate = null): static
     {
       if ($LockingDate == null) {
        $this->LockingDate = null;
@@ -210,7 +210,7 @@ class OmniChannel
       return $this->OriginalDocument;
     }
 
-    public function setOriginalDocument(SaleDocumentIdentifier $OriginalDocument): static
+    public function setOriginalDocument(?SaleDocumentIdentifier $OriginalDocument): static
     {
       $this->OriginalDocument = $OriginalDocument;
       return $this;
@@ -221,7 +221,7 @@ class OmniChannel
       return $this->PaymentMethodId;
     }
 
-    public function setPaymentMethodId(string $PaymentMethodId): static
+    public function setPaymentMethodId(?string $PaymentMethodId): static
     {
       $this->PaymentMethodId = $PaymentMethodId;
       return $this;
@@ -232,7 +232,7 @@ class OmniChannel
       return $this->PaymentStatus;
     }
 
-    public function setPaymentStatus(string $PaymentStatus): static
+    public function setPaymentStatus(?string $PaymentStatus): static
     {
       $this->PaymentStatus = $PaymentStatus;
       return $this;
@@ -243,7 +243,7 @@ class OmniChannel
       return $this->ReturnStatus;
     }
 
-    public function setReturnStatus(string $ReturnStatus): static
+    public function setReturnStatus(?string $ReturnStatus): static
     {
       $this->ReturnStatus = $ReturnStatus;
       return $this;
@@ -254,7 +254,7 @@ class OmniChannel
       return $this->ReturnType;
     }
 
-    public function setReturnType(string $ReturnType): static
+    public function setReturnType(?string $ReturnType): static
     {
       $this->ReturnType = $ReturnType;
       return $this;
@@ -265,7 +265,7 @@ class OmniChannel
       return $this->ShippingStatus;
     }
 
-    public function setShippingStatus(string $ShippingStatus): static
+    public function setShippingStatus(?string $ShippingStatus): static
     {
       $this->ShippingStatus = $ShippingStatus;
       return $this;
@@ -276,7 +276,7 @@ class OmniChannel
       return $this->Tracking;
     }
 
-    public function setTracking(string $Tracking): static
+    public function setTracking(?string $Tracking): static
     {
       $this->Tracking = $Tracking;
       return $this;
@@ -287,7 +287,7 @@ class OmniChannel
       return $this->Transporter;
     }
 
-    public function setTransporter(string $Transporter): static
+    public function setTransporter(?string $Transporter): static
     {
       $this->Transporter = $Transporter;
       return $this;

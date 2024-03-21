@@ -17,7 +17,7 @@ class CustomerQueryData extends CustomerData
 
     protected ?bool $IsVirtual = null;
 
-    protected ?\DateTime $LastDateUpdate = null;
+    protected \DateTime|string|null $LastDateUpdate = null;
 
     protected ?string $Notepad = null;
 
@@ -106,7 +106,7 @@ class CustomerQueryData extends CustomerData
         }
     }
 
-    public function setLastDateUpdate(\DateTime $LastDateUpdate = null): static
+    public function setLastDateUpdate(\DateTime|string|null $LastDateUpdate = null): static
     {
         if ($LastDateUpdate == null) {
             $this->LastDateUpdate = null;

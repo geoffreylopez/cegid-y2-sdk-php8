@@ -12,7 +12,7 @@ class Create_Header
 
     protected ?string $CustomerId = null;
 
-    protected ?\DateTime $Date = null;
+    protected \DateTime|string|null $Date = null;
 
     protected ?SaleDocumentLineIdentifier $Deposit = null;
 
@@ -28,7 +28,7 @@ class Create_Header
 
     protected ?OmniChannel $OmniChannel = null;
 
-    protected ?DocumentOrigin $Origin = null;
+    protected DocumentOrigin|string|null $Origin = null;
 
     protected ?string $SalesPersonId = null;
 
@@ -91,13 +91,13 @@ class Create_Header
         return $this->CustomerId;
     }
 
-    public function setCustomerId(string $CustomerId): static
+    public function setCustomerId(?string $CustomerId): static
     {
         $this->CustomerId = $CustomerId;
         return $this;
     }
 
-    public function getDate(): \DateTime|bool|null
+    public function getDate(): \DateTime|bool|string|null
     {
         if ($this->Date == null) {
             return null;
@@ -110,7 +110,7 @@ class Create_Header
         }
     }
 
-    public function setDate(\DateTime $Date = null): static
+    public function setDate(\DateTime|string|null $Date = null): static
     {
         if ($Date == null) {
             $this->Date = null;

@@ -4,7 +4,7 @@ namespace Y2\Customer;
 
 class UserDefinedText
 {
-    protected ?UserDefinedId $Id = null;
+    protected ?string $Id = null;
 
     protected ?string $Value = null;
 
@@ -13,12 +13,12 @@ class UserDefinedText
 
     }
 
-    public function getId(): ?UserDefinedId
+    public function getId(): ?string
     {
         return $this->Id;
     }
 
-    public function setId(UserDefinedId $Id): static
+    public function setId(string $Id): static
     {
         $this->Id = $Id;
         return $this;

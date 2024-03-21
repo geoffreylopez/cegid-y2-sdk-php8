@@ -41,7 +41,7 @@ class Address
       return $this->City;
     }
 
-    public function setCity(string $City): static
+    public function setCity(?string $City): static
     {
       $this->City = $City;
       return $this;
@@ -52,7 +52,7 @@ class Address
       return $this->ContactNumber;
     }
 
-    public function setContactNumber(int $ContactNumber): static
+    public function setContactNumber(?int $ContactNumber): static
     {
       $this->ContactNumber = $ContactNumber;
       return $this;
@@ -63,7 +63,7 @@ class Address
       return $this->CountryId;
     }
 
-    public function setCountryId(string $CountryId): static
+    public function setCountryId(?string $CountryId): static
     {
       $this->CountryId = $CountryId;
       return $this;
@@ -74,7 +74,7 @@ class Address
       return $this->CountryIdType;
     }
 
-    public function setCountryIdType(string $CountryIdType): static
+    public function setCountryIdType(?string $CountryIdType): static
     {
       $this->CountryIdType = $CountryIdType;
       return $this;
@@ -85,7 +85,7 @@ class Address
       return $this->FirstName;
     }
 
-    public function setFirstName(string $FirstName): static
+    public function setFirstName(?string $FirstName): static
     {
       $this->FirstName = $FirstName;
       return $this;
@@ -96,7 +96,7 @@ class Address
       return $this->LastName;
     }
 
-    public function setLastName(string $LastName): static
+    public function setLastName(?string $LastName): static
     {
       $this->LastName = $LastName;
       return $this;
@@ -107,7 +107,7 @@ class Address
       return $this->Line1;
     }
 
-    public function setLine1(string $Line1): static
+    public function setLine1(?string $Line1): static
     {
       $this->Line1 = $Line1;
       return $this;
@@ -118,7 +118,7 @@ class Address
       return $this->Line2;
     }
 
-    public function setLine2(string $Line2): static
+    public function setLine2(?string $Line2): static
     {
       $this->Line2 = $Line2;
       return $this;
@@ -129,7 +129,7 @@ class Address
       return $this->Line3;
     }
 
-    public function setLine3($Line3): static
+    public function setLine3(?string $Line3): static
     {
       $this->Line3 = $Line3;
       return $this;
@@ -140,7 +140,7 @@ class Address
       return $this->PhoneNumber;
     }
 
-    public function setPhoneNumber(string $PhoneNumber): static
+    public function setPhoneNumber(?string $PhoneNumber): static
     {
       $this->PhoneNumber = $PhoneNumber;
       return $this;
@@ -151,7 +151,7 @@ class Address
       return $this->Region;
     }
 
-    public function setRegion(string $Region): static
+    public function setRegion(?string $Region): static
     {
       $this->Region = $Region;
       return $this;
@@ -173,7 +173,7 @@ class Address
       return $this->ZipCode;
     }
 
-    public function setZipCode(string $ZipCode): static
+    public function setZipCode(?string $ZipCode): static
     {
       $this->ZipCode = $ZipCode;
       return $this;

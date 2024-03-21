@@ -5,7 +5,7 @@ namespace Y2\Customer;
 class UserDefinedValue
 {
 
-    protected ?UserDefinedId $Id = null;
+    protected ?string $Id = null;
 
     protected ?float $Value = null;
 
@@ -14,12 +14,12 @@ class UserDefinedValue
 
     }
 
-    public function getId(): ?UserDefinedId
+    public function getId(): ?string
     {
         return $this->Id;
     }
 
-    public function setId(UserDefinedId $Id): static
+    public function setId(string $Id): static
     {
         $this->Id = $Id;
         return $this;
@@ -30,7 +30,7 @@ class UserDefinedValue
         return $this->Value;
     }
 
-    public function setValue(float $Value): static
+    public function setValue(?float $Value): static
     {
         $this->Value = $Value;
         return $this;

@@ -34,7 +34,7 @@ class AddressDataType
         return $this->AddressLine1;
     }
 
-    public function setAddressLine1(string $AddressLine1): static
+    public function setAddressLine1(?string $AddressLine1): static
     {
         $this->AddressLine1 = $AddressLine1;
         return $this;
@@ -45,7 +45,7 @@ class AddressDataType
         return $this->AddressLine2;
     }
 
-    public function setAddressLine2(string $AddressLine2): static
+    public function setAddressLine2(?string $AddressLine2): static
     {
         $this->AddressLine2 = $AddressLine2;
         return $this;
@@ -56,7 +56,7 @@ class AddressDataType
         return $this->AddressLine3;
     }
 
-    public function setAddressLine3(string $AddressLine3): static
+    public function setAddressLine3(?string $AddressLine3): static
     {
         $this->AddressLine3 = $AddressLine3;
         return $this;
@@ -78,7 +78,7 @@ class AddressDataType
         return $this->City;
     }
 
-    public function setCity(string $City): static
+    public function setCity(?string $City): static
     {
         $this->City = $City;
         return $this;
@@ -89,7 +89,7 @@ class AddressDataType
         return $this->CountryId;
     }
 
-    public function setCountryId(string $CountryId): static
+    public function setCountryId(?string $CountryId): static
     {
         $this->CountryId = $CountryId;
         return $this;
@@ -100,7 +100,7 @@ class AddressDataType
         return $this->CountryIdType;
     }
 
-    public function setCountryIdType(string|CountryIdType $CountryIdType): static
+    public function setCountryIdType(string|CountryIdType|null $CountryIdType): static
     {
         $this->CountryIdType = $CountryIdType;
         return $this;
@@ -111,7 +111,7 @@ class AddressDataType
         return $this->Nata;
     }
 
-    public function setNata(bool $Nata): static
+    public function setNata(?bool $Nata): static
     {
         $this->Nata = $Nata;
         return $this;
@@ -122,7 +122,7 @@ class AddressDataType
         return $this->RegionId;
     }
 
-    public function setRegionId(string $RegionId): static
+    public function setRegionId(?string $RegionId): static
     {
         $this->RegionId = $RegionId;
         return $this;
@@ -133,7 +133,7 @@ class AddressDataType
         return $this->ZipCode;
     }
 
-    public function setZipCode(string $ZipCode): static
+    public function setZipCode(?string $ZipCode): static
     {
         $this->ZipCode = $ZipCode;
         return $this;
