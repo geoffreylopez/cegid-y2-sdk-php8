@@ -30,7 +30,7 @@ class Create_Line
 
     protected ?OmniChannelLine $OmniChannel = null;
 
-    protected ?DocumentOrigin $Origin = null;
+    protected DocumentOrigin|string|null $Origin = null;
 
     protected ?string $PackageReference = null;
 
@@ -55,7 +55,7 @@ class Create_Line
         return $this->BonId;
     }
 
-    public function setBonId(string $BonId): static
+    public function setBonId(?string $BonId): static
     {
         $this->BonId = $BonId;
         return $this;
@@ -66,7 +66,7 @@ class Create_Line
         return $this->CatalogReference;
     }
 
-    public function setCatalogReference(string $CatalogReference): static
+    public function setCatalogReference(?string $CatalogReference): static
     {
         $this->CatalogReference = $CatalogReference;
         return $this;
@@ -77,7 +77,7 @@ class Create_Line
         return $this->Comment;
     }
 
-    public function setComment(string $Comment): static
+    public function setComment(?string $Comment): static
     {
         $this->Comment = $Comment;
         return $this;
@@ -88,7 +88,7 @@ class Create_Line
         return $this->ComplementaryDescription;
     }
 
-    public function setComplementaryDescription(string $ComplementaryDescription): static
+    public function setComplementaryDescription(?string $ComplementaryDescription): static
     {
         $this->ComplementaryDescription = $ComplementaryDescription;
         return $this;
@@ -107,7 +107,7 @@ class Create_Line
         }
     }
 
-    public function setDeliveryDate(\DateTime $DeliveryDate = null): static
+    public function setDeliveryDate(?\DateTime $DeliveryDate = null): static
     {
         if ($DeliveryDate == null) {
             $this->DeliveryDate = null;
@@ -122,7 +122,7 @@ class Create_Line
         return $this->DiscountTypeId;
     }
 
-    public function setDiscountTypeId(string $DiscountTypeId): static
+    public function setDiscountTypeId(?string $DiscountTypeId): static
     {
         $this->DiscountTypeId = $DiscountTypeId;
         return $this;
@@ -133,7 +133,7 @@ class Create_Line
         return $this->ExternalReference;
     }
 
-    public function setExternalReference(string $ExternalReference): static
+    public function setExternalReference(?string $ExternalReference): static
     {
         $this->ExternalReference = $ExternalReference;
         return $this;
@@ -152,7 +152,7 @@ class Create_Line
         }
     }
 
-    public function setInitialDeliveryDate(\DateTime $InitialDeliveryDate = null): static
+    public function setInitialDeliveryDate(?\DateTime $InitialDeliveryDate = null): static
     {
         if ($InitialDeliveryDate == null) {
             $this->InitialDeliveryDate = null;
@@ -167,7 +167,7 @@ class Create_Line
         return $this->ItemIdentifier;
     }
 
-    public function setItemIdentifier(ItemIdentifier $ItemIdentifier): static
+    public function setItemIdentifier(?ItemIdentifier $ItemIdentifier): static
     {
         $this->ItemIdentifier = $ItemIdentifier;
         return $this;
@@ -178,7 +178,7 @@ class Create_Line
         return $this->Label;
     }
 
-    public function setLabel(string $Label): static
+    public function setLabel(?string $Label): static
     {
         $this->Label = $Label;
         return $this;
@@ -189,7 +189,7 @@ class Create_Line
         return $this->MovementReasonId;
     }
 
-    public function setMovementReasonId(string $MovementReasonId): static
+    public function setMovementReasonId(?string $MovementReasonId): static
     {
         $this->MovementReasonId = $MovementReasonId;
         return $this;
@@ -200,7 +200,7 @@ class Create_Line
         return $this->NetUnitPrice;
     }
 
-    public function setNetUnitPrice(float $NetUnitPrice): static
+    public function setNetUnitPrice(?float $NetUnitPrice): static
     {
         $this->NetUnitPrice = $NetUnitPrice;
         return $this;
@@ -211,7 +211,7 @@ class Create_Line
         return $this->OmniChannel;
     }
 
-    public function setOmniChannel(OmniChannelLine $OmniChannel): static
+    public function setOmniChannel(?OmniChannelLine $OmniChannel): static
     {
         $this->OmniChannel = $OmniChannel;
         return $this;
@@ -222,7 +222,7 @@ class Create_Line
         return $this->Origin;
     }
 
-    public function setOrigin(string $Origin): static
+    public function setOrigin(string|DocumentOrigin|null $Origin): static
     {
         $this->Origin = $Origin;
         return $this;
@@ -233,7 +233,7 @@ class Create_Line
         return $this->PackageReference;
     }
 
-    public function setPackageReference(string $PackageReference): static
+    public function setPackageReference(?string $PackageReference): static
     {
         $this->PackageReference = $PackageReference;
         return $this;
@@ -244,7 +244,7 @@ class Create_Line
         return $this->Quantity;
     }
 
-    public function setQuantity(float $Quantity): static
+    public function setQuantity(?float $Quantity): static
     {
         $this->Quantity = $Quantity;
         return $this;
@@ -255,7 +255,7 @@ class Create_Line
         return $this->SalesPersonId;
     }
 
-    public function setSalesPersonId(string $SalesPersonId): static
+    public function setSalesPersonId(?string $SalesPersonId): static
     {
         $this->SalesPersonId = $SalesPersonId;
         return $this;
@@ -266,7 +266,7 @@ class Create_Line
         return $this->SerialNumberId;
     }
 
-    public function setSerialNumberId(string $SerialNumberId): static
+    public function setSerialNumberId(?string $SerialNumberId): static
     {
         $this->SerialNumberId = $SerialNumberId;
         return $this;
@@ -277,7 +277,7 @@ class Create_Line
         return $this->Taxes;
     }
 
-    public function setTaxes(ArrayOfCreate_Tax $Taxes): static
+    public function setTaxes(?ArrayOfCreate_Tax $Taxes): static
     {
         $this->Taxes = $Taxes;
         return $this;
@@ -288,7 +288,7 @@ class Create_Line
         return $this->UnitPrice;
     }
 
-    public function setUnitPrice(float $UnitPrice): static
+    public function setUnitPrice(?float $UnitPrice): static
     {
         $this->UnitPrice = $UnitPrice;
         return $this;

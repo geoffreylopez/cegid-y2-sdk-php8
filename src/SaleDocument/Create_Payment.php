@@ -12,7 +12,7 @@ class Create_Payment
 
     protected ?string $CurrencyId = null;
 
-    protected ?\DateTime $DueDate = null;
+    protected \DateTime|string|null $DueDate = null;
 
     protected ?int $Id = null;
 
@@ -71,7 +71,7 @@ class Create_Payment
         return $this;
     }
 
-    public function getDueDate(): \DateTime|bool|null
+    public function getDueDate(): \DateTime|bool|string|null
     {
         if ($this->DueDate == null) {
             return null;
@@ -84,7 +84,7 @@ class Create_Payment
         }
     }
 
-    public function setDueDate(\DateTime $DueDate = null): static
+    public function setDueDate(\DateTime|string $DueDate = null): static
     {
         if ($DueDate == null) {
             $this->DueDate = null;

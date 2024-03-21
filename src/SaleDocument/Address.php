@@ -10,7 +10,7 @@ class Address
 
     protected ?string $CountryId = null;
 
-    protected ?CountryIdType $CountryIdType = null;
+    protected string|CountryIdType|null $CountryIdType = null;
 
     protected ?string $FirstName = null;
 
@@ -162,7 +162,7 @@ class Address
       return $this->TitleId;
     }
 
-    public function setTitleId(string $TitleId): static
+    public function setTitleId(?string $TitleId): static
     {
       $this->TitleId = $TitleId;
       return $this;

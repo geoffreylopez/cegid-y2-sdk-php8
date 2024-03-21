@@ -29,7 +29,7 @@ class CreditCard
       return $this->TransactionNumber;
     }
 
-    public function setTransactionNumber(string $TransactionNumber): static
+    public function setTransactionNumber(?string $TransactionNumber): static
     {
       $this->TransactionNumber = $TransactionNumber;
       return $this;

@@ -16,7 +16,7 @@ class AddressDataType
 
     protected ?string $CountryId = null;
 
-    protected ?CountryIdType $CountryIdType = null;
+    protected CountryIdType|string|null $CountryIdType = null;
 
     protected ?bool $Nata = null;
 
@@ -67,7 +67,7 @@ class AddressDataType
         return $this->BrandName;
     }
 
-    public function setBrandName(string $BrandName): static
+    public function setBrandName(?string $BrandName): static
     {
         $this->BrandName = $BrandName;
         return $this;
@@ -100,7 +100,7 @@ class AddressDataType
         return $this->CountryIdType;
     }
 
-    public function setCountryIdType(CountryIdType $CountryIdType): static
+    public function setCountryIdType(string|CountryIdType $CountryIdType): static
     {
         $this->CountryIdType = $CountryIdType;
         return $this;

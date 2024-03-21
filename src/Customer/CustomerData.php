@@ -30,7 +30,7 @@ class CustomerData extends CustomerDataBase
 
     protected ?CustomerInformationType $OptinAlternativeEmail = null;
 
-    protected ?CustomerInformationType $OptinEmail = null;
+    protected CustomerInformationType|string|null $OptinEmail = null;
 
     protected ?CustomerInformationType $OptinHomePhone = null;
 
@@ -214,7 +214,7 @@ class CustomerData extends CustomerDataBase
         return $this->OptinEmail;
     }
 
-    public function setOptinEmail(CustomerInformationType $OptinEmail): static
+    public function setOptinEmail(CustomerInformationType|string $OptinEmail): static
     {
         $this->OptinEmail = $OptinEmail;
         return $this;
