@@ -4,144 +4,84 @@ namespace Y2\ItemInventory;
 
 class CbpFaultDetail
 {
-    /**
-     * @var string $Cause
-     */
-    protected $Cause = null;
+    protected ?string $Cause = null;
 
-    /**
-     * @var string $Description
-     */
-    protected $Description = null;
+    protected ?string $Description = null;
 
-    /**
-     * @var string $Id
-     */
-    protected $Id = null;
+    protected ?string $Id = null;
 
-    /**
-     * @var string $Message
-     */
-    protected $Message = null;
+    protected ?string $Message = null;
 
-    /**
-     * @var string $SourceLocation
-     */
-    protected $SourceLocation = null;
+    protected ?string $SourceLocation = null;
 
-    /**
-     * @var string $ToDo
-     */
-    protected $ToDo = null;
+    protected ?string $ToDo = null;
 
     public function __construct()
     {
 
     }
 
-    /**
-     * @return string
-     */
-    public function getCause()
+    public function getCause(): ?string
     {
         return $this->Cause;
     }
 
-    /**
-     * @param string $Cause
-     * @return CbpFaultDetail
-     */
-    public function setCause($Cause)
+    public function setCause(string $Cause): static
     {
         $this->Cause = $Cause;
         return $this;
     }
 
-    /**
-     * @return string
-     */
-    public function getDescription()
+    public function getDescription(): ?string
     {
         return $this->Description;
     }
 
-    /**
-     * @param string $Description
-     * @return CbpFaultDetail
-     */
-    public function setDescription($Description)
+    public function setDescription(string $Description): static
     {
         $this->Description = $Description;
         return $this;
     }
 
-    /**
-     * @return string
-     */
-    public function getId()
+    public function getId(): ?string
     {
         return $this->Id;
     }
 
-    /**
-     * @param string $Id
-     * @return CbpFaultDetail
-     */
-    public function setId($Id)
+    public function setId(string $Id): static
     {
         $this->Id = $Id;
         return $this;
     }
 
-    /**
-     * @return string
-     */
-    public function getMessage()
+    public function getMessage(): ?string
     {
         return $this->Message;
     }
 
-    /**
-     * @param string $Message
-     * @return CbpFaultDetail
-     */
-    public function setMessage($Message)
+    public function setMessage(string $Message): static
     {
         $this->Message = $Message;
         return $this;
     }
 
-    /**
-     * @return string
-     */
-    public function getSourceLocation()
+    public function getSourceLocation(): ?string
     {
         return $this->SourceLocation;
     }
 
-    /**
-     * @param string $SourceLocation
-     * @return CbpFaultDetail
-     */
-    public function setSourceLocation($SourceLocation)
+    public function setSourceLocation(string $SourceLocation): static
     {
         $this->SourceLocation = $SourceLocation;
         return $this;
     }
 
-    /**
-     * @return string
-     */
-    public function getToDo()
+    public function getToDo(): ?string
     {
         return $this->ToDo;
     }
 
-    /**
-     * @param string $ToDo
-     * @return CbpFaultDetail
-     */
-    public function setToDo($ToDo)
+    public function setToDo(string $ToDo): static
     {
         $this->ToDo = $ToDo;
         return $this;

@@ -4,57 +4,33 @@ namespace Y2\ItemInventory;
 
 class ResetShoppingCart
 {
-    /**
-     * @var ResetShoppingCart_Request $request
-     */
-    protected $request = null;
+    protected ?ResetShoppingCart_Request $request = null;
 
-    /**
-     * @var RetailContext $clientContext
-     */
-    protected $clientContext = null;
+    protected ?RetailContext $clientContext = null;
 
-    /**
-     * @param ResetShoppingCart_Request $request
-     * @param RetailContext $clientContext
-     */
-    public function __construct($request, $clientContext)
+    public function __construct(ResetShoppingCart_Request $request, RetailContext $clientContext)
     {
         $this->request       = $request;
         $this->clientContext = $clientContext;
     }
 
-    /**
-     * @return ResetShoppingCart_Request
-     */
-    public function getRequest()
+    public function getRequest(): ?ResetShoppingCart_Request
     {
         return $this->request;
     }
 
-    /**
-     * @param ResetShoppingCart_Request $request
-     * @return ResetShoppingCart
-     */
-    public function setRequest($request)
+    public function setRequest(ResetShoppingCart_Request $request): static
     {
         $this->request = $request;
         return $this;
     }
 
-    /**
-     * @return RetailContext
-     */
-    public function getClientContext()
+    public function getClientContext(): ?RetailContext
     {
         return $this->clientContext;
     }
 
-    /**
-     * @param RetailContext $clientContext
-     * @return ResetShoppingCart
-     */
-    public function setClientContext($clientContext)
+    public function setClientContext(RetailContext $clientContext): static
     {
         $this->clientContext = $clientContext;
         return $this;

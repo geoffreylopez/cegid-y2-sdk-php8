@@ -7,10 +7,7 @@ namespace Y2\ItemInventory;
  */
 class ItemInventoryWcfService extends \SoapClient
 {
-    /**
-     * @var array $classmap The defined classes
-     */
-    private static $classmap = array(
+    private static array $classmap = array(
         'HelloWorld'                                 => 'Y2\\ItemInventory\\HelloWorld',
         'RetailContext'                              => 'Y2\\ItemInventory\\RetailContext',
         'HelloWorldResponse'                         => 'Y2\\ItemInventory\\HelloWorldResponse',
@@ -50,8 +47,6 @@ class ItemInventoryWcfService extends \SoapClient
     );
 
     /**
-     * @param $wsdl
-     * @param array $options
      * @throws \SoapFault
      */
     public function __construct($wsdl, array $options = array())
@@ -69,65 +64,37 @@ class ItemInventoryWcfService extends \SoapClient
         parent::__construct($wsdl, $options);
     }
 
-    /**
-     * @param HelloWorld $parameters
-     * @return HelloWorldResponse
-     */
-    public function HelloWorld(HelloWorld $parameters)
+    public function HelloWorld(HelloWorld $parameters): HelloWorldResponse
     {
         return $this->__soapCall('HelloWorld', array($parameters));
     }
 
-    /**
-     * @param GetAvailableQty $parameters
-     * @return GetAvailableQtyResponse
-     */
-    public function GetAvailableQty(GetAvailableQty $parameters)
+    public function GetAvailableQty(GetAvailableQty $parameters): GetAvailableQtyResponse
     {
         return $this->__soapCall('GetAvailableQty', array($parameters));
     }
 
-    /**
-     * @param GetAvailableCumulativeQtyAllStores $parameters
-     * @return GetAvailableCumulativeQtyAllStoresResponse
-     */
-    public function GetAvailableCumulativeQtyAllStores(GetAvailableCumulativeQtyAllStores $parameters)
+    public function GetAvailableCumulativeQtyAllStores(GetAvailableCumulativeQtyAllStores $parameters): GetAvailableCumulativeQtyAllStoresResponse
     {
         return $this->__soapCall('GetAvailableCumulativeQtyAllStores', array($parameters));
     }
 
-    /**
-     * @param GetInventoryDetailByStore $parameters
-     * @return GetInventoryDetailByStoreResponse
-     */
-    public function GetInventoryDetailByStore(GetInventoryDetailByStore $parameters)
+    public function GetInventoryDetailByStore(GetInventoryDetailByStore $parameters): GetInventoryDetailByStoreResponse
     {
         return $this->__soapCall('GetInventoryDetailByStore', array($parameters));
     }
 
-    /**
-     * @param UpdateShoppingCart $parameters
-     * @return UpdateShoppingCartResponse
-     */
-    public function UpdateShoppingCart(UpdateShoppingCart $parameters)
+    public function UpdateShoppingCart(UpdateShoppingCart $parameters): UpdateShoppingCartResponse
     {
         return $this->__soapCall('UpdateShoppingCart', array($parameters));
     }
 
-    /**
-     * @param ResetShoppingCart $parameters
-     * @return ResetShoppingCartResponse
-     */
-    public function ResetShoppingCart(ResetShoppingCart $parameters)
+    public function ResetShoppingCart(ResetShoppingCart $parameters): ResetShoppingCartResponse
     {
         return $this->__soapCall('ResetShoppingCart', array($parameters));
     }
 
-    /**
-     * @param GetListItemInventoryDetailByStore $parameters
-     * @return GetListItemInventoryDetailByStoreResponse
-     */
-    public function GetListItemInventoryDetailByStore(GetListItemInventoryDetailByStore $parameters)
+    public function GetListItemInventoryDetailByStore(GetListItemInventoryDetailByStore $parameters): GetListItemInventoryDetailByStoreResponse
     {
         return $this->__soapCall('GetListItemInventoryDetailByStore', array($parameters));
     }

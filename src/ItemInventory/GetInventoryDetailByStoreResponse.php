@@ -4,32 +4,19 @@ namespace Y2\ItemInventory;
 
 class GetInventoryDetailByStoreResponse
 {
-    /**
-     * @var ArrayOfAvailableQtyByStore $GetInventoryDetailByStoreResult
-     */
-    protected $GetInventoryDetailByStoreResult = null;
+    protected ?ArrayOfAvailableQtyByStore $GetInventoryDetailByStoreResult = null;
 
-    /**
-     * @param ArrayOfAvailableQtyByStore $GetInventoryDetailByStoreResult
-     */
-    public function __construct($GetInventoryDetailByStoreResult)
+    public function __construct(ArrayOfAvailableQtyByStore $GetInventoryDetailByStoreResult)
     {
         $this->GetInventoryDetailByStoreResult = $GetInventoryDetailByStoreResult;
     }
 
-    /**
-     * @return ArrayOfAvailableQtyByStore
-     */
-    public function getGetInventoryDetailByStoreResult()
+    public function getGetInventoryDetailByStoreResult(): ?ArrayOfAvailableQtyByStore
     {
         return $this->GetInventoryDetailByStoreResult;
     }
 
-    /**
-     * @param ArrayOfAvailableQtyByStore $GetInventoryDetailByStoreResult
-     * @return GetInventoryDetailByStoreResponse
-     */
-    public function setGetInventoryDetailByStoreResult($GetInventoryDetailByStoreResult)
+    public function setGetInventoryDetailByStoreResult(ArrayOfAvailableQtyByStore $GetInventoryDetailByStoreResult): static
     {
         $this->GetInventoryDetailByStoreResult = $GetInventoryDetailByStoreResult;
         return $this;

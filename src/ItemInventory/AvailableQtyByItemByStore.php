@@ -4,52 +4,32 @@ namespace Y2\ItemInventory;
 
 class AvailableQtyByItemByStore
 {
-    /**
-     * @var string $ItemCode
-     */
-    protected $ItemCode = null;
+    protected ?string $ItemCode = null;
 
-    /**
-     * @var ArrayOfStoreAvailableQty $StoresAvailableQty
-     */
-    protected $StoresAvailableQty = null;
+    protected ?ArrayOfStoreAvailableQty $StoresAvailableQty = null;
 
     public function __construct()
     {
 
     }
 
-    /**
-     * @return string
-     */
-    public function getItemCode()
+    public function getItemCode(): ?string
     {
         return $this->ItemCode;
     }
 
-    /**
-     * @param string $ItemCode
-     * @return AvailableQtyByItemByStore
-     */
-    public function setItemCode($ItemCode)
+    public function setItemCode(string $ItemCode): static
     {
         $this->ItemCode = $ItemCode;
         return $this;
     }
 
-    /**
-     * @return ArrayOfStoreAvailableQty
-     */
-    public function getStoresAvailableQty()
+    public function getStoresAvailableQty(): ?ArrayOfStoreAvailableQty
     {
         return $this->StoresAvailableQty;
     }
 
-    /**
-     * @param ArrayOfStoreAvailableQty $StoresAvailableQty
-     * @return AvailableQtyByItemByStore
-     */
-    public function setStoresAvailableQty($StoresAvailableQty)
+    public function setStoresAvailableQty(ArrayOfStoreAvailableQty $StoresAvailableQty): static
     {
         $this->StoresAvailableQty = $StoresAvailableQty;
         return $this;

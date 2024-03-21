@@ -4,75 +4,45 @@ namespace Y2\ItemInventory;
 
 class AvailableQtyByStore
 {
-    /**
-     * @var float $AvailableQty
-     */
-    protected $AvailableQty = null;
+    protected ?float $AvailableQty = null;
 
-    /**
-     * @var string $StoreDescription
-     */
-    protected $StoreDescription = null;
+    protected ?string $StoreDescription = null;
 
-    /**
-     * @var string $StoreId
-     */
-    protected $StoreId = null;
+    protected ?string $StoreId = null;
     
     public function __construct()
     {
 
     }
 
-    /**
-     * @return float
-     */
-    public function getAvailableQty()
+    public function getAvailableQty(): ?float
     {
         return $this->AvailableQty;
     }
 
-    /**
-     * @param float $AvailableQty
-     * @return AvailableQtyByStore
-     */
-    public function setAvailableQty($AvailableQty)
+    public function setAvailableQty(float $AvailableQty): static
     {
         $this->AvailableQty = $AvailableQty;
         return $this;
     }
 
-    /**
-     * @return string
-     */
-    public function getStoreDescription()
+    public function getStoreDescription(): ?string
     {
         return $this->StoreDescription;
     }
 
-    /**
-     * @param string $StoreDescription
-     * @return AvailableQtyByStore
-     */
-    public function setStoreDescription($StoreDescription)
+    public function setStoreDescription(string $StoreDescription): static
     {
         $this->StoreDescription = $StoreDescription;
         return $this;
     }
 
-    /**
-     * @return string
-     */
-    public function getStoreId()
+    public function getStoreId(): ?string
     {
         return $this->StoreId;
     }
 
-    /**
-     * @param string $StoreId
-     * @return AvailableQtyByStore
-     */
-    public function setStoreId($StoreId)
+    public function setStoreId(string $StoreId): static
     {
         $this->StoreId = $StoreId;
         return $this;

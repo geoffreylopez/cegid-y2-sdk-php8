@@ -4,98 +4,58 @@ namespace Y2\ItemInventory;
 
 class StoreAvailableQty
 {
-    /**
-     * @var float $AvailableQuantity
-     */
-    protected $AvailableQuantity = null;
+    protected ?float $AvailableQuantity = null;
 
-    /**
-     * @var ArrayOfAvailableSkuQty $AvailableSkusQty
-     */
-    protected $AvailableSkusQty = null;
+    protected ?ArrayOfAvailableSkuQty $AvailableSkusQty = null;
 
-    /**
-     * @var string $StoreId
-     */
-    protected $StoreId = null;
+    protected ?string $StoreId = null;
 
-    /**
-     * @var string $StoreName
-     */
-    protected $StoreName = null;
+    protected ?string $StoreName = null;
 
     public function __construct()
     {
 
     }
 
-    /**
-     * @return float
-     */
-    public function getAvailableQuantity()
+    public function getAvailableQuantity(): ?float
     {
         return $this->AvailableQuantity;
     }
 
-    /**
-     * @param float $AvailableQuantity
-     * @return StoreAvailableQty
-     */
-    public function setAvailableQuantity($AvailableQuantity)
+    public function setAvailableQuantity(float $AvailableQuantity): static
     {
         $this->AvailableQuantity = $AvailableQuantity;
         return $this;
     }
 
-    /**
-     * @return ArrayOfAvailableSkuQty
-     */
-    public function getAvailableSkusQty()
+    public function getAvailableSkusQty(): ?ArrayOfAvailableSkuQty
     {
         return $this->AvailableSkusQty;
     }
 
-    /**
-     * @param ArrayOfAvailableSkuQty $AvailableSkusQty
-     * @return StoreAvailableQty
-     */
-    public function setAvailableSkusQty($AvailableSkusQty)
+    public function setAvailableSkusQty(ArrayOfAvailableSkuQty $AvailableSkusQty): static
     {
         $this->AvailableSkusQty = $AvailableSkusQty;
         return $this;
     }
 
-    /**
-     * @return string
-     */
-    public function getStoreId()
+    public function getStoreId(): ?string
     {
         return $this->StoreId;
     }
 
-    /**
-     * @param string $StoreId
-     * @return StoreAvailableQty
-     */
-    public function setStoreId($StoreId)
+    public function setStoreId(string $StoreId): static
     {
         $this->StoreId = $StoreId;
         return $this;
     }
 
-    /**
-     * @return string
-     */
-    public function getStoreName()
+    public function getStoreName(): ?string
     {
         return $this->StoreName;
     }
 
-    /**
-     * @param string $StoreName
-     * @return StoreAvailableQty
-     */
-    public function setStoreName($StoreName)
+    public function setStoreName(string $StoreName): static
     {
         $this->StoreName = $StoreName;
         return $this;

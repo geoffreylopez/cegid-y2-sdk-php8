@@ -4,78 +4,45 @@ namespace Y2\ItemInventory;
 
 class UpdateShoppingCart_Request
 {
-    /**
-     * @var ItemIdentifier $ItemIdentifier
-     */
-    protected $ItemIdentifier = null;
+    protected ?ItemIdentifier $ItemIdentifier = null;
 
-    /**
-     * @var float $Quantity
-     */
-    protected $Quantity = null;
+    protected ?float $Quantity = null;
 
-    /**
-     * @var string $WarehouseId
-     */
-    protected $WarehouseId = null;
+    protected ?string $WarehouseId = null;
 
-    /**
-     * @param float $Quantity
-     */
-    public function __construct($Quantity)
+    public function __construct(float $Quantity)
     {
         $this->Quantity = $Quantity;
     }
 
-    /**
-     * @return ItemIdentifier
-     */
-    public function getItemIdentifier()
+    public function getItemIdentifier(): ?ItemIdentifier
     {
         return $this->ItemIdentifier;
     }
 
-    /**
-     * @param ItemIdentifier $ItemIdentifier
-     * @return UpdateShoppingCart_Request
-     */
-    public function setItemIdentifier($ItemIdentifier)
+    public function setItemIdentifier(ItemIdentifier $ItemIdentifier): static
     {
         $this->ItemIdentifier = $ItemIdentifier;
         return $this;
     }
 
-    /**
-     * @return float
-     */
-    public function getQuantity()
+    public function getQuantity(): ?float
     {
         return $this->Quantity;
     }
 
-    /**
-     * @param float $Quantity
-     * @return UpdateShoppingCart_Request
-     */
-    public function setQuantity($Quantity)
+    public function setQuantity(float $Quantity): static
     {
         $this->Quantity = $Quantity;
         return $this;
     }
 
-    /**
-     * @return string
-     */
-    public function getWarehouseId()
+    public function getWarehouseId(): ?string
     {
         return $this->WarehouseId;
     }
 
-    /**
-     * @param string $WarehouseId
-     * @return UpdateShoppingCart_Request
-     */
-    public function setWarehouseId($WarehouseId)
+    public function setWarehouseId(string $WarehouseId): static
     {
         $this->WarehouseId = $WarehouseId;
         return $this;

@@ -4,29 +4,19 @@ namespace Y2\ItemInventory;
 
 class BusinessFaultDetail extends CbpFaultDetail
 {
-    /**
-     * @var ArrayOfstring $MemberNames
-     */
-    protected $MemberNames = null;
+    protected ?ArrayOfstring $MemberNames = null;
 
     public function __construct()
     {
         parent::__construct();
     }
 
-    /**
-     * @return ArrayOfstring
-     */
-    public function getMemberNames()
+    public function getMemberNames(): ?ArrayOfstring
     {
         return $this->MemberNames;
     }
 
-    /**
-     * @param ArrayOfstring $MemberNames
-     * @return BusinessFaultDetail
-     */
-    public function setMemberNames($MemberNames)
+    public function setMemberNames(ArrayOfstring $MemberNames): static
     {
         $this->MemberNames = $MemberNames;
         return $this;

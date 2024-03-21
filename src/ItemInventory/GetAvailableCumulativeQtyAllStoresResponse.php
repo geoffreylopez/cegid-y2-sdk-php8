@@ -4,32 +4,19 @@ namespace Y2\ItemInventory;
 
 class GetAvailableCumulativeQtyAllStoresResponse
 {
-    /**
-     * @var AvailableQtyReturn $GetAvailableCumulativeQtyAllStoresResult
-     */
-    protected $GetAvailableCumulativeQtyAllStoresResult = null;
+    protected ?AvailableQtyReturn $GetAvailableCumulativeQtyAllStoresResult = null;
 
-    /**
-     * @param AvailableQtyReturn $GetAvailableCumulativeQtyAllStoresResult
-     */
-    public function __construct($GetAvailableCumulativeQtyAllStoresResult)
+    public function __construct(AvailableQtyReturn $GetAvailableCumulativeQtyAllStoresResult)
     {
         $this->GetAvailableCumulativeQtyAllStoresResult = $GetAvailableCumulativeQtyAllStoresResult;
     }
 
-    /**
-     * @return AvailableQtyReturn
-     */
-    public function getGetAvailableCumulativeQtyAllStoresResult()
+    public function getGetAvailableCumulativeQtyAllStoresResult(): ?AvailableQtyReturn
     {
         return $this->GetAvailableCumulativeQtyAllStoresResult;
     }
 
-    /**
-     * @param AvailableQtyReturn $GetAvailableCumulativeQtyAllStoresResult
-     * @return GetAvailableCumulativeQtyAllStoresResponse
-     */
-    public function setGetAvailableCumulativeQtyAllStoresResult($GetAvailableCumulativeQtyAllStoresResult)
+    public function setGetAvailableCumulativeQtyAllStoresResult(AvailableQtyReturn $GetAvailableCumulativeQtyAllStoresResult): static
     {
         $this->GetAvailableCumulativeQtyAllStoresResult = $GetAvailableCumulativeQtyAllStoresResult;
         return $this;

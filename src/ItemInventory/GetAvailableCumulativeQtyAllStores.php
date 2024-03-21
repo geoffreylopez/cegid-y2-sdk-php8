@@ -4,82 +4,47 @@ namespace Y2\ItemInventory;
 
 class GetAvailableCumulativeQtyAllStores
 {
-    /**
-     * @var string $itemId
-     */
-    protected $itemId = null;
+    protected ?string $itemId = null;
 
-    /**
-     * @var ItemIdentifier $itemIdentifier
-     */
-    protected $itemIdentifier = null;
+    protected ?ItemIdentifier $itemIdentifier = null;
 
-    /**
-     * @var RetailContext $clientContext
-     */
-    protected $clientContext = null;
+    protected ?RetailContext $clientContext = null;
 
-    /**
-     * @param string $itemId
-     * @param ItemIdentifier $itemIdentifier
-     * @param RetailContext $clientContext
-     */
-    public function __construct($itemId, $itemIdentifier, $clientContext)
+    public function __construct(string $itemId, ItemIdentifier $itemIdentifier, RetailContext $clientContext)
     {
         $this->itemId         = $itemId;
         $this->itemIdentifier = $itemIdentifier;
         $this->clientContext  = $clientContext;
     }
 
-    /**
-     * @return string
-     */
-    public function getItemId()
+    public function getItemId(): ?string
     {
         return $this->itemId;
     }
 
-    /**
-     * @param string $itemId
-     * @return GetAvailableCumulativeQtyAllStores
-     */
-    public function setItemId($itemId)
+    public function setItemId(string $itemId): static
     {
         $this->itemId = $itemId;
         return $this;
     }
 
-    /**
-     * @return ItemIdentifier
-     */
-    public function getItemIdentifier()
+    public function getItemIdentifier(): ?ItemIdentifier
     {
         return $this->itemIdentifier;
     }
 
-    /**
-     * @param ItemIdentifier $itemIdentifier
-     * @return GetAvailableCumulativeQtyAllStores
-     */
-    public function setItemIdentifier($itemIdentifier)
+    public function setItemIdentifier(ItemIdentifier $itemIdentifier): static
     {
         $this->itemIdentifier = $itemIdentifier;
         return $this;
     }
 
-    /**
-     * @return RetailContext
-     */
-    public function getClientContext()
+    public function getClientContext(): ?RetailContext
     {
         return $this->clientContext;
     }
 
-    /**
-     * @param RetailContext $clientContext
-     * @return GetAvailableCumulativeQtyAllStores
-     */
-    public function setClientContext($clientContext)
+    public function setClientContext(RetailContext $clientContext): static
     {
         $this->clientContext = $clientContext;
         return $this;

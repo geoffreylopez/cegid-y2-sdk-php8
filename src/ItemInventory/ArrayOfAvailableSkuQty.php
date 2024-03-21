@@ -4,29 +4,19 @@ namespace Y2\ItemInventory;
 
 class ArrayOfAvailableSkuQty implements \ArrayAccess, \Iterator, \Countable
 {
-    /**
-     * @var AvailableSkuQty[] $AvailableSkuQty
-     */
-    protected $AvailableSkuQty = null;
+    protected ?array $AvailableSkuQty = null;
 
     public function __construct()
     {
 
     }
 
-    /**
-     * @return AvailableSkuQty[]
-     */
-    public function getAvailableSkuQty()
+    public function getAvailableSkuQty(): ?array
     {
         return $this->AvailableSkuQty;
     }
 
-    /**
-     * @param AvailableSkuQty[] $AvailableSkuQty
-     * @return ArrayOfAvailableSkuQty
-     */
-    public function setAvailableSkuQty(array $AvailableSkuQty = null)
+    public function setAvailableSkuQty(array $AvailableSkuQty = null): static
     {
         $this->AvailableSkuQty = $AvailableSkuQty;
         return $this;
@@ -34,34 +24,24 @@ class ArrayOfAvailableSkuQty implements \ArrayAccess, \Iterator, \Countable
 
     /**
      * ArrayAccess implementation
-     *
-     * @param mixed $offset An offset to check for
-     * @return boolean true on success or false on failure
      */
-    public function offsetExists($offset)
+    public function offsetExists(mixed $offset): bool
     {
         return isset($this->AvailableSkuQty[$offset]);
     }
 
     /**
      * ArrayAccess implementation
-     *
-     * @param mixed $offset The offset to retrieve
-     * @return AvailableSkuQty
      */
-    public function offsetGet($offset)
+    public function offsetGet(mixed $offset): mixed
     {
         return $this->AvailableSkuQty[$offset];
     }
 
     /**
      * ArrayAccess implementation
-     *
-     * @param mixed $offset The offset to assign the value to
-     * @param AvailableSkuQty $value The value to set
-     * @return void
      */
-    public function offsetSet($offset, $value)
+    public function offsetSet(mixed $offset, $value): void
     {
         if (!isset($offset)) {
             $this->AvailableSkuQty[] = $value;
@@ -72,21 +52,16 @@ class ArrayOfAvailableSkuQty implements \ArrayAccess, \Iterator, \Countable
 
     /**
      * ArrayAccess implementation
-     *
-     * @param mixed $offset The offset to unset
-     * @return void
      */
-    public function offsetUnset($offset)
+    public function offsetUnset(mixed $offset): void
     {
         unset($this->AvailableSkuQty[$offset]);
     }
 
     /**
      * Iterator implementation
-     *
-     * @return AvailableSkuQty Return the current element
      */
-    public function current()
+    public function current(): mixed
     {
         return current($this->AvailableSkuQty);
     }
@@ -94,30 +69,24 @@ class ArrayOfAvailableSkuQty implements \ArrayAccess, \Iterator, \Countable
     /**
      * Iterator implementation
      * Move forward to next element
-     *
-     * @return void
      */
-    public function next()
+    public function next(): void
     {
         next($this->AvailableSkuQty);
     }
 
     /**
      * Iterator implementation
-     *
-     * @return string|null Return the key of the current element or null
      */
-    public function key()
+    public function key(): string|int|null
     {
         return key($this->AvailableSkuQty);
     }
 
     /**
      * Iterator implementation
-     *
-     * @return boolean Return the validity of the current position
      */
-    public function valid()
+    public function valid(): bool
     {
         return $this->key() !== null;
     }
@@ -125,20 +94,16 @@ class ArrayOfAvailableSkuQty implements \ArrayAccess, \Iterator, \Countable
     /**
      * Iterator implementation
      * Rewind the Iterator to the first element
-     *
-     * @return void
      */
-    public function rewind()
+    public function rewind(): void
     {
         reset($this->AvailableSkuQty);
     }
 
     /**
      * Countable implementation
-     *
-     * @return AvailableSkuQty Return count of elements
      */
-    public function count()
+    public function count(): int
     {
         return count($this->AvailableSkuQty);
     }

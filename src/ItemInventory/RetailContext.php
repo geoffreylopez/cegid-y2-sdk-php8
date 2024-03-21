@@ -4,29 +4,19 @@ namespace Y2\ItemInventory;
 
 class RetailContext
 {
-    /**
-     * @var string $DatabaseId
-     */
-    protected $DatabaseId = null;
+    protected ?string $DatabaseId = null;
 
     public function __construct()
     {
 
     }
 
-    /**
-     * @return string
-     */
-    public function getDatabaseId()
+    public function getDatabaseId(): ?string
     {
         return $this->DatabaseId;
     }
 
-    /**
-     * @param string $DatabaseId
-     * @return RetailContext
-     */
-    public function setDatabaseId($DatabaseId)
+    public function setDatabaseId(string $DatabaseId): static
     {
         $this->DatabaseId = $DatabaseId;
         return $this;

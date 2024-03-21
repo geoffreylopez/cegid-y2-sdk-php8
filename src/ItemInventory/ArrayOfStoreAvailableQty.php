@@ -4,29 +4,19 @@ namespace Y2\ItemInventory;
 
 class ArrayOfStoreAvailableQty implements \ArrayAccess, \Iterator, \Countable
 {
-    /**
-     * @var StoreAvailableQty[] $StoreAvailableQty
-     */
-    protected $StoreAvailableQty = null;
+    protected ?array $StoreAvailableQty = null;
 
     public function __construct()
     {
 
     }
 
-    /**
-     * @return StoreAvailableQty[]
-     */
-    public function getStoreAvailableQty()
+    public function getStoreAvailableQty(): ?array
     {
         return $this->StoreAvailableQty;
     }
 
-    /**
-     * @param StoreAvailableQty[] $StoreAvailableQty
-     * @return ArrayOfStoreAvailableQty
-     */
-    public function setStoreAvailableQty(array $StoreAvailableQty = null)
+    public function setStoreAvailableQty(array $StoreAvailableQty = null): static
     {
         $this->StoreAvailableQty = $StoreAvailableQty;
         return $this;
@@ -34,34 +24,24 @@ class ArrayOfStoreAvailableQty implements \ArrayAccess, \Iterator, \Countable
 
     /**
      * ArrayAccess implementation
-     *
-     * @param mixed $offset An offset to check for
-     * @return boolean true on success or false on failure
      */
-    public function offsetExists($offset)
+    public function offsetExists(mixed $offset): bool
     {
         return isset($this->StoreAvailableQty[$offset]);
     }
 
     /**
      * ArrayAccess implementation
-     *
-     * @param mixed $offset The offset to retrieve
-     * @return StoreAvailableQty
      */
-    public function offsetGet($offset)
+    public function offsetGet(mixed $offset): mixed
     {
         return $this->StoreAvailableQty[$offset];
     }
 
     /**
      * ArrayAccess implementation
-     *
-     * @param mixed $offset The offset to assign the value to
-     * @param StoreAvailableQty $value The value to set
-     * @return void
      */
-    public function offsetSet($offset, $value)
+    public function offsetSet(mixed $offset, $value): void
     {
         if (!isset($offset)) {
             $this->StoreAvailableQty[] = $value;
@@ -72,21 +52,16 @@ class ArrayOfStoreAvailableQty implements \ArrayAccess, \Iterator, \Countable
 
     /**
      * ArrayAccess implementation
-     *
-     * @param mixed $offset The offset to unset
-     * @return void
      */
-    public function offsetUnset($offset)
+    public function offsetUnset(mixed $offset): void
     {
         unset($this->StoreAvailableQty[$offset]);
     }
 
     /**
      * Iterator implementation
-     *
-     * @return StoreAvailableQty Return the current element
      */
-    public function current()
+    public function current(): mixed
     {
         return current($this->StoreAvailableQty);
     }
@@ -94,30 +69,24 @@ class ArrayOfStoreAvailableQty implements \ArrayAccess, \Iterator, \Countable
     /**
      * Iterator implementation
      * Move forward to next element
-     *
-     * @return void
      */
-    public function next()
+    public function next(): void
     {
         next($this->StoreAvailableQty);
     }
 
     /**
      * Iterator implementation
-     *
-     * @return string|null Return the key of the current element or null
      */
-    public function key()
+    public function key(): string|int|null
     {
         return key($this->StoreAvailableQty);
     }
 
     /**
      * Iterator implementation
-     *
-     * @return boolean Return the validity of the current position
      */
-    public function valid()
+    public function valid(): bool
     {
         return $this->key() !== null;
     }
@@ -125,20 +94,16 @@ class ArrayOfStoreAvailableQty implements \ArrayAccess, \Iterator, \Countable
     /**
      * Iterator implementation
      * Rewind the Iterator to the first element
-     *
-     * @return void
      */
-    public function rewind()
+    public function rewind(): void
     {
         reset($this->StoreAvailableQty);
     }
 
     /**
      * Countable implementation
-     *
-     * @return StoreAvailableQty Return count of elements
      */
-    public function count()
+    public function count(): int
     {
         return count($this->StoreAvailableQty);
     }

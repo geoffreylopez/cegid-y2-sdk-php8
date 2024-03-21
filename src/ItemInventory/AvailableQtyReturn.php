@@ -4,52 +4,32 @@ namespace Y2\ItemInventory;
 
 class AvailableQtyReturn
 {
-    /**
-     * @var float $AvailableQty
-     */
-    protected $AvailableQty = null;
+    protected ?float $AvailableQty = null;
 
-    /**
-     * @var QueryExecutionStatus $QueryStatus
-     */
-    protected $QueryStatus = null;
+    protected ?QueryExecutionStatus $QueryStatus = null;
 
     public function __construct()
     {
 
     }
 
-    /**
-     * @return float
-     */
-    public function getAvailableQty()
+    public function getAvailableQty(): ?float
     {
         return $this->AvailableQty;
     }
 
-    /**
-     * @param float $AvailableQty
-     * @return AvailableQtyReturn
-     */
-    public function setAvailableQty($AvailableQty)
+    public function setAvailableQty(float $AvailableQty): static
     {
         $this->AvailableQty = $AvailableQty;
         return $this;
     }
 
-    /**
-     * @return QueryExecutionStatus
-     */
-    public function getQueryStatus()
+    public function getQueryStatus(): ?QueryExecutionStatus
     {
         return $this->QueryStatus;
     }
 
-    /**
-     * @param QueryExecutionStatus $QueryStatus
-     * @return AvailableQtyReturn
-     */
-    public function setQueryStatus($QueryStatus)
+    public function setQueryStatus(QueryExecutionStatus $QueryStatus): static
     {
         $this->QueryStatus = $QueryStatus;
         return $this;

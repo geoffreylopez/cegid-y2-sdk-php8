@@ -4,29 +4,19 @@ namespace Y2\ItemInventory;
 
 class GetListItemInventoryDetailByStore_Reply
 {
-    /**
-     * @var ArrayOfAvailableQtyByItemByStore $InventoryDetailsByStore
-     */
-    protected $InventoryDetailsByStore = null;
+    protected ?ArrayOfAvailableQtyByItemByStore $InventoryDetailsByStore = null;
 
     public function __construct()
     {
 
     }
 
-    /**
-     * @return ArrayOfAvailableQtyByItemByStore
-     */
-    public function getInventoryDetailsByStore()
+    public function getInventoryDetailsByStore(): ?ArrayOfAvailableQtyByItemByStore
     {
         return $this->InventoryDetailsByStore;
     }
 
-    /**
-     * @param ArrayOfAvailableQtyByItemByStore $InventoryDetailsByStore
-     * @return GetListItemInventoryDetailByStore_Reply
-     */
-    public function setInventoryDetailsByStore($InventoryDetailsByStore)
+    public function setInventoryDetailsByStore(ArrayOfAvailableQtyByItemByStore $InventoryDetailsByStore): static
     {
         $this->InventoryDetailsByStore = $InventoryDetailsByStore;
         return $this;

@@ -4,167 +4,97 @@ namespace Y2\ItemInventory;
 
 class GetListItemInventoryDetailByStore_Request
 {
-    /**
-     * @var boolean $AllAvailableWarehouse
-     */
-    protected $AllAvailableWarehouse = null;
+    protected ?bool $AllAvailableWarehouse = null;
 
-    /**
-     * @var boolean $DetailSku
-     */
-    protected $DetailSku = null;
+    protected ?bool $DetailSku = null;
 
-    /**
-     * @var ArrayOfItemIdentifier $ItemIdentifiers
-     */
-    protected $ItemIdentifiers = null;
+    protected ?ArrayOfItemIdentifier $ItemIdentifiers = null;
 
-    /**
-     * @var boolean $OnlyAvailableStock
-     */
-    protected $OnlyAvailableStock = null;
+    protected ?bool $OnlyAvailableStock = null;
 
-    /**
-     * @var Pager $Pager
-     */
-    protected $Pager = null;
+    protected ?Pager $Pager = null;
 
-    /**
-     * @var ArrayOfstring $StoreIds
-     */
-    protected $StoreIds = null;
+    protected ?ArrayOfstring $StoreIds = null;
 
-    /**
-     * @var boolean $WithStoreName
-     */
-    protected $WithStoreName = null;
+    protected ?bool $WithStoreName = null;
 
     public function __construct()
     {
 
     }
 
-    /**
-     * @return boolean
-     */
-    public function getAllAvailableWarehouse()
+    public function getAllAvailableWarehouse(): ?bool
     {
         return $this->AllAvailableWarehouse;
     }
 
-    /**
-     * @param boolean $AllAvailableWarehouse
-     * @return GetListItemInventoryDetailByStore_Request
-     */
-    public function setAllAvailableWarehouse($AllAvailableWarehouse)
+    public function setAllAvailableWarehouse(bool $AllAvailableWarehouse): static
     {
         $this->AllAvailableWarehouse = $AllAvailableWarehouse;
         return $this;
     }
 
-    /**
-     * @return boolean
-     */
-    public function getDetailSku()
+    public function getDetailSku(): ?bool
     {
         return $this->DetailSku;
     }
 
-    /**
-     * @param boolean $DetailSku
-     * @return GetListItemInventoryDetailByStore_Request
-     */
-    public function setDetailSku($DetailSku)
+    public function setDetailSku(bool $DetailSku): static
     {
         $this->DetailSku = $DetailSku;
         return $this;
     }
 
-    /**
-     * @return ArrayOfItemIdentifier
-     */
-    public function getItemIdentifiers()
+    public function getItemIdentifiers(): ?ArrayOfItemIdentifier
     {
         return $this->ItemIdentifiers;
     }
 
-    /**
-     * @param ArrayOfItemIdentifier $ItemIdentifiers
-     * @return GetListItemInventoryDetailByStore_Request
-     */
-    public function setItemIdentifiers($ItemIdentifiers)
+    public function setItemIdentifiers(ArrayOfItemIdentifier $ItemIdentifiers): static
     {
         $this->ItemIdentifiers = $ItemIdentifiers;
         return $this;
     }
 
-    /**
-     * @return boolean
-     */
-    public function getOnlyAvailableStock()
+    public function getOnlyAvailableStock(): ?bool
     {
         return $this->OnlyAvailableStock;
     }
 
-    /**
-     * @param boolean $OnlyAvailableStock
-     * @return GetListItemInventoryDetailByStore_Request
-     */
-    public function setOnlyAvailableStock($OnlyAvailableStock)
+    public function setOnlyAvailableStock(bool $OnlyAvailableStock): static
     {
         $this->OnlyAvailableStock = $OnlyAvailableStock;
         return $this;
     }
 
-    /**
-     * @return Pager
-     */
-    public function getPager()
+    public function getPager(): ?Pager
     {
         return $this->Pager;
     }
 
-    /**
-     * @param Pager $Pager
-     * @return GetListItemInventoryDetailByStore_Request
-     */
-    public function setPager($Pager)
+    public function setPager(Pager $Pager): static
     {
         $this->Pager = $Pager;
         return $this;
     }
 
-    /**
-     * @return ArrayOfstring
-     */
-    public function getStoreIds()
+    public function getStoreIds(): ?ArrayOfstring
     {
         return $this->StoreIds;
     }
 
-    /**
-     * @param ArrayOfstring $StoreIds
-     * @return GetListItemInventoryDetailByStore_Request
-     */
-    public function setStoreIds($StoreIds)
+    public function setStoreIds(ArrayOfstring $StoreIds): static
     {
         $this->StoreIds = $StoreIds;
         return $this;
     }
 
-    /**
-     * @return boolean
-     */
-    public function getWithStoreName()
+    public function getWithStoreName(): ?bool
     {
         return $this->WithStoreName;
     }
 
-    /**
-     * @param boolean $WithStoreName
-     * @return GetListItemInventoryDetailByStore_Request
-     */
-    public function setWithStoreName($WithStoreName)
+    public function setWithStoreName(bool $WithStoreName): static
     {
         $this->WithStoreName = $WithStoreName;
         return $this;
